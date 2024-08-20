@@ -1,0 +1,157 @@
+\section{Torque,}
+Last class I introduced the idea of torque.
+$$\tau=rF_\perp=rF\sin\theta$$
+
+[Insert diagram showing definition of torque.]
+\vspace{5cm}
+
+Forces generate torques, and the magnitude of the torque depends on (1) the distance from the axis of rotation to the point at which the force is acting and (2) the component of the force that is perpendicular to the radial axis. Torques are positive for counter-clockwise rotation.
+
+We also saw that torques cause angular acceleration, such that
+$$\sum \tau=I\alpha$$
+where $I$ is the moment of inertia. $I$ can be thought of as an object's resistance to angular acceleration. This equation is Newton's Second Law for rotation.
+
+Until now we've ignored objects' moments of inertia, e.g., when considering a motion of a pulley. Today I want to revisit Atwood's Machine, and then I'd like to go through a couple of more involved problems that involve the moment of inertia.
+
+\subsection{Examples}
+\subsubsection*{Ex: Atwood's Machine}
+Earlier in the semester I asserted that the tension in a string that passes over a pulley is uniform if we assume that the pulley is massless (and the axle is frictionless). Last class said that the tension will be different on either side of the pulley if the pulley is not massless. It may not have been clear why that is the case, although in fact that is the general case.
+
+\clearpage
+[Insert diagram of pulley, indicating forces acting on it.]
+\vspace{5cm}
+
+Summing the torques acting on the pulley,
+$$\sum \tau = rT_1-rT_2 = I\alpha$$
+If the pulley is massless, then $I=0$ and therefore $T_1=T_2$, which is why we previously treated the tensions as being identical.
+
+\subsubsection*{Ex: A variation on Atwood's Machine}
+In class we generally apply Newton's Laws in specific directions. We could also apply them in the direction of motion if we wanted to. For the case of Atwood's Machine, you could think of the hanging masses as string as a single system. The gravitational forces acting on the masses point either in the direction of motion or opposite the direction of motion.
+
+When we solve the problem this way, we don't worry about the tensional forces in the string because they are \textit{internal forces} in the system. Internal forces are forces that are exchanged between objects in the system. We only need to worry about \textit{external forces}. What makes something an internal force or external force depends on how we define the system. When we solved this problem during the last class, we essentially treated the two masses and the pulley as separate systems, and so the tensional forces were external to each of those objects.
+
+Instead of thinking about blocks hanging over a pulley, let's simplify the problem somewhat to think about a block being pushed over a roller that spins about an axle.
+
+[Insert diagram of block on top of rolling object.]
+\vspace{5cm}
+
+The block has two forces acting on the ends, and in opposite directions. These are comparable to the gravitational forces in the Atwood Machine. There is also a force of static friction that keeps the block from sliding over the roller. We have previously implicitly assumed that the there is static friction between the pulley and the string.
+
+Summing the forces in the $x-$direction gives
+$$\sum F_x = F_1-F_2-F_s = ma$$
+
+The force of static friction is also causing the roller to spin. Summing the torques on the roller,
+$$\sum \tau = -rF_s = I\alpha$$
+
+The linear acceleration and angular acceleration must have the opposite sign (for this problem), and so $\alpha = -a/r$. Solving for $F_s$,
+$$F_s = -\frac{Ia}{r^2}$$
+
+What happens if $a$ becomes really large? The block will start to slip over the roller, which is analogous to pulling a tablecloth really quickly. Now inserting $F_s$ into the first equation, we see that
+$$F_1-F_2=a\left(m-\frac{I}{r^2}\right)$$
+The moment of inertia of a cylinder/pulley is
+$$I=\frac{1}{2}m_pr^2$$
+and therefore
+$$F_1-F_2=a\left(m-\frac{1}{2}m_p\right)$$
+and the acceleration is
+$$a=\frac{F_1-F_2}{m-\frac{1}{2}m_p}$$
+
+The mass of the roller/pulley reduces the acceleration of the block.
+
+\subsubsection*{Ex: Block pulled by falling mass}
+A block is pulled by a string across a horizontal, frictionless plane. The other end of the string is suspended over a pulley and attached to a hanging mass. We will not assume that the pulley is massless but we will assume that the pulley is frictionless. Because the pulley has a moment of inertia, the tension in the two parts of the string are not necessarily equal. What is the acceleration of the block?
+
+\clearpage
+[Insert diagram.]
+\vspace{5cm}
+
+Start by summing the forces acting on mass $m_1$.
+$$\sum F_x=T_1=m_1a_x$$
+We want to find $a_x$. 
+This is one equation with two unknowns. We need at least one more equation.
+
+Now let's sum the forces acting on mass $m_2$.
+$$\sum F_y=T_2-F_{g,2}=m_2a_y$$
+Note that $a_x$ and $a_y$ have the same magnitude; $a_x>0$ and $a_y<0$, so $a_y=-a_x$. Therefore,
+$$T_2-m_2g=-m_2a_x$$
+We've introduced another equation, but also one more unknown. We now have two equations and three unknowns.
+
+We can come up with a third equation by summing the torques on the pulley.
+$$\sum \tau=rT_1-rT_2=I\alpha\Rightarrow T_2-T_1=I\frac{\alpha}{r}$$
+This equation has given us yet one more unknown, $\alpha$. But we saw earlier that $a_t=\alpha r$, so $\alpha=a_t/r$. We need to be careful with the signs here. We have defined our torques to be positive for counter-clockwise rotation. We have also defined $a_x$ to be positive if it causes clockwise rotation. Therefore, we want to set $\alpha=-a_x/r$. Thus,
+$$T_1-T_2=-I\frac{a_x}{r^2}$$
+We have three equations and three unknowns. Let's solve the first two equations for $T_1$ and $T_2$, respectively, and insert them into the third equation.
+
+$$T_1=m_1a_x$$
+$$T_2=m_2g-m_2a_x$$
+
+And so
+$$m_1a_x-m_2g+m_2a_x=-I\frac{a_x}{r^2}$$
+We want to solve this for $a_x$.
+$$-m_2g=-m_2a_x-m_1a_x-I\frac{a_x}{r^2}=-\left(m_2+m_1+\frac{I}{r^2}\right)a_x$$
+Finally, we arrive at
+$${a_x=\frac{m_2g}{m_2+m_1+\frac{I}{r^2}}}$$
+
+The moment of inertia of a disk is $I=(mr^2)/2$. If we treat the pulley as being a uniform disk of mass $m_p$, we can simplify the above equation to 
+$$\boxed{a_x=\frac{m_2g}{m_2+m_1+\frac{m_p}{2}}}$$
+
+Aside:
+
+If you look back in your notes, you'll see that when we ignored the mass of the pulley, we arrived at
+$$a_x=\frac{m_2g}{m_2+m_1}$$
+Furthermore, if we plug this back into the original force balance equations, we see that 
+$$T_1=\frac{m_1m_2g}{m_2+m_1}$$
+and
+$$T_2=m_2g-\frac{m_2^2g}{m_2+m_1}=\frac{m_2^2g+m_1m_2g}{m_2+m_1}-\frac{m_2^2g}{m_2+m_1}=\frac{m_1m_2g}{m_2+m_1}$$
+In other words, if $m_p=0$ then $T_1=T_2$.
+
+How much error do we introduce by assuming that $m_p=0$? Let's plug in some numbers to find out.
+
+$m_1=0.2\mbox{ kg}$\\
+$m_2=0.1\mbox{ kg}$\\
+$m_p=0.01\mbox{ kg}$
+
+$a_x\mbox{(with pulley's mass)}=3.22\mbox{ m/s}^2$\\
+$a_x\mbox{(without pulley's mass)}=3.27\mbox{ m/s}^2$
+
+That's an error of less than 2$\%$.
+
+\subsubsection*{Ex: Ball rolling down a ramp}
+Let's consider a ball rolling down a ramp without slipping and try to predict where it will hit the ground once it flies through the air.
+\clearpage
+[Insert diagram.]
+\vspace{5cm}
+
+$$\sum F_x=F_g\sin\theta-F_f=ma $$
+
+How do we deal with the frictional force? The ball isn't slipping, yet it is still moving...
+
+$$\sum\tau=-rF_f=I\alpha $$
+We have seen that $\alpha=a_t/r$. In this case, $a>0$ implies $\alpha<0$, so $\alpha=-a/r$ and therefore
+$$-rF_f=-I\frac{a}{r}\Rightarrow F_f=I\frac{a}{r^2}$$
+Inserting this into the above equation gives
+$$F_g\sin\theta-I\frac{a}{r^2}=ma\Rightarrow a\left(\frac{I}{r^2}+m\right)=F_g\sin\theta=mg\sin\theta$$
+$$a=\frac{mg\sin\theta}{\frac{I}{r^2}+m}$$
+For a solid, uniform sphere, $I=(2/5)mr^2$. Thus,
+$$a=\frac{mg\sin\theta}{\frac{(2/5)mr^2}{r^2}+m}=\frac{mg\sin\theta}{(2/5)m+m}=\frac{mg\sin\theta}{(7/5)m}$$
+$$\boxed{a=\frac{5}{7}g\sin\theta}$$
+
+If the ball starts at rest what will its speed be when it reaches the end of the ramp?
+
+Recall:\\
+$$v_r^2-v_i^2=2a\Delta{x}$$
+$$v_r^2=2\frac{5}{7}g\sin\theta\frac{H}{\sin\theta}=\frac{10}{7}gH\Rightarrow \boxed{v_r=\sqrt{\frac{10}{7}gH}}$$
+
+Previously, when we ignored rolling friction, we found that $v_r=\sqrt{2gH}$.
+
+Now to solve the projectile motion problem:
+$$v_{y,i}=-v_r\sin\theta$$
+$$\Delta{y}=v_{y,i}\Delta{t}+\frac{1}{2}a_y\Delta{t}^2\Rightarrow 0 = \frac{1}{2}a_y\Delta{t}^2+v_{y,i}\Delta{t}-\Delta{y}$$
+We can use the quadratic equation to solve for $\Delta{t}$
+$$\Delta{t}=\frac{v_{y,i}\pm\sqrt{v_{y,i}^2+2a_y\Delta{y}}}{a_y}=\frac{-v_r\sin\theta\pm\sqrt{v_r^2\sin^2\theta-2g\Delta{y}}}{-g}$$
+
+The horizontal distance that marble travels is 
+$$\Delta{x}=v_{x,i}\Delta{t}=v_r\cos\theta\Delta{t}=v_r\cos\theta\frac{-v_r\sin\theta\pm\sqrt{v_r^2\sin^2\theta-2g\Delta{y}}}{-g}$$
+
+Plug in numbers. How does this compare to our prediction if we had ignored rolling friction?
+
+\clearpage

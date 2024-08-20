@@ -1,0 +1,95 @@
+\section{Projectile motion}
+Objectives:
+\begin{enumerate}
+\item Solving projectile motion problems
+\end{enumerate}
+
+Last class we saw that the kinematic equations that we developed for motion in one direction can be easily generalized to describe motion in two or three dimensions. We'll work through a couple of projectile motion problems today.
+
+\hrulefill
+\subsection{Demos}
+\begin{itemize}
+\item Cart with shooting marble
+\item Free-fall apparatus
+\item Video of monkey getting hit by cannon
+\end{itemize}
+
+\subsection*{Cart with shooting marble}
+Marble accelerates vertically but not horizontally. Demonstrates that for projectile motion problems we can often treat the x- and y-components of motion separately.
+
+Assumptions:
+\begin{itemize}
+  \item Gravity is spatially constant and directed downward.
+  \item Air resistance is considered negligible. (Air resistance depends on object's geometry and the medium through which it is travelling.)
+\end{itemize}
+
+
+\subsection*{Free-fall apparatus}
+
+[Set-up free-fall apparatus.]
+
+Which marble will hit the ground first? The one that falls straight down, or the one that is kicked by the spring?
+
+Turns out that they hit the ground at the same time! They both start with no vertical velocity, and gravity acts downward on both marbles equally.
+
+If we measure the height that the marbles are dropped from, and the distance that the projectile marble travels, can we calculate the marble's initial speed?
+
+First, let's consider motion in the $y-$direction to determine the time it takes the marble to hit the ground.
+$$\Delta{y}=v_{y,i}\Delta{t}+\frac{1}{2}a\Delta{t}\ds^2$$
+But $v_{y,i}=0$, $\Delta{y}=-H$, and, if the $y$ points upward, $a=-g$.
+$$-H=-\frac{1}{2}g\Delta{t}\ds^2$$
+$$\Delta{t}\ds^2=\frac{2H}{g}$$
+$$\Delta{t}=\sqrt{\frac{2H}{g}}$$
+
+Now let's use the horizontal distance that the marble travelled to calculate its initial velocity. There is no acceleration in the $x-$direction.
+$$v=\frac{\Delta{x}}{\Delta{t}}=\frac{\Delta{x}}{\sqrt{\frac{2H}{g}}}=\Delta{x}\sqrt{\frac{g}{2H}}$$
+
+\subsection*{Video of monkey getting hit by a cannonball}
+The cannon was pointed directly at the monkey. The speed with which the cannon was fired doesn't actually matter --- it only affects at what height the monkey gets hit. Can we prove that? What do we know? (By the way, this is kind of a tricky problem. I wouldn't ask a question like this on an exam unless I gave you a lot of hints.)
+
+[Insert diagram of falling monkey.]
+\vspace{5cm}
+
+Let's start with the monkey:\\
+$v_{y,i}=0$\\
+$\Delta{y_m}=\frac{1}{2}a_y\Delta{t}\ds^2=-\frac{1}{2}g\Delta{t}\ds^2$\\
+$\Delta{y_m}=H-y_m$, where $y_m$ is the monkey's position when it gets hit.
+
+Now let's analyze the cannon:\\
+$v_{x}=V_i\cos\theta=\frac{\Delta{x}}{\Delta{t}}$\\
+$v_{y,i}=V_i\sin\theta$\\
+$\Delta{y_c}=y_c-0=y_c=v_{y,i}\Delta{t}+\frac{1}{2}a_y\Delta{t}\ds^2=V_i\sin\theta\Delta{t}-\frac{1}{2}g\Delta{t}\ds^2$
+
+We can make a few substitutions. Note that $\Delta{t}=\Delta{x}/(V_i\cos\theta)$. So, this means that
+$$y_c=\frac{V_i\sin\theta}{V_i\cos\theta}\Delta{x}+(y_m-H),$$
+which reduces to
+$$y_c=\Delta{x}\tan\theta+y_m-H$$.
+But $\tan\theta=H/\Delta{x}$... So,
+$$y_c=\frac{H}{\Delta{x}}\Delta{x}+y_m-H=H+y_m-H=y_m.$$
+When the cannonball has travelled a distance $\Delta{x}$, it will be at the same height above the ground as the monkey, and you will hear the monkey screach!
+
+
+\subsection{Example problem}
+
+You are throwing a ball from the top of a 10-m high cliff. You can throw the ball at a speed of $V_i=30\mbox{ m/s}$. At what angle relative to horizontal should you throw the ball to maximize the speed at which it hits the ground? Upward, downward, or horizontally?
+
+For the $x-$direction, we have a constant velocity of
+$$v_x=V_i\cos\theta$$
+
+For the $y-$direction, we have
+$$2a\Delta{y}=v_{y,f}\ds^2-v_{y,i}\ds^2$$
+The velocity in the $y-$direction changes with time. $a=-g$, and $\Delta{y}=-10\mbox{ m}$.
+$$2gH=v_{y,f}\ds^2-(V_i\sin\theta)\ds^2\Rightarrow v_{y,f}\ds^2=2gH+(V_i\sin\theta)\ds^2$$
+We don't need to take the square root to find $v_{y,f}$, because we would want to square it in the next step.
+
+The speed that the rock hits the ground at will be
+$$V_f=\sqrt{v_x\ds^2+v_{y,f}\ds^2}$$
+So, inserting the above results
+$$V_f=\sqrt{V_i\ds^2\cos^2\theta+2gH+V_i\ds^2\sin^2\theta}=\sqrt{V_i\ds^2(\cos^2\theta+\sin^2\theta)+2gH} = \sqrt{V_i\ds^2+2gH}$$
+
+It doesn't matter what angle you throw the ball at, just throw it fast!
+
+This is a great example of why it pays off to do the algebra before plugging in any numbers. We ended up with an elegant, insightful, and surprising solution.
+
+
+\clearpage

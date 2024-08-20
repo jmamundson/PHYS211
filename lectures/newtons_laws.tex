@@ -1,0 +1,113 @@
+\section{Newton's Laws}
+Objectives:
+\begin{itemize}
+\item Types of forces
+\item Newton's Laws
+\item Free-body diagrams
+\end{itemize}
+\hrulefill
+
+I spent the first seven lectures discussing \textit{kinematics}, which is the branch of physics that describes the motion of objects. We've talked about linear motion, two-dimensional motion, and circular/rotational motion. Today I'm going to start talking about \textit{dynamics}, which is the study of causes of motion and changes in motion. Kinematics and dynamics make up what we refer to as mechanics. We're now moving into the latter half of the 1600s, and we're adding a level of abstraction. We're also going to start being able to address much more interesting questions.
+
+We are going to use the term \textit{force} to describe the agent that causes motion --- or as we'll see in a minute, changes in motion. We usually write force as $\vec{F}$. Force is a vector, just like displacement, velocity, and acceleration. Therefore it has a magnitude and direction, and can be split into vector components: $\vec{F}=\langle{F_x,F_y}\rangle$.
+
+There are several different types of forces. We'll split them into two types: contact forces and body forces.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+Contact force & Body force\\
+\hline
+friction/drag & gravity\\
+tension & electric\\
+normal & magnetic\\
+spring & \\
+\hline
+\end{tabular}
+\end{table}
+
+[Make sketches of the forces.]
+\clearpage
+
+
+\subsection{Newton's Laws}
+In order to know how forces affect the motion of objects, we need Newton's Laws.
+
+\subsubsection{Newton's First Law}
+The velocity of an object remains constant unless it is acted upon by an \textit{external} force. In other words,
+$$\sum\vec{F}=0\Rightarrow \vec{a}=0.$$
+This is only valid for ``inertial'' references frames (i.e., non-accelerating reference frames). We will usually use reference frames that are not moving relative to the Earth. 
+
+The first law is a formalization of Galileo's work on kinematics.
+
+\subsubsection{Newton's Second Law}
+The acceleration of an object is parallel and proportional to the net force acting on the object and inversely proportional to the object's mass.
+$$\sum\vec{F}=m\vec{a}$$
+From this, we see that force has units of [kg$\cdot$m/s$^2$], which we refer to as a newton [N]. This Law is based on the work of Galileo, Kepler, Brahe, and others.
+
+This makes sense. Try pushing a penny and a piano. It takes much less effort to push a penny. Why? Because the penny has less mass. But what is mass???
+
+Newton's First Law can be thought of as a special case of the second law: if $\vec{a}=0$, then $\sum \vec{F}=0$.
+
+\subsubsection{Newton's Third Law}
+For every action, there is an equal and opposite reaction. In other words, the force exerted on object 2 by object 1 is equal and opposite to the force exerted on object 1 by object 2.
+$$\vec{F}_{12}=-\vec{F}_{21}$$
+
+This is the most confusing of the three laws. A couple of examples:
+\begin{itemize}
+\item A hammer hitting a nail. The hammer exerts a force on the nail, and the nail exerts a force on the hammer. This is why hammers sometimes break.
+\item A bug hitting a windshield. Which experiences a larger force --- the bug, or the windshield? They actually experience the same force, but the bug has a much smaller mass than the car, and so it undergoes an extreme acceleration!
+\end{itemize}
+
+\subsection{Demonstration of forces}
+\begin{itemize}
+\item Have student hold onto a spring while I pull on the other side. They should agree that they feel a pulling force.
+\item Hang a mass from the spring. The spring stretches, so it must be exerting a force on the mass.
+\item Hang a mass from the string. Is the string exerting a force on the mass? If I tied a rope around your waist and pulled, would you feel a force? Molecular bonds are essentially springs. The string does stretch a little bit, and that's what causes tension.
+\item Place a book on the table. What forces are being exerted on the book? Is there actually a normal force acting upward on the book?
+\item Place the book on top of a compression spring. The spring changes length, so it must be exerting a force on the book.
+\item So we really can think of the normal force as being due to molecular bonds being compressed. Stand on table with laser beam pointing at the wall. Although they don't see the table deflect, they do see the position of the laser change. This is evidence that the table experienced compression.
+\end{itemize}
+
+\subsection{Free-body diagrams}
+The key to solving problems using Newton's Laws is to draw free-body diagrams. The general method will be:
+\begin{itemize}
+\item Identify relevant forces in a free body diagram. A free body diagram is an illustration used to visualize the applied forces, movements, and resulting reactions on an object.
+\item Use Newton's Second Law to set up 1 or 2 equations (motion in 1-D or 2-D). To do this, I always define forces as being positive, and then insert negative signs in Newton's Second Law if the force points in the negative $x$- or $y$-directions.
+\item Solve for unknown terms. Sometimes this involves solving for acceleration and then applying kinematics to describe an object's motion.
+\end{itemize}
+
+Let's go through some examples. We'll draw free-body diagrams and identify the equations that we would use, but won't do anything more (yet).
+
+A comment on systems: When drawing a free-body diagram and applying Newton's Laws, we are analyzing all of the \textit{external forces} acting on a \textit{system}. We are free to choose our system any way that we'd like.
+
+\subsection{Example problems}
+\subsubsection{Example \#1}
+A box is resting on the floor.
+
+Forces: Gravitational force pointing downward, and the normal force is pointing upward.
+
+Equations:
+$$\sum F_x=0$$
+$$\sum F_y=F_n-F_g=ma_y=0$$
+(For this particular problem, $F_n=F_g$.
+
+\subsubsection{Example \#2}
+A box is sliding down an inclined plane.
+
+Forces: $\vec{F}_g$, $\vec{F}_k$, $\vec{F}_n$. Which way are they pointing?
+
+Equations:
+$$\sum F_x=F_g\sin\theta-F_k$$
+$$\sum F_y=F_n-F_g\cos\theta$$
+
+\subsubsection{Example \#3}
+A box is pulled up a ramp by a falling mass that is connected by a string. For this problem, let's just identify the forces on the diagram.
+
+Forces: $\vec{F}_g$, $\vec{F}_n$, $\vec{F}_k$, $\vec{F}_t$\\
+To solve this type of problem, we need to balance forces on both objects. We'll discuss this in detail later. 
+
+\subsubsection{Example \#4}
+You are given two forces (draw vectors). Find the third force that would hold the object in equilibrium. The key to this problem is that for an object in equilibrium, $\sum \vec F=0$.
+
+
+\clearpage

@@ -1,0 +1,132 @@
+\section{OSCILLATIONS}
+Objectives:
+\begin{itemize}
+\item simple harmonic motion
+\item linear restoring forces: spring, bobbing icebergs, pendulums
+\item derivation of equations of motion
+\end{itemize}
+
+\hrulefill
+
+We've now discussed motion of solids and fluids. We'll now talk about a type of motion that is common to both: oscillations and waves (waves are a type of oscillation). We'll start by studying simple harmonic motion.
+
+\subsection{Springs}
+Consider the forces acting on a mass that is on a frictionless, horizontal surface and is connected to a spring.
+
+[Insert digram.]
+\vspace{5cm}
+
+$$\sum F_x = F_{sp}=ma_x$$
+$$-kx=ma_x=m\frac{d^2x}{dt^2}$$
+This is a second-order, ordinary differential equation. This is the sort of equation that you would learn to solve in MATH 302: Differential Equations.
+
+If you stretch the spring to an initial displacement $x_i$ and release it from rest, the solution to this differential equation is
+$$x=x_i\cos\left(\sqrt{\frac{k}{m}}t\right)$$
+We can calculate the velocity and acceleration by taking derivatives of $x$, which yields
+$$v=-x_i\sqrt{\frac{k}{m}}\sin\left(\sqrt{\frac{k}{m}}t\right)$$
+and
+$$a=-xi\frac{k}{m}\cos\left(\sqrt{\frac{k}{m}}t\right)=-x\frac{k}{m}$$
+Plug this back in and show that it is the solution to the differential equation.
+
+
+The angular frequency of these functions is
+$$\omega=\sqrt{\frac{k}{m}}=2\pi f=2\pi\frac{1}{T}$$
+The period of oscillation is therefore 
+$$\boxed{T=2\pi\sqrt{\frac{m}{k}}}$$
+
+[Insert diagram showing the shape of the displacement function, and illustrating what is meant by $T$.]
+\vspace{5cm}
+
+Demo: The period of oscillation is large for large masses and small spring constants. 
+
+Any system that oscillates sinusoidally, such as a spring, is referred to as a \textit{simple harmonic oscillator}. Simple harmonic motion occurs when you have a \textit{linear restoring force}.
+
+\subsection{Pendulums}
+Pendulums are also (approximately) simple harmonic oscillators.
+
+[Insert diagram.]
+\vspace{5cm}
+
+The force-balance along the trajectory of the pendulum is
+$$\sum F=-F_g\sin\theta=ma_s=m\frac{d^2s}{dt^2}$$
+If $\theta$ is ``small'', then $\sin\theta\approx \theta$ and therefore
+$$-mg\theta=m\frac{d^2s}{dt^2}$$
+The angle $\theta$ is related to the arc length by $s=L\theta$, so
+$$-mg\theta=mL\frac{d^2\theta}{dt^2}$$
+and therefore the gravitational force is a \textit{linear restoring force}. Simplifying,
+$$-g\theta=L\frac{d^2\theta}{dt^2}$$
+which should look kind of familiar. If we start at rest at $\theta=\theta_i$, then the solution is
+$$\theta=\theta_i\cos\left(\sqrt{\frac{g}{L}}t\right)$$
+and the period of oscillation is
+$$\boxed{T=2\pi\sqrt{\frac{L}{g}}}$$
+
+Note that $\sqrt{g}\approx \pi$, so a simple rule of thumb is that
+$$T=2\sqrt{L}$$
+
+\subsection{Walking}
+Biological application: Part of walking involves letting your legs swing like pendulums under the influence of gravity. The more you ``use'' gravity, the less work that your muscles have to do. This is accomplished by moving your legs at their ``natural frequency''. For example, if your leg length is $L=0.75\mbox{ m}$, $T_0=1.7\mbox{ s}$. It should be easy for you to take two steps in 1.7 s. Moving it more or less quickly takes extra work from your muscles. 
+
+Thus the speed that animals walk depends on the length of their legs. 
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$v=\frac{\Delta{x}}{\Delta{t}}$$
+Let $\Delta{t}=T$, where $T$ is the amount of time it takes to make two steps (one with each foot). The distance traveled is $4L\sin\theta\approx 4L\theta$. Therefore,
+$$v\approx\frac{4L\theta}{2\pi\sqrt{L/g}}=\frac{2\theta}{\pi}\sqrt\frac{g}{L}\approx\frac{2\theta}{\sqrt{L}}$$
+
+If $\theta=10^{\circ}$ and $L=0.75\mbox{ m}$, then 
+$$\boxed{v=0.40\mbox{ m/s}=1.4\mbox{ km/h}}$$
+
+
+\subsection{Damped and driven oscillations}
+We've so far only discussed simple harmonic oscillators in the absence of external forces. External forces can cause oscillations to be damped or to grow. In damped oscillations, mechanical energy is converted to thermal energy. In driven oscillations, an external force does work on the system.
+
+\subsubsection{Damping}
+For a pendulum, the main energy loss is due to air resistance, which depends on speed. Let's include this drag force in the force-balance equation. Again, summing the forces in the direction of the pendulum's motion,
+$$\sum F=-F_g\sin\theta-F_d=ma_s=m\frac{d^2s}{dt^2}=mL\frac{d^2\theta}{dt^2}$$
+The drag force is proportional to the pendulum's velocity (we'll assume linearly), and therefore
+$$F_d=cv=c\frac{ds}{dt}=cL\frac{d\theta}{dt}$$
+Using the small-angle approximation,
+$$-mg\theta-cL\frac{d\theta}{dt}=mL\frac{d^2\theta}{dt^2}$$
+Again, we arrive at a second-order ordinary differential equation. This one has the solution
+$$\theta(t)=\theta_ie^{-\frac{c}{2m}t}\cos\left(\sqrt{\frac{g}{L}-\frac{c^2}{4m^2}}t\right)$$
+
+I admit, this is a mess! But it tells us two things:
+
+(1) The amplitude decays exponentially with time because of the term $e^{-\frac{c}{2m}t}$. The $e$-folding time, which is the time at which the amplitude is $1/e$ of the original amplitude, is $t=2m/c$. For a metal sphere with a diameter of 0.01~m, $t\approx 400\mbox{ s}$. This is why pendulums can oscillate for a long time. You can increase the $e$-folding time by increasing the mass of the pendulum, so that air resistance has less of an impact on its motion.
+
+(2) The natural frequency of the pendulum is 
+$$f=\frac{1}{2\pi}\sqrt{\frac{g}{L}-\frac{c^2}{4m^2}}$$
+Including drag decreases the frequency ever so slightly. For the same metal sphere, $c^2/(4m^2)\approx 1/1600\mbox{ s}^{-2}$. If $L=1\mbox{ m}$, then $g/L\approx 10\mbox{ s}^{-2}$. So the drag has only a very minor effect on the pendulum's frequency.
+
+[Insert diagram of a damped oscillation.]
+\vspace{5cm}
+
+\subsubsection{Driven oscillations and resonance}
+Oscillating systems have a natural frequency when left alone (as we've already seen). What happens if you subject a system to a periodic, driving frequency?
+
+If the natural frequency matches the natural frequency of the system, you get large oscillations (especially if damping is small) --- this is called resonance.
+
+Consider a horizontal spring being driven by a piston, with no friction (undamped).
+
+$$\sum F_x = -k(x-X_0\cos(2\pi ft)) = ma_x = m\frac{d^2x}{dt^2},$$
+where $f$ is the frequency of the driven oscillations of the piston.
+
+The solution to this equation is
+$$x = X_0\cos(2\pi ft)\frac{f_0^2}{f_0^2-f^2},$$
+where $f_0$ is the natural frequency of the spring. Oscillations become infinitely large when $f_0=f$!
+
+[Insert frequency-response curve.]
+\vspace{5cm}
+
+Example: Cars ride on springs; they therefore have a natural frequency. For a particular car, the natural frequency is 2 Hz. The car is driving 20 mph over a washboard road with bumps every 10 ft. What is the driving frequency? How does it compare to the natural frequency?
+
+$$v=\frac{\Delta{x}}{\Delta{t}}\Rightarrow T=\frac{\Delta{x}}{v}=\frac{10\mbox{ ft}}{20\mbox{ mph}}=0.35\mbox{ s}$$
+Which means that
+$$f=\frac{1}{T}=2.9\mbox{ Hz}$$
+
+This is just above the natural frequency. Driving faster will reduce the amplitude of the oscillations.
+
+
+\clearpage

@@ -1,0 +1,73 @@
+\section{ANGULAR MOMENTUM AND CONSERVATION OF ANGULAR MOMENTUM}
+We've been treating momentum as a linear, vector quantity. The momentum $\vec{p}$ of an particle spinning in a circle is not conserved, because an external force ($F_c$) causes the velocity vector to continuously change direction. However, there is a quantity called the angular momentum that is conserved. Recall the definition of torque,
+$$\tau_{net}=I\alpha\Rightarrow \alpha=\frac{\tau_{net}}{I}.$$
+The angular acceleration is also the rate of change of angular velocity, so 
+$$\tau_{net}=I\alpha=I\frac{d\omega}{d{t}},$$
+or integrating,
+$$\ds\int_{t_0}^{t_1}\tau_{net}\,dt=I\Delta{\omega}$$
+This is an angular impulse, which is analogous to what we had for linear motion,
+$$\ds\int_{t_0}^{t_1}\vec{F}_{net}\,dt=m\Delta{\vec{v}}=\vec{J}$$
+Let's define angular momentum as
+$$\boxed{L=I\omega}$$
+This equation tells us that, just like with linear momentum, an object can have a large angular momentum if it is spinning fast or has a large momentum of inertia. What gives an object a large moment of inertia?
+
+If the net torque acting on an object is zero, then
+$$\ds\int_{t_0}^{t_1}\tau_{net}\,{dt}=0=I\Delta\omega=\Delta{L}.$$
+This equation says that the change in angular momentum is zero if there is no net external torque acting on the object. This is exactly analogous to the law of conservation of momentum, and we call this the law of conservation of angular momentum. Another way to write this is
+$$\boxed{I_f\omega_f=I_i\omega_i}.$$
+
+We define the direction of the angular momentum according to the right hand rule.
+\vspace{5cm}
+
+From this derivation, we can also see that
+$$\tau_{net}=\frac{dL}{dt}$$
+which is analogous to 
+$$\vec F_{net}=\frac{d\vec{p}}{dt}$$
+
+\hrulefill\\
+Example: A common example of the conservation of angular momentum that you've all seen is that of a figure skater spinning in circles. When they hold their arms and legs out they spin slowly, and when they pull them in tight they spin more quickly. To analyze this situation, let's treat a figure skater's hands as point masses and ignore the rest of their body. (This allows us to work with analytical expressions for the moment of inertia.)
+
+A skater spins around on the tips of his blades while holding 5.0-kg weights in each hand. He begins with his arms straight out from his body and his hands 140 cm apart. While spinning at 2 rev/s, he pulls the weights in and holds them 50 cm apart against his shoulder. If we neglect the mass of the skater, how fast is he spinning when he pulls the weights in?
+
+[Insert diagram of skater from above.]
+\vspace{5cm}
+
+There are no external torques acting on the skater (we're ignoring the friction between the skates and the ice, and any air resistance). This means that the skater's rotation follows the law of conservation of angular momentum, and so
+$$I_i\omega_i=I_f\omega_f.$$
+For a point mass moving in a circle, the moment of inertia is $mr^2$. Since we have two point masses, $I=2mr^2$. Plugging this into the above equation yields
+$$2mr_i\ds^2\omega_i=2mr_f\ds^2\omega_f.$$
+We want to solve for $\omega_f$. So
+$$\omega_f=\frac{r_i\ds^2}{r_f\ds^2}\omega_i=16\mbox{ rev/s}=32\pi\mbox{ rad/s}.$$
+
+\hrulefill\\
+Example: Pick another example...
+
+\hrulefill\\
+Demos with rotating stand, and noting that if there are no external forces, then $L_i=L_f$.
+
+1. Rotate in place and stand rotates the other direction. Think about how to define the system.
+
+Initially, $L_i=0$, which means that $L_f=0$. If I rotate counterclockwise, the stand has to rotate the other direction.
+\vspace{5cm}
+
+2. Stand with rotating wheel, and cause it to rotate the other direction. Why does this happen? It again has to do with conservation of angular momentum. I change the direction that it rotates, so the system has to respond by rotating the opposite direction.
+\vspace{5cm}
+
+
+
+3. Rotating wheel that doesn't fall. Why not?
+
+Spin wheel really fast and hang it from a string. The angular momentum from the wheel's rotation points in the horizontal direction. Gravity creates a torque around the pivot point, which causes an incremental change in angular momentum.
+
+$$\tau=\frac{dL}{dt}\Rightarrow dL=\tau\,dt$$
+
+The magnitude of $L$ is fixed by $\omega$, so the torque from gravity only causes a change in the direction of $L$.
+\vspace{5cm}
+
+If $\omega$ is small
+\vspace{5cm}
+
+the momentum vector at some later time is just the momentum from gravity and the wheel falls... So $L$ must be quite a bit bigger than $dL$ for the wheel for this to work.
+
+
+\clearpage

@@ -1,0 +1,118 @@
+\section{Impulse and momentum}
+Objectives:
+\begin{itemize}
+\item Impulses
+\item Systems, internal forces, and external forces
+\item Conservation of momentum
+\end{itemize}
+
+\hrulefill
+
+\subsection{Impulse}
+We have already made a great deal of progress in being able to describe the motion of an object that is subjected to forces. However, there are certain things that are quite difficult to analyze (e.g., collisions) using the ideas that we have developed so far. To more easily understand complex interactions, we often use conservation laws such as the conservation of momentum and the conservation of energy. We will also see that that many of the problems that we've already addressed can be solved much more quickly using conservation of momentum or energy --- with the trade-off being that we have to use more abstract concepts.
+
+We will spend the next few weeks discussing these conservation laws.
+
+Demo \#1: Collision of two carts on a track.\\
+Demo \#2: Tennis ball and basketball falling; the tennis ball shoots up much higher than expected.
+
+In these two demos, we can describe and predict some of the motion of the objects using the Newton's laws and the concept of forces, but we can't predict the outcome of the collisions.
+
+What are the forces acting on an object during a collision? Let's make a sketch of the the force exerted by a wall as a ball bounces off of the wall.
+
+[Insert diagram. Force is zero, grows in magnitude, then returns back to zero as the ball leaves the wall.]
+\vspace{5cm}
+
+The exact shape of the force-time graph may be quite complicated and unknown. To simplify the situation, we will define the impulse, $\vec{J}$, such that 
+$$\vec{J}=\displaystyle\int_{t_i}^{t_f}\vec{F}\,dt=\vec{F}_{avg}\Delta{t}$$
+What this tells us is that a large force (think rapid acceleration) applied for a short time interval is equivalent to a small force (think slow acceleration) applied for a long time interval. Graphically, what is the impulse? How does it relate to the force-time graph? Its the area under the force curve.
+
+Impulse can be positive or negative because the average force can be positive or negative. What is it in our example of the ball hitting the wall?
+
+What we really want is a way to relate impulse to an object's change in velocity.
+
+$$\displaystyle\int_{t_i}^{t_f}\vec{F}\,dt=\displaystyle\int_{t_i}^{t_f}m\vec{a}\,dt=\displaystyle\int_{t_i}^{t_f}m\frac{d\vec{v}}{dt}\,dt=m(\vec{v}_f-\vec{v}_i)$$
+
+We're going to define momentum as
+$$\vec{p}=m\vec{v}$$
+so that
+$$m\vec v_f-m\vec v_i=\vec p_f-\vec p_i=\Delta{\vec p}$$
+
+Putting this altogether,
+$$\boxed{\vec J = \displaystyle\int_{t_i}^{t_f}\vec{F}\,dt = \Delta{\vec p}}$$
+
+This is referred to as the impulse-momentum theorem.
+
+An impulsive force (one that is ``short-lived'') changes an objects momentum. If the mass of the object is unaffected by the impulsive force, then the impulse changes the object's velocity.
+
+Finally, Newton's Second Law is actually best expressed using momentum.
+$$\ds \sum F = \frac{d\vec{p}}{dt}=\frac{d}{dt}(m\vec{v})$$
+
+For the case that mass is constant,
+$$\ds \sum F = m\frac{d\vec{v}}{dt}=m\vec a$$
+
+\subsubsection{Example \#1: Snowball hits the side of a building}
+A student throws a 120-g snowball at 7.5 m/s at the side of a building, where it hits and sticks. What is the average magnitude of the average force on the on the wall if the duration of the collision is 0.15 s?
+
+Given:\\
+$m=120\mbox{ g}$\\
+$v_i=7.5\mbox{ m/s}$\\
+$v_f=0\mbox{ m/s}$\\
+$\Delta{t}=0.15\mbox{ s}$\\
+
+Solve:
+$$J=F_{avg}\Delta{t}=\Delta{p}=m\Delta{v}$$
+$$F_{avg}=m\frac{\Delta{v}}{\Delta{t}}=6.0\mbox{ N}$$
+
+What would happen if we increased $\Delta{t}$? The force would decrease --- $\Delta{t}$ saves lives!
+
+\subsubsection{Example \#2: Tennis ball bounces off of a wall}
+A 60-g tennis ball with an initial speed of 32 m/s hits a wall and rebounds with the same speed (but in the opposite direction). The force history is known: the force rises linearly from 0 to $F_{max}$ in 2 ms, remains constant for 2 ms, and then decreases linearly to 0 in another 2 ms.
+
+[Insert diagram of force history.]
+\vspace{5cm}
+
+What is the value of $F_{max}$ during the collision?
+
+Hint: impulse is the area under the force curve. So this means that 
+$$J=F_{max}\cdot 4\mbox{ ms}=F_{max}\cdot 0.004\mbox{ s}$$
+
+We also know that the change in momentum is 
+$$\Delta{p}=m\Delta{v}=mv_f-mv_i=-mv_i-mv_i=-2mv_i$$
+
+$$J=\Delta{p}\Rightarrow F_{max}\cdot 0.004\mbox{ s}=-2mv_i\Rightarrow F_{max}=960\mbox{ N}$$
+Note: because $F_{max}$ is positive, according to the graph, then $v_i<0$.
+
+\subsection{Systems and conservation of momentum}
+Now let's analyze the collision of two objects in a little more detail. To do this, we need to define a few terms.
+
+\textit{System:} the collection of objects whose motion we want to analyze
+
+\textit{Environment:} all objects external to the system
+
+\textit{Internal forces:} forces between objects within the system
+
+\textit{External forces:} forces between the environment and the system
+
+First, let's analyze the case of two carts moving on a horizontal track. If the system consists of the carts, then the net external force on the system is zero. During the collision, the force from cart 1 acting on cart 2 is equal and opposite to the force from cart 2 acting on cart 1.
+$$\vec{F}_{12}=-\vec{F}_{21}$$
+This means that
+$$\vec{J}_{12}=\ds\int_{t_i}^{t_f}\vec{F}_{12}\,dt=-\ds\int_{t_i}^{t_f}\vec{F}_{21}\,dt=-\vec{J}_{21}$$
+And so
+$$\Delta \vec{p}_1 = -\Delta \vec{p}_2$$
+$$\Delta \vec{p}_1 + \Delta \vec{p}_2 = 0$$
+$$(\vec{p}_{1,f}+\vec{p}_{2,f})-(\vec{p}_{1,i}+\vec{p}_{2,i})=0$$
+
+Now we'll define the \textit{total momentum} as being the sum of the momentum of all objects in the system.
+$$\vec{P}=\sum_j \vec{p}_j$$
+Therefore,
+$$\vec{P}_f-\vec{P}_i=\Delta \vec{P} = 0$$
+
+This is the \textit{Law of Conservation of Momentum}. It states that the total momentum of the system is constant as long as there is no \textit{net external force} acting on the system. Note that the momentum of individual objects can change.
+
+What do we do if the net external force is not equal to zero???
+
+If the forces acting during the collision are much greater than the net external force, then we can use the \textit{impulse approximation}. During the short time interval of the collision, we can ignore the external forces.
+
+
+\clearpage

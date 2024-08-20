@@ -1,0 +1,115 @@
+\section{Types of forces, part II}
+Objectives:
+\begin{itemize}
+\item Frictional forces: static vs. kinematic
+\end{itemize}
+
+Last class:
+\begin{itemize}
+\item Gravitational force: $F_g=\frac{Gm_1m_2}{r^2}$, but use $F_g=mg$ near the Earth's surface.
+\item Normal force: $F_n>0$, points perpendicular to surface.
+\item Tensional force: $F_t$, points in direction of string. Massless string approximation allows us to assume that the tensional force is constant through the string.
+\end{itemize}
+
+\subsection{Frictional force}
+The normal force is very important when dealing with friction, which is known through experiments.
+
+Consider the case in which the block is resting on a ramp. This means that friction balances whatever forces would tend to cause acceleration (in this case, down the ramp). 
+
+[Insert diagram of boxing resting on a ramp.]
+\vspace{5cm}
+
+In our example, this would mean that
+$$\sum F_x=F_g\sin\theta-F_s=ma_x$$
+where $F_s$ refers to static friction. Summing the forces in the $y-$direction,
+$$\sum F_y=F_n-F_g\cos\theta=0\Rightarrow F_n=F_g\cos\theta \Rightarrow F_g=\frac{F_n}{\cos\theta}$$
+Plugging this into the $x-$equation,
+$$F_n\frac{\sin\theta}{\cos\theta}-F_s=F_n\tan\theta-F_s=ma_x$$
+
+The frictional force (for static friction) will adjust its magnitude to hold the block in place until a certain threshold is reached will be in static equilibrium until a certain threshold is exceeded. For small angles, $F_s=F_n\tan\theta$ and therefore $a_x=0$. When the angle becomes too large, the box starts to slide. Thus, the maximum force of static friction is
+$$\boxed{\max F_s=\mu_s F_n}$$
+where $\mu_s=\tan\left(\theta_{max}\right)$ is the coefficient of static friction. It is a system property.
+
+What if the box starts sliding?
+
+[Insert diagram.]
+\vspace{5cm}
+
+We can solve for the frictional force.
+
+Summing the forces in the $y$-direction:
+$$\sum F_y = F_n-F_g\cos\theta=ma_y=0$$
+$$F_n=F_g\cos\theta$$
+
+Summing the forces in the $x$-direction:
+$$\sum F_x=F_g\sin\theta-F_k=ma_x\neq 0$$
+$$F_k=m(a_x-g\sin\theta)$$
+
+This means that we can measure $F_n$ and $F_k$ experimentally. If we do lots of experiments, we find that $F_k$ is proportional to $F_n$.
+
+[Insert diagram of $F_k$ vs. $F_n$; plots as straight line with $y-$intercept of 0.]
+\vspace{5cm}
+
+This means that
+$$\boxed{ F_k = \mu_k F_n}$$
+where $\mu_k$ is the coefficient of kinetic friction. It is a constant for a given system (combination of surfaces) and is determined experimentally. This is just a model for friction; its actually quite a bit more complicated and is still an active area of research. People that study earthquakes worry about friction a lot!
+
+What makes something have a high coefficient of friction?
+
+Coefficients of friction are generally less than 1, but don't have to be.
+
+If you want to solve a problem in which a box isn't sliding initially, do the following:
+\begin{enumerate}
+\item Calculate the force that will tend to accelerate the box.
+\item Does this force exceed $\max F_s$? If no, then immediately have the frictional force $F_s$. If yes, then the box will start sliding and you will have frictional force $F_k=\mu_k F_n$.
+\end{enumerate}
+In general, $\mu_s>\mu_k$. In other words, its easier to keep an object moving than it is to get it moving in the first place.
+
+\subsection{Example problems}
+\subsubsection{Example \#1}
+You pull a box with a rope across a horizontal surface. The box is initially at rest, but you are able to overcome the maximum static friction. Plot the frictional force as a function of time. Let $m=100\mbox{ kg}$, $\mu_s=0.3$, and $\mu_k=0.2$.
+
+[Insert diagram.]
+\vspace{5cm}
+
+Before and after the box starts moving,
+$$\sum F_y = F_n-F_g=0\Rightarrow F_n=F_g=mg$$
+
+Before the box starts moving,
+$$\sum F_x=F_t-F_s=0\Rightarrow F_s=F_t$$
+
+Let's assume that we linearly increase $F_t$ until the box starts moving. This occurs once $F_t\geq \max F_s=\mu_s F_n=\mu_s mg=0.3\times 100\mbox{ kg}\times 9.81\mbox{ m/s}^2\approx 300\mbox{ N}$. Once the box starts moving, we switch to kinetic friction: $F_k=\mu_k mg=0.2\times 100\mbox{ kg}\times 9.81\mbox{ m/s}^2\approx 200\mbox{ N}$.
+
+\clearpage
+[Insert plot of results.]
+\vspace{5cm}
+
+\subsubsection{Example \#2}
+Demo to calculate the coefficient of friction of a block sliding over the table.
+
+What do we need?
+
+Forces on sliding block:
+$$\sum F_x=F_t-F_k=m_1a_x$$
+$$F_k=F_t-m_1a_x$$
+
+$$\sum F_y=F_n-F_g=0\Rightarrow F_n=F_g$$
+
+Forces on falling block:
+$$\sum F_y=F_t-F_g=m_2a_y$$
+$$F_t=m_2a_y+m_2g$$
+
+$F_t$ on the falling block is the same as $F_t$ on the sliding block. We have an additional constraint, which is that $a_x=-a_y=a$.
+
+So this means that
+$$F_k=m_2a_y+m_2g-m_1a_x=m_2g-(m_1+m_2)a=\mu_kF_n=\mu_km_1g$$
+$$\mu_k=\frac{m_2g-(m_1+m_2)a}{m_1g}$$
+
+We need to measure the acceleration.
+$$\Delta{x}=v_i\Delta{t}+\frac{1}{2}a\Delta{t}^2\Rightarrow a=\frac{2\Delta{x}}{\Delta{t}^2}$$
+
+We can just as easily measure the vertical displacement.
+
+
+
+\clearpage

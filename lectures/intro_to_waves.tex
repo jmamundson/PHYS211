@@ -1,0 +1,104 @@
+\section{Introduction to waves}
+Objectives:
+\begin{itemize}
+\item Types of waves
+\item Wave model
+\end{itemize}
+
+\hrulefill
+
+\subsection{Types of waves}
+Waves are a type of oscillation. There are many types of waves:
+\begin{itemize}
+\item sound waves -- gas
+\item elastic waves -- solid
+\item water waves -- liquid
+\item electromagnetic waves -- don't require a medium...
+\end{itemize}
+
+These can be categorized as two different types of waves.\\
+(1) Mechanical waves:
+\begin{itemize}
+\item Motion of a substance caused by a disturbance to the substance. Mechanical waves include sound, elastic, and water waves.
+\item Wave speed, $v$, depends on material properties.
+\item No net motion of material. Waves transmit energy, not particles. (Demonstrate with a slinky.)
+\end{itemize}
+
+(2) Electromagnetic waves:
+\begin{itemize}
+\item Waves of an electromagnetic field. Includes visible light, radio waves, x-rays, ...
+\item Not due to the motion of a substance. EM waves can travel through vacuums!
+\end{itemize}
+
+The details of wave behavior differ, but we can discuss basic properties of waves with a ``wave model''.
+
+The most basic waves are transverse (wave on a string) or longitudinal (sound wave). For transverse waves, the particle motion is perpendicular to the wave direction, whereas for longitudinal waves the particle motion is parallel to the wave direction.
+
+Waves can travel as a single pulse or a series of pulses. When waves are produced by a simple harmonic oscillator, the waves are sinusoidal.
+
+\subsection{One-dimensional waves}
+We will focus on describing waves that travel in one direction. Waves are a function of two variables: position and time. We need a function that describes when and where a wave is located. We'll start graphically, by considering simple wave pulses.
+\clearpage
+Snapshot graphs show what a wave looks like at any instant in time.
+\vspace{8cm}
+
+History graphs show the history of a particular point in the medium.
+\vspace{6cm}
+\clearpage
+\subsubsection{Example \#1: Sketch a history graph}
+\vspace{8cm}
+
+\subsubsection{Example \#2: Sketch a snapshot graph}
+\vspace{8cm}
+
+\clearpage
+\subsection{Wave model}
+[Insert diagram of a sinusoidal wave; show how its position changes at some later time.]
+\vspace{5cm}
+
+We can describe the wave displacement, $y$, by
+
+$$y(x,t)=A\sin\left(2\pi\frac{x}{\lambda}\pm 2\pi\frac{t}{T}\right)$$
+
+The displacement depends on both location and time. $x/\lambda$ describes the wave shape. The $+$ indicates that the wave is travelling to the left, the $-$ indicates that it is travelling to the right. Note that the wave model uses three dimensions ($x$, $y$, and $t$)... Also note that this is written in terms of a transverse wave, but it also applies to longitudinal waves. The vertical displacement can just be replaced with a horizontal displacement relative to an object's initial position.
+
+Let's analyze this equation in a bit of detail. 
+
+\subsubsection{Oscillations of fixed points}
+First, consider fixed points in space, e.g., $x=0$. Then
+$$y(0,t)=A\sin\left(\pm 2\pi\frac{t}{T}\right)$$
+
+Each particle in the waves oscillates sinusoidally with amplitude $A$.
+
+What if $x=\lambda/2$?
+$$y\left(\frac{\lambda}{2},t\right)=A\sin\left(2\pi\frac{\lambda/2}{\lambda}\pm 2\pi\frac{t}{T}\right)=A\sin\left(\pi\pm 2\pi\frac{t}{T}\right)$$
+The $\pi$ at the beginning is just a ``phase'' shift. To see how, let's recall an identity from trigonometry:
+$$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$$
+Here, $\alpha=\pi$; $\sin\pi=-1$ and $\sin\pi=0$. This means that
+$$y\left(\frac{\lambda}{2},t\right)=-A\sin\left(\pm 2\pi\frac{t}{T}\right)$$
+which is what we would expect. If we looked at $x=\lambda$, we would find that 
+$$y(\lambda,t)=A\sin\left(\pm 2\pi\frac{t}{T}\right)$$
+which is the same as for $x=0$. This is good!
+
+\subsubsection{Snapshots in time}
+Now let's take a look at snapshots in time for a wave that is travelling to the right (use negative sign in the equation). If $t=0$, this means that
+$$y(x,0)=A\sin\left(2\pi\frac{x}{\lambda}\right)$$
+When $t=T/4$, this gives
+$$y\left(x,\frac{T}{4}\right)=A\sin\left(2\pi\frac{x}{\lambda}-\frac{\pi}{2}\right),$$
+which represents a 90$^\circ$ phase shift to the right. To see this, we can again use the angle sum and difference identity. In this case, $\beta=\pi/2$, so $\sin\beta=0$ and $\sin\beta=1$. This means that
+$$y\left(x,\frac{T}{4}\right)=A\sin\left(2\pi\frac{x}{\lambda}\right)$$
+
+[Insert diagram.]
+\vspace{5cm}
+
+\subsubsection{Wave speed}
+The wave model characterizes the speed at which a wave propagates to the left or right.
+$$v=\frac{\Delta{x}}{\Delta{t}}=\frac{\lambda}{T}\Rightarrow \lambda=vT$$
+Plugging this into the wave model gives
+$$y(x,t)=A\sin\left(2\pi\frac{x}{vT}\pm 2\pi\frac{t}{T}\right)=A\sin\left(2\pi\frac{1}{T}\left(\frac{x}{v}\pm t\right)\right)=A\sin\left(2\pi f\left(\frac{x}{v}\pm t\right)\right)$$
+
+\clearpage
+\subsubsection{Examples: Find wave properties}
+For the waves shown below, find the (i) wavelength, (ii) period, (iii) wave speed, and (iv) phase constant.
+
+\clearpage

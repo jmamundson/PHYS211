@@ -1,0 +1,126 @@
+\section{Thermodynamics, Part I}
+Objectives:
+\begin{itemize}
+\item 1$^\mathrm{st}$ and 2$^\mathrm{nd}$ Laws of Thermodynamics
+\item Specific heat and latent heat
+\end{itemize}
+
+\hrulefill
+
+\subsection{1$^\mathrm{st}$ Law of Thermodynamics}
+The last few lectures we have discussed the idea of energy and work, and we've focused primarily on mechanical energy. Recall the work-energy theorem:
+$$W=\Delta{E}=\Delta{K}+\Delta{U_g}+\Delta{E_{th}}+...$$
+But what is thermal energy? Its essentially kinetic energy of vibrating molecules. For example, for friction, we saw that
+$$\Delta{E_{th}}=F_k\Delta{x}$$
+As the thermal energy increases, more molecules vibrate and so the temperature of the system increases.
+
+The thermal energy can also change if the molecular vibrations cause molecules outside of the system to vibrate --- this is a transfer of kinetic energy at the molecular scale, and it only happens when there is a temperature difference between the system and the environment. Thermal energy that is exchanged between a system and the environment due to a \underline{temperature difference} is referred to as \textit{heat}.
+
+How is heat transferred between two objects? In general terms... Take two objects at different temperatures. This means that there molecules are vibrating at different rates. Place the objects next two each, and there are essentially millions of collisions occurring between the objects. Elastic collisions transfer energy from the warm object to the cold object until the kinetic energy of the molecules is the same in both objects.
+
+[Insert diagram.]
+\vspace{5cm}
+
+So let's modify the work-energy equation to account for heat.
+$$W+Q=\Delta{E},$$
+where $Q$ is the heat exchanged between the system and the environment. If $W,Q>0$, energy goes into the system. If $Q,W<0$, energy leaves the system. Work and heat are not state variables, which means that they don't describe the state of a system. It doesn't make sense to talk about changes in work or changes in heat.  This equation is the \textit{First Law of Thermodynamics}. It essentially states that energy can not be created or destroyed. \textbf{Observing changes in a system tells us nothing about the processes that caused energy to enter or leave the system.}
+
+Consider a system in which $\Delta{E}=\Delta{E_{th}}$ (no other forms of energy are changing). Let's say you pump air into a tire. What happens?
+\begin{itemize}
+\item You're doing work ($W>0$), so $\Delta{E_{th}}>0$ and the temperature increases (due to an increase in air pressure).
+\item Eventually heat is lost to the environment, $\Delta{E_{th}}<0$, and so $Q<0$.
+\end{itemize}
+
+\subsubsection{Applications: heat pumps and heat engines}
+Let's now consider a couple of common applications of the first law of thermodynamics.
+
+(1) Heat generally flows from warm reservoirs to cold reservoirs. Heat pumps work against this natural flow --- refrigerators use heat pumps. In a really simple model of a refrigerator, you have a cold reservoir (where you store food), a hot reservoir (the room), and a heat pump that runs on electricity. If we think of the heat pump as being the system, there is work being done on the system by electricity, and heat flowing into and out of the system.
+$$W_{in}+Q_c+Q_h=\Delta{E}$$
+If the energy of the heat pump is constant, then
+$$W_{in}+Q_c+Q_h=0$$
+and so
+$$Q_h=W_{in}+Q_c$$
+This tells us that more heat flows out of the heat pump than flows in.
+
+[Insert diagram.]
+\vspace{5cm}
+
+(2) Heat engines are basically the opposite of heat pumps. They follow the natural flow of heat --- and take advantage of it to do work.
+$$Q_h-Q_c-W_{out}=0$$
+$$W_{out}=Q_h-Q_c$$
+The right hand side of this equation depends on temperature differences (we'll get to that later). So the larger the temperature difference, the more work that the engine can do.
+
+The efficiency of an engine is
+$$e=\frac{\mbox{what you get}}{\mbox{what you paid}}=\frac{Q_h-Q_c}{Q_h}$$
+From the second law of thermodynamics, which I'll discuss in a minute,
+$$e=\frac{T_h-T_c}{T_h}=1-\frac{T_c}{T_h}$$.
+
+This is the maximum efficiency of an engine. Note that (1) $e<1$ and (2) $e$ increases as the temperature difference increases.
+
+[Insert diagram.]
+\vspace{5cm}
+
+\subsection{2$^\mathrm{nd}$ Law of Thermodynamics}
+We already saw that heat naturally flows from hot to cold.
+
+[Insert diagram. Molecules in a hot object have higher kinetic energy than molecules in a cold object.]
+\vspace{5cm}
+
+Hot molecules are more likely to increase the energy/speed of the cold molecules... You can see this with conservation of momentum and energy of collisions. Sometimes its easier to think of this in terms of two gases that are initially separated. The hot molecules move faster and are therefore more likely to cross the initial boundary and warm up other molecules.
+
+Its possible, but highly unlikely, that the system would evolve the other way (that the cold molecules would transfer energy to the warm molecules and cause them to vibrate more quickly). We use the term \textit{entropy} to describe this unlikeliness.
+
+The \textit{Second Law of Thermodynamics} tells us that the entropy of an \textit{isolated system} never decreases. (The Second Law can be shown empirically, or derived from statistical mechanics...) As a result, order goes to disorder and kinetic and potential energies are ``lost'' to thermal energy.
+
+This explains why engines can't be 100\% efficient. If all incoming heat is converted to work, the entropy of the system would decrease.
+
+\subsection{Specific heat and latent heat}
+What happens when heat is transferred to or away from an object?
+
+There are basically two possibilities. The object changes temperature or it changes phase (e.g., from a solid to a liquid).
+
+(1) The \textbf{specific heat}, $c$, is the amount of heat required to raise 1 kg of a substance by 1 K. So the heat required to change the temperature of an object by $\Delta{T}$ is
+$$\boxed{Q=mc\Delta{T}}$$
+
+Specific heat is a material property and can vary widely. For mercury $c=140$ J/(kg K), whereas for water $c=4190$ J/(kg K). It actually takes a lot of heat to warm up/cool down water. This is important for biology (e.g., ocean temperatures are fairly constant).
+
+This equation also tells us that it takes more heat to warm up/cool down large objects. This is why large animals can survive harsh winters more easily than small animals.
+
+(Note that the specific heat is often treated as a constant, but it doesn't have to be. For seawater, it depends on salinity and temperature.)
+\bigskip
+
+(2) \textbf{Latent heat} or heat of transformation is the amount of heat needed to change the phase of a substance. Essentially, when a material changes phase, heat goes into breaking bonds.
+
+When a material changes from solid to liquid, or vice-versa, we refer to the latent heat of fusion, $L_f$.\\
+
+When a material changes from liquid to gas, or vice-versa, we refer to the latent heat of vaporization, $L_v$.\\
+
+$L_f$ and $L_v$ are material properties and have units of J/kg.
+
+The heat required to change phase is simply the mass times the latent heat.
+$$Q_f=\pm mL_f$$
+$$Q_v=\pm mL_v$$
+
+$+\Rightarrow$ heat must be added to melt or vaporize.
+
+$-\Rightarrow$ heat must be removed during freezing or condensing.
+
+Note that $L_v>>L_f$. Melting only requires breaking enough bonds than an object can start to flow. Vaporization requires enough energy to break all bonds and send molecules flying through the air.
+
+Maybe not surprisingly, water also has really high $L_f$ and $L_v$, which is important for biology. It doesn't easily freeze or evaporate.
+
+\subsubsection{Example: boiling mercury}
+Example: How much heat is need to change 20 g of mercury at 20$^\circ$C to vapor at its boiling point?
+
+Given:\\
+$c=140$ J/(kg K)\\
+$T_m=357^\circ$C\\
+$L_v=2.96\times 10^5$ J/kg\\
+
+(a) $Q_T=mc\Delta{T}=943$ J
+
+(b) $Q_f=mL_f=5920$ J
+
+(c) $Q_{total}=Q_T+Q_f=6863$ J
+
+\clearpage

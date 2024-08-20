@@ -1,0 +1,97 @@
+\section{Wave frequency, Doppler effect, and shock waves}
+Objectives:
+\begin{itemize}
+\item Relationship between wave speed and frequency
+\item Velocity of various waves
+\item Doppler effect
+\item Wave superposition (?)
+\end{itemize}
+
+\hrulefill
+Last class:
+\begin{itemize}
+\item Wave model: $\Delta{y}(x,t)=A\sin\left(2\pi\left(\frac{x}{\lambda}\pm\frac{t}{T}\right)+\phi\right)$
+\item Note: wave model is the solution to the ``wave equation'', a partial differential equation that is derived by summing the forces on various media
+\item Wave speed: $v=\frac{\lambda}{T}=\lambda f$
+\item The wave model describes how the displacement caused by a wave varies in time and space. It does not determine what controls the the wave speed, frequency, wavelength, and amplitude of specific types of waves. Those are things that are unique to a system.
+\end{itemize}
+
+
+%hertz wave machine
+
+\subsection{Wave speed}
+For some systems, the wave speed is independent of frequency. 
+
+\subsubsection{Wave on a string}
+From a force balance analysis:
+$$v=\sqrt{\frac{F_t}{\mu}},$$
+where $F_t$ is the tensional force and $\mu$ is the linear density (mass / length). Waves travel quickly through taut strings that don't have much mass.
+
+\subsubsection{Wave travelling through an ideal gas}
+From thermodynamics and analysis of ideal gas law:
+$$v_{sound}=\sqrt{\frac{\gamma RT}{M}}$$
+where $\gamma=c_p/c_v$ is the adiabatic index and is often close to one, $R=8.31\mbox{ J/(mol}\cdot\mbox{K)}$ is the gas constant, $T$ is temperature in Kelvin, and $M$ is the molar mass (kg/mol of the gas). The speed of sound basically depends on temperature.
+
+For non-ideal gases, $v_{sound}$ has a slight dependency on density, and therefore pressure, but we won't worry about that.
+
+\subsubsection{Electromagnetic waves}
+Predicted by Maxwell's equations for electromagnetism, and has not been proven otherwise. 
+In a vacuum,
+$$v=c\approx 3\times 10^8\mbox{ m/s}=\mbox{constant}$$
+
+In other materials, 
+$$v=\frac{c}{n},$$
+where $n\geq 1$ is the index of refraction. It essentially has to do with interactions between the electromagnetic wave and electrons in the material.
+
+The frequency does not change as a wave passes from one material to another, so its wavelength must change.
+Because $v=\lambda/T=\lambda f$, we can write
+$$\frac{c}{n}=\lambda f$$
+$$\lambda_{\rm mat} = \frac{c}{nf_{\rm mat}}=\frac{c}{nf_{\rm vac}}=\frac{\lambda_{\rm vac}f_{\rm vac}}{nf_{\rm vac}}=\frac{\lambda_{\rm vac}}{n}$$
+
+[Sketch what happens as a wave passes from a vacuum into a material.]
+\vspace{3cm}
+
+
+\subsubsection{Demo: sound chirp}
+The point of all this is that for these types of waves, if you know the frequency or period you can calculate the wavelength, and vice-versa.
+
+high frequency waves = short wavelength = high pitch (sound) or color blue (EM waves)
+
+low frequency waves = long wavelength = low pitch (sound) or color red (EM waves)
+
+Demo: sound chirp with audacity
+
+The human ear can detect sounds between about 20 Hz and 20 kHz. Frequencies less than 20 Hz are referred to as infrasound. These waves travel large distances, and are used for detecting nuclear explosions, studying volcanoes and earthquakes, ... Frequencies greater than 20 kHz are referred to as ultrasound. Their short wavelengths make them useful for imaging soft tissue/fetuses.
+
+
+\subsection{Doppler effect}
+Many wave sources emit spherical waves (this is difficult to visualize). The sound that is heard depends on whether or not the source is moving. This is referred to as the Doppler Effect.
+
+\clearpage
+[Draw diagram of stationary source and equally-spaced spherical waves.]
+\vspace{5cm}
+
+
+[Draw diagram of moving source, showing that frequency depends on position relative to the source.]
+\vspace{5cm}
+
+If the wave is travelling to the right at speed $v_o$, and the source is travelling at $v_s$, the observed wavelength is 
+$$\lambda=v_oT-v_sT=(v_o-v_s)T_o=\frac{v_o-v_s}{f_o}.$$
+But you perceive the wavelength as 
+$$\lambda=\frac{v_o}{f}$$
+Setting these equal gives
+$$\frac{v_o}{f}=\frac{v_o-v_s}{f_o}$$
+Taking the inverse
+$$\frac{f}{v_o}=\frac{f_o}{v_o-v_s}$$
+Multiplying by $v_o$ gives
+$$\boxed{f=\frac{f_o}{1-v_s/v_o}}$$
+
+This is for an object moving toward you. For an object moving away from you, the result is
+$$\boxed{f=\frac{f_o}{1+v_s/v_o}}$$
+
+If the object is moving toward you and $v_s=v_0$, the equation blows up. This is when you get a sonic boom. If $v_s>v_0$ you get a negative frequency, which doesn't make sense.
+
+\subsubsection{Demo: videos of Doppler effect and shock waves; whirling tuning fork}
+
+
+\clearpage

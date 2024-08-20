@@ -1,0 +1,123 @@
+\section{Gravitational acceleration and projectile motion}
+Objectives:
+\begin{enumerate}
+\item Motion due to gravitational acceleration
+\item Vector descriptions of 2- and 3-dimensional motion
+\item Kinematics of projectile motion
+\end{enumerate}
+\hrulefill
+
+Last class I derived the kinematic equations for constant acceleration:
+$$\Delta{v}=a\Delta{t}$$
+$$\Delta{x}=v_i\Delta{t}+\frac{1}{2}a\Delta{t}\ds^2$$
+$$v_f\ds^2-v_i\ds^2=2a\Delta{x}$$
+
+\subsection{Gravitational acceleration: A special case of constant acceleration}
+Free fall is an important example of motion under constant acceleration. Near the surface of the Earth, objects accelerate downward at about $g=9.81\mbox{ m/s}^2$ (ignoring the effects of air resistance).
+
+\begin{enumerate}
+\item $g>0$ (always positive); it is a \textit{magnitude}
+\item If the coordinate system points upward, then $a=-g$; be careful to take into account the orientation of the coordinate system!
+\item $g=9.81\mbox{ m/s}^2$ near the Earth's surface
+\item Use kinematic equations for constant acceleration
+\end{enumerate}
+
+Demonstrations that gravitational acceleration is constant for all objects near the Earth's surface:
+\begin{itemize}
+\item Objects fall at roughly the same rate.
+\item Tie washers to string and drop, demonstrating constant gravitational acceleration. Time interval from one washer hitting the ground to the next is constant; I calculated the spacing for the washers based on the assumption of constant acceleration. If washers are evenly spaced, the ``clicks'' increase in frequency.
+
+Calculated spacing using based on:
+$$v_i=0$$
+$$a=-g=-9.81\mbox{ m/s}^2$$
+$$\Delta{t} = 0.1\mbox{ s}, 0.2\mbox{ s},0.3 \mbox{ s},\dots$$
+Replace $\Delta{x}$ with $\Delta{y}$. The spacing from the first washer to any of the subsequent washers is equal to $-\Delta{y}$, or in other words, the distance that the washers fall.
+$$\Delta{y}=\frac{1}{2}g\Delta{t}^2=0.05\mbox{ m}, 0.20\mbox{ m}, 0.44\mbox{ m},\dots$$
+\end{itemize}
+
+Example:
+A ball is shot vertically from the ground at a speed of 50 m/s. (1) What elevation will the ball reach? (2) How long will it take the ball to hit the ground? (3) What will its speed be when it hits the ground?
+
+Given:\\
+$v_i=50\mbox{ m/s}$\\
+$x_i=0\mbox{ m}$\\
+$a=-g=-9.81\mbox{ m/s}^2$
+
+(1) The ball will have a speed of 0 m/s when it reaches its peak. Therefore,
+$$v_{\mbox{peak}}\displaystyle^2-v_i^2=2a\Delta{y}$$
+$$\Delta{y}=\frac{-v_i\displaystyle^2}{2a}=127\mbox{ m}$$
+
+(2) To calculate the time to the peak, we'll again make use of the fact that $v_{\mbox{peak}}=0$.
+$$a=\frac{\Delta{v}}{\Delta{t}}$$
+$$\Delta{t}=\frac{\Delta{v}}{a}=\frac{v_{\mbox{peak}}-v_i}{a}=\frac{-v_i}{a}=5.1\mbox{ s}$$
+
+(3)To calculate the speed when it hits the ground, we can use the kinematic equation that doesn't include $\Delta{t}$. That way we don't have to calculate how long it takes the ball to travel up and down.
+$$v_f\displaystyle^2-v_i\displaystyle^2=2a\Delta{y}$$
+Since $\Delta{y}=0$,
+$$v_f\displaystyle^2=v_i\displaystyle^2$$
+and so
+$$v_f=\pm v_i.$$
+The direction that the ball is travelling has changed, so 
+$$v_f=-v_i=50\mbox{ m/s}.$$
+
+
+\subsection{Motion in 2-dimensions}
+We have mostly been using $x$ to define our coordinate system. The coordinate system can point in any convenient direction, and sometimes we will use $y$ or $z$ to indicate a distance along an axis.
+
+We will often want to describe motion in 2-dimensions, and sometimes in 3-dimensions. In these instances we will need to use \textit{vectors}, and we will need to make use of $y$ and/or $z$. It is pretty straightforward to generalize what we have already learned to describe motion in 2- and 3-dimensions. Before continuing, we also need to remember what is meant by a vector.
+
+Vector: a geometric quantity having both magnitude \textit{and} direction.
+
+\clearpage
+[Insert diagram of a vector.]
+\vspace{5cm}
+
+\begin{table}[h]
+\begin{tabular}{lll}
+\textbf{Kinematic variable} & \textbf{1D (scalar quantity)} & \textbf{2D (vector quantity)}\\
+\hline
+position & $x$ & $\vec{x}=\langle{x,y}\rangle$\\
+displacement & $\Delta{x}$ or $dx$ & $\Delta\vec{x}=\langle{\Delta{x},\Delta{y}}\rangle$ or $d\vec{x}=\langle{dx,dy}\rangle$\\
+velocity & $v=\frac{\Delta{x}}{\Delta{t}}$ or $v=\frac{dx}{dt}$ & $\vec{v}=\langle{v_x,v_y}\rangle=\langle{\frac{\Delta{x}}{\Delta{t}},\frac{\Delta{y}}{\Delta{t}}}\rangle$ or $\vec{v}=\langle{\frac{dx}{dt},\frac{dy}{dt}}\rangle$\\
+acceleration & $a=\frac{\Delta{v}}{\Delta{t}}$ or $a=\frac{dv}{dt}$ & $\vec{a}=\langle{a_x,a_y}\rangle=\langle{\frac{\Delta{v_x}}{\Delta{t}},\frac{\Delta{v_y}}{\Delta{t}}}\rangle$ or $\vec{a}=\langle{\frac{dv_x}{dt},\frac{dv_y}{dt}}\rangle$\\
+\hline
+\end{tabular}
+\end{table}
+
+The kinematic equations for constant acceleration can also be written, and manipulated, in vector notation.
+\begin{table}[h]
+\begin{tabular}{ll}
+\textbf{Motion in $x$-direction}\hspace{3cm} & \textbf{Motion in $y$-direction}\\
+\hline
+$\Delta{v_x}=a_x\Delta{t}$ & $\Delta{v_y}=a_y\Delta{t}$\\
+$\Delta{x}=v_{x,i}\Delta{t}+\frac{1}{2}a_x\Delta{t}\ds^2$ & $\Delta{y}=v_{y,i}\Delta{t}+\frac{1}{2}a_y\Delta{t}\ds^2$\\
+$v_{x,f}\ds^2-v_{x,i}\ds^2=2a_x\Delta{x}$ & $v_{y,f}\ds^2-v_{y,i}\ds^2=2a_y\Delta{y}$\\
+\hline
+\end{tabular}
+\end{table}
+
+We really haven't added all that much complexity here. All we're saying is that the equations that we developed for 1-dimensional motion can be generalized to describe motion in 2-dimensions. We can do this as long as the $x$- and $y$-axes are orthogonal/perpendicular to each other. For example, if an object moves in the $x$-direction, its $y$-position doesn't necessarily change at the same time. This doesn't mean that motion in the $x$-direction is independent of motion in the $y$-direction. 
+
+[Insert diagram showing displacement vector. Should have $\vec{x_1}$ and $\vec{x_2}$]
+\vspace{5cm}
+
+Initial position: $\vec{x}_i=\langle{x_i,y_i}\rangle$\\
+Magnitude: $\vec{x}_i=|\vec{x}_i|=\sqrt{x_i\ds^2+y_i\ds^2}$\\
+Angle: $\tan\theta_i=y_i/x_i$\\
+If angle is known: $x_i=\cos\theta_i$ and $y_i=\sin\theta_i$\\
+
+After some time, the object moves to position $\vec{x}_f$. The displacement is $$\Delta\vec{x}=\vec{x}_f-\vec{x}_i=\langle{x_f,y_f}\rangle-\langle{x_i,y_i}\rangle=\langle{x_f-x_i,y_f-y_i}\rangle.$$ 
+\textbf{You have to add or subtract vector components!} If this is confusing, ask questions and read your textbook. We will use vectors throughout the semester.
+
+You can also add vectors graphically. Slide the tail of one vector to the tip of the other vector. For subtraction, the easiest way is to recall that subtraction is the same as adding a negative number. This applies also for vectors.
+
+[Insert diagrams showing addition and subtraction of vectors.]
+\vspace{5cm}
+
+\hrulefill
+\subsection{Projectile motion}
+Projectile motion is a common example of motion in two dimensions, and is one in which we can treat the motion in the $x-$ and $y-$directions independently.
+
+[Insert demo of falling marbles to show that vertical motion is independent of horizontal motion.]
+
+\clearpage

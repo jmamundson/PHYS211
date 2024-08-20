@@ -1,0 +1,140 @@
+\section{Standing waves and music}
+Objectives:
+\begin{itemize}
+\item Wave superposition
+\item Beats
+\item Standing waves
+\item Music
+\end{itemize}
+
+\hrulefill
+
+\subsection{Wave superposition}
+Waves are unique in that they can pass through each other. When they do so, they may constructively and destructively interfere. Mathematically, we can write this as
+$$y(x,t)=y_1(x,t)+y_2(x,t)$$
+where
+$$y_i(x,t)=A_i\sin\left(2\pi\frac{x}{\lambda_i}\pm 2\pi\frac{t}{T_i}+\phi\right)$$
+
+We can replace $\lambda_i$ in each term with
+$$\lambda_i=vT_i,$$
+where, if we're dealing with sound, $v=343\mbox{ m/s}$.
+
+$$y(x,t)=A_1\cos\left(2\pi\left(\frac{x}{vT_1}-\frac{t}{T_1}\right)\right) + A_2\cos\left(2\pi\left(\frac{x}{vT_2}-\frac{t}{T_2}\right)\right) + A_3\cos\left(2\pi\left(\frac{x}{vT_3}-\frac{t}{T_3}\right)\right)+...$$
+
+Now replacing $1/T_i=f_i$, and factoring out $f_i$, this gives
+$$y(x,t)=A_1\cos\left(2\pi f_1\left(\frac{x}{v}-t\right)\right) + A_2\cos\left(2\pi f_2\left(\frac{x}{v}-t\right)\right) + A_3\cos\left(2\pi f_3\left(\frac{x}{v}-t\right)\right)+...$$
+
+Each of these terms has a unique amplitude, $A$, and frequency, $f$. One way to visualize this is to plot a power spectrum (which you did in lab).
+
+[Insert diagram of power spectrum.]
+\vspace{5cm}
+
+\clearpage
+[Insert diagram showing what the waves indicated in the power spectrum actually look like.]
+\vspace{5cm}
+
+
+\subsection{Beats}
+One interesting consequence of wave superposition is that you can create beats with two waves of similar frequency.
+
+[Insert diagram of beats -- sometimes constructive interference, sometimes destructive interference.]
+\vspace{5cm}
+
+Add them together and get quiet and loud periods.
+
+[Insert diagram showing resultant wave.]
+\vspace{5cm}
+
+You still have constant sound -- this isn't like the beating of a drum.
+
+No need to show this, but
+$$A_1\sin(2\pi f_1 t)+A_2\sin(2\pi f_2 t)=2A\sin\left(2\pi\frac{f_1+f_2}{2}t\right)\cos\left(2\pi\frac{f_1-f_2}{2}t\right)$$
+If $f_1$ and $f_2$ are close, then the frequency of the cosine is often too low to be perceived as pitch. Therefore the pitch that you hear is determined by the frequency of the sine function: $1/2(f_1+f_2)\approx f_1$. And the frequency of volume modulation is approximately two times the frequency of the modulating cosine, or
+$$f_{beat}=|f_1-f_2|$$
+The reason the beat frequency isn't divided by two is that the modulating cosine has a value of 0 twice per cycle.
+
+Musicians use beats to tune their instruments. You tune the instrument by changing its frequency so as to remove any beats from being produced.
+
+
+\subsection{Standing waves}
+An equation describing standing waves, i.e., those in which the peaks don't travel, can be found by using wave superposition.
+
+Places with no displacement are called nodes, and places of maximum displacement are referred to as anti-nodes. Standing waves can be thought of as two waves of equal frequency, amplitude, and speed, travelling in opposite directions. Using wave superposition, we can show that the equation for a standing wave on a string that is fixed on both ends is:
+
+$$y(x,t)=A\sin\left(2\pi\frac{x}{\lambda}-2\pi\frac{t}{T}\right)- A\sin\left(2\pi\frac{x}{\lambda}+2\pi\frac{t}{T}\right)$$
+
+A trig identity that you may or may not know:
+$$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$$
+
+Putting this together yields:
+$$y(x,t)=A\sin\left(2\pi\frac{x}{\lambda}\right)\cos\left(2\pi\frac{t}{T}\right)$$
+
+The sine describes the how the oscillation varies in space, and the cosine describes how it varies in time. Let’s think about it in terms of the first harmonic. The displacement is always zero at $x = 0$ and $x = L = \lambda/2$, and the displacement is always largest at $x = L/2 = \lambda/4$.
+
+ Only certain wavelengths or frequencies can produce standing waves. For strings that are fixed on both ends and for open-open tubes, possible solutions are
+  $$\lambda_m=\frac{2L}{m}$$
+  where $m=1,2,3,\dots$ are the harmonics. This corresponds to frequencies of
+  $$f_m=m\left(\frac{v}{2L}\right)=mf_1$$
+  where $v$ is the wave speed. 
+
+  For open-closed tubes, we have a different set of harmonics.
+  $$\lambda_m=\frac{4L}{m}$$
+  where $m=1,3,5,\dots$. Note that open-closed tubes only have odd-numbered modes. This corresponds to frequencies of
+  $$f_m=m\left(\frac{v}{4L}\right)=mf_1$$
+
+
+\subsection{Video demos}
+\begin{itemize}
+\item Traveling waves
+\item Beats
+\item Standing waves
+\end{itemize}
+
+  
+\subsection{Musical notes}
+I'd like to finish our discussion of waves by talking a bit about musical notes.
+
+Simples notes:
+\begin{itemize}
+\item note1.wav: $f_1=220\mbox{ Hz}$ (note "A")
+\item note2.wav: $f_1=440\mbox{ Hz}$ (note "A", one octave higher)
+\item note3.wav: $f_1=880\mbox{ Hz}$ (note "A", two octaves higher)
+\end{itemize}
+
+Beats:
+\begin{itemize}
+\item beats1.wav: $f_1=400\mbox{ Hz}$; $f_2=410\mbox{ Hz}$; $f_{\rm beat}=10\mbox{ Hz} \Rightarrow T=0.1\mbox{ s} \Rightarrow \mbox{ can't hear beats}$
+\item beats2.wav: $f_1=400\mbox{ Hz}$; $f_2=401\mbox{ Hz}$; $f_{\rm beat}=1\mbox{ Hz} \Rightarrow T=1\mbox{ s}$
+\item beats3.wav: $f_1=400\mbox{ Hz}$; $f_2=400.5\mbox{ Hz}$; $f_{\rm beat}=0.5\mbox{ Hz} \Rightarrow T=2\mbox{ s}$
+\item beats4.wav: $f_1=100\mbox{ Hz}$; $f_2=101\mbox{ Hz}$; $f_{\rm beat}=1\mbox{ Hz} \Rightarrow T=2\mbox{ s}$
+\end{itemize}
+
+Harmonics:
+\begin{itemize}
+\item harmonic\_A.wav: $f_1=220\mbox{ Hz}$ (dropped an octave), $f_2=440\mbox{ Hz}$, $f_3=660\mbox{ Hz}$, $f_4=880\mbox{ Hz}$, $f_5=1100\mbox{ Hz}$
+\item harmonic\_Csharp.wav: $f_1=277.2\mbox{ Hz}$, $f_2=554.4\mbox{ Hz}$, $f_3=831.6\mbox{ Hz}$, $f_4=1108.8\mbox{ Hz}$, $f_5=1386\mbox{ Hz}$
+\item harmonic\_D.wav: $f_1=293.33\mbox{ Hz}$ (dropped an octave), $f_2=586.67\mbox{ Hz}$, $f_3=880\mbox{ Hz}$, $f_4=1173.33\mbox{ Hz}$, $f_5=1466.67\mbox{ Hz}$
+\item harmonic\_E.wav: $f_1=330\mbox{ Hz}$, $f_2=660\mbox{ Hz}$, $f_3=990\mbox{ Hz}$, $f_4=1320\mbox{ Hz}$, $f_5=1650\mbox{ Hz}$
+\end{itemize}
+
+Consonance, dissonance, and chords
+\begin{itemize}
+\item consonance\_fifth\_AE.wav: combine A and E; some harmonics match and sounds good 
+$$\left(f_1\right)_E=3/2*\left(f_1\right)_A$$
+\item consonance\_fourth\_AD.wav: combine A and D; some harmonics match and sounds good 
+  $$\left(f_1\right)_D=4/3*\left(f_1\right)_A$$
+\item triad\_chord.wav: root, third, and fifth: A, C$^\#$, and E
+\item dissonance\_AAsharp.wav: simultaneously play two adjacent notes (A and A$^\#$); feels unsettled or unresolved. Dissonance is not necessarily a bad thing; its basically beats, but the beat frequency is below hearing threshold (i.e., in the infrasound). Infrasound has been used in movies to produce an unsettled feeling
+\end{itemize}
+  
+This has just been a brief intro to music theory. But, basically, the following things determine notes:
+\begin{itemize}
+\item natural frequencies of vibration
+  \begin{itemize}
+  \item tube length
+  \item open-open vs open-closed
+  \end{itemize}
+\item number of overtones/harmonics
+\item ``preciseness'' of overtones
+\item timbre: fundamental frequency might not be most significant harmonic; how sounds decay with time;
+\end{itemize}

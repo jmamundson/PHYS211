@@ -1,0 +1,95 @@
+\section{Thermodynamics, Part II}
+Objectives:
+\begin{itemize}
+\item Overview of thermodynamics
+\item Example problems
+\end{itemize}
+
+\subsection{Overview of thermodynamics}
+Last class I introduced the first and second laws of thermodynamics and discussed what happens when heat is transferred into or out of a system.
+\begin{itemize}
+\item First Law of Thermodynamics: $W+Q=\Delta{E}$, where $Q$ is \textit{heat} that is transferred into or out of the system (which can occur in several ways). Think of heat as the transfer of thermal energy.
+\item Second Law of Thermodynamics: 
+	\begin{itemize}
+	\item Entropy (disorder) of a \textit{closed} system can never decrease; in other words, order tends toward disorder.
+	\item Heat flows from hot objects to cold objects, which causes the thermal energy of the objects to change.
+	\item Mechanical energy (kinetic, gravitational potential, etc) tends to turn into thermal energy. This transformation is not reversible.
+	\end{itemize}
+\item When heat enters or exits a system, the objects in the system change temperature and/or phase.
+\item The heat need to produce a temperature change is $Q=mc\Delta{T}$, where $c$ is the specific heat (a material property). Rearranging, this is also $\Delta{T}=Q/(mc)$, which might be more intuitive.
+\item The heat needed to change the phase of a material is $Q_f=\pm mL_f$ (for solid to liquid or vice-versa) and $Q_v=\pm mL_v$ (for liquid to gas or vice-versa). $L_f$ and $L_v$ are the latent heats of fusion and vaporization (also material properties). $L_v>>L_f$.
+\end{itemize}
+
+I'd like to spend some time today thinking about these ideas by way of example problems and at the end we'll talk about calories. What is a calorie?
+
+\subsection{Example problems}
+\subsubsection{Snowpack melting in the spring}
+
+Consider a melting snowpack in spring. The snow is below 0$^\circ$C but the air is warmer than that. The surface snow melts first, and the water percolates downward. It freezes when it comes into contact with cold snow and in doing so releases latent heat to the surrounding snow pack. This causes the surrounding snowpack to warm up to a uniform temperature (basically, 0$^\circ$C), and then melting can happen much more quickly. Wet snow avalanches happen occur in spring when the entire snowpack warms up and becomes saturated. The process can be exacerbated by rainfall.
+
+\clearpage
+[Insert diagram of spring snowpack.]
+\vspace{5cm}
+
+
+\subsubsection{Bringing mercury to a boil}
+Example: How much heat is needed to change 20~g of mercury at 20$^\circ$C to vapor at the boiling point?
+
+Mercury is liquid at 20$^\circ$C. We first need to figure out how much heat it takes to raise it to its boiling point of 357$^\circ$C. The specific heat of mercury is $c=140\mbox{ J}/\mbox{(kg}\cdot\mbox{K)}$.
+$$Q=mc\Delta{T}=943\mbox{ J}$$
+Then we need to calculate how much additional heat is need to convert it to vapor. The latent heat of vaporization of of mercury is $L_v=2.96\times 10^5\mbox{ J/kg}$.
+$$Q=mL_v=5920\mbox{ J}$$
+So, 
+$$\boxed{Q_{total}=6863\mbox{ J}}$$
+
+
+
+\subsubsection{Hot metal and water in isolated container}
+Consider what happens when hot metal is placed in water in a perfectly insulated cup with no gas (i.e., any void space is essentially a vacuum). The Second Law of Thermodynamics tells us that heat is transferred from the hot metal to the water until the temperatures are uniform. What is the final temperature of the system?
+
+We can solve for this using the First Law of Thermodynamics, i.e.,
+$$Q+W=\Delta{E}$$
+There are no external forces acting on the system, so $W=0$, and because this is an isolated system, $\Delta{E}=0$. This means that $Q=0$ (which I guess we already knew because the system is insulated).
+
+However, there is heat flowing from the metal to the water. The metal cools down and the water warms up. So let's call $Q_m$ the amount of heat released by the metal, and $Q_w$ is the amount of heat transferred into the water.
+
+$$Q=Q_m+Q_w=0$$
+$$m_mc_m(T_f-T_m)+m_wc_w(T_f-T_w)=0$$
+Here, $T_m$ and $T_w$ are the initial temperatures of the metal and the water. If the masses, specific heats, and initial temperatures are known, you could solve for $T_f$.
+
+$$T_f=\frac{m_mc_mT_m+m_2c_2T_w}{m_mc_m+m_wc_w}$$
+
+Alternatively, you could measure the temperatures and masses, and if you know the specific heat of water you can figure out the specific heat of the metal (and maybe identify the metal).
+
+
+Similar ideas are used in calorimetry.
+
+[Insert diagram of a bomb calorimeter.]
+\vspace{5cm}
+
+Essentially, you burn the sample and observe the water heating up. The heat released by the sample equals the heat absorbed by the water. 1 food calorie is the amount of heat needed to increase 1 kg of water by 1 K.
+$$1\mbox{ food calorie} = 4200\mbox{ J}$$
+
+
+\subsubsection{Ice melting in water}
+Example: You place 50 g of ice at -10$^\circ$C into 200 g of water at 20$^\circ$C. What happens? Does the ice melt? What is the final temperature of the system? Again will we will assume that the glass is perfectly insulated so that we don't have to worry about energy exchanges with the environment.
+
+Given:\\
+$c_i=2220$ J/(kg K)\\
+$c_w=4200$ J/(kg K)\\
+$L_f=334\times 10^3$ J/kg
+
+What happens:\\
+(1) Amount of heat that the water can lose: $Q_{water}=m_wc_w\Delta{T_w}=16800\mbox{ J}$\\
+(2) Amount of heat needed to warm up the ice to 0$^\circ$C: $Q_i=m_ic_i\Delta{T_i}=1110\mbox{ J}$\\
+(3) Amount of heat needed to melt all of the ice: $Q_f=mL_f=16700$
+
+The sum of (2) and (3) is greater than the amount of heat that the water can lose. This means that not all of the ice melts and that the final temperature will be 0$^\circ$C. How much ice melts?
+
+After warming up the ice, the water can still release 15700 J before it starts to freeze. From (3),
+$$m=\frac{Q_f}{L_f}=47\mbox{ g}$$
+There are 3 g of ice remaining.
+
+As you solve this type of problem, you need to ask a series of ``if, then'' questions.
+
+\clearpage

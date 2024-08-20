@@ -1,0 +1,110 @@
+w\section{WAVE SUPERPOSITION}
+Waves are unique in that they can pass through each other. When they do so, they can constructively or destructively interfere.
+
+[Insert diagrams of constructive and destructive interference of a wave travelling on a string.]
+\vspace{8cm}
+
+This is referred to as wave superposition. Wave superposition has several important implications for sound (and other waves).
+
+\hrulefill\\
+(1) Sound intensity/quality in a room. Sound waves are not one-dimensional.
+
+[Insert diagram of sound waves coming from speakers in a room.]
+\vspace{5cm}
+
+Where do you get constructive interference? Destructive interference? The answer depends on wavelengths and room geometry (when you account for echos). This is something that we'll see again next semester when we talk about the fact that light is a type of wave.
+
+\hrulefill\\
+(2) Sound waves are generally not a simple sinusoid with one frequency. Instead, they are a combination of many sinusoidal functions with different frequencies.
+
+So for example, the displacement at one location due to several waves travelling from the same location and in the same direction is
+
+$$y(x,t)=y_1+y_2+y_3+...=A_1\cos\left(2\pi\left(\frac{x}{\lambda_1}-\frac{t}{T_1}\right)\right) + A_2\cos\left(2\pi\left(\frac{x}{\lambda_2}-\frac{t}{T_2}\right)\right) + A_3\cos\left(2\pi\left(\frac{x}{\lambda_3}-\frac{t}{T_3}\right)\right)+...$$
+
+We can replace $\lambda_i$ in each term with
+$$\lambda_i=vT_i,$$
+where $v=343\mbox{ m/s}$ is the speed of sound (a constant).
+
+$$y(x,t)=A_1\cos\left(2\pi\left(\frac{x}{vT_1}-\frac{t}{T_1}\right)\right) + A_2\cos\left(2\pi\left(\frac{x}{vT_2}-\frac{t}{T_2}\right)\right) + A_3\cos\left(2\pi\left(\frac{x}{vT_3}-\frac{t}{T_3}\right)\right)+...$$
+
+Now replacing $1/T_i=f_i$, and factoring out $f_i$, this gives
+$$y(x,t)=A_1\cos\left(2\pi f_1\left(\frac{x}{v}-t\right)\right) + A_2\cos\left(2\pi f_2\left(\frac{x}{v}-t\right)\right) + A_3\cos\left(2\pi f_3\left(\frac{x}{v}-t\right)\right)+...$$
+
+Each of these terms has a unique amplitude, $A$, and frequency, $f$. Another way to visualize this is to plot a power spectrum (which you did in lab).
+
+[Insert diagram of power spectrum.]
+\vspace{5cm}
+
+[Insert diagram showing what the waves indicated in the power spectrum actually look like.]
+\vspace{5cm}
+
+\clearpage
+[Insert diagram to show result of adding waves together.]
+\vspace{5cm}
+
+\hrulefill\\
+(3) Beats occur when two waves with similar frequencies interfere with each other.
+
+[Insert diagram of beats -- sometimes constructive interference, sometimes destructive interference.]
+\vspace{5cm}
+
+Add them together and get quiet and loud periods.
+
+[Insert diagram showing resultant wave.]
+\vspace{5cm}
+
+You still have constant sound -- this isn't like the beating of a drum.
+
+No need to show this, but
+$$A_1\cos(2\pi f_1 t)+A_2\cos(2\pi f_2 t)=2A\cos\left(2\pi\frac{f_1+f_2}{2}t\right)\cos\left(2\pi\frac{f_1-f_2}{2}t\right)$$
+If $f_1$ and $f_2$ are close, then the frequency of the second cosine is often too low to be perceived as pitch. Therefore the pitch that you hear is determined by the frequency of the first cosine function: $1/2(f_1+f_2)\approx f_1$. And the frequency of volume modulation is approximately
+$$f_{beat}=|f_1-f_2|$$
+
+Musicians use beats to tune their instruments. You tune the instrument by changing its frequency so as to remove any beats from being produced...
+
+\hrulefill\\
+(4) When instruments produce notes, they typically produce sound at several frequencies called harmonics (more on this later).
+
+[Insert power spectrum for two different, but similar, notes and their harmonics.]
+\vspace{5cm}
+
+If the spacing between the notes is 
+\begin{itemize}
+\item not too large, you'll get consonance -- a pleasant sound
+\item too large, you'll get dissonance -- an unpleasant sound
+\end{itemize}
+
+\hrulefill\\
+(5) Standing waves, which are waves in which the peaks and troughs don't move, can be described by adding together to travelling waves.
+
+[Insert diagram of a guitar string, fundamental mode oscillation].
+\vspace{5cm}
+
+When you pluck a string, there are other vibrational modes that are present.
+
+\clearpage
+[Insert diagram of second and third harmonics, being sure to indicate nodes and antinodes.]
+\vspace{5cm}
+
+The wavelength of each mode is
+$$\lambda_m=\frac{2L}{m}$$
+where $L$ is the length of the string and $m$ is the mode.
+
+$$v=\lambda_m f_m$$
+$$f_m=\frac{v}{\lambda_m}=m\frac{v}{2L}$$
+
+So this means that $f_1=v/(2L)$, and $f_2=2f_1$, $f_3=3f_1$, etc. Note that second harmonic is the same as the first overtone.
+
+Describing standing waves by adding or subtracting together travelling waves. For the case of the oscillating string, we want to subtract the travelling waves:
+$$y(x,t)=A\cos\left(2\pi\frac{x}{\lambda}-2\pi\frac{t}{T}\right)- A\cos\left(2\pi\frac{x}{\lambda}+2\pi\frac{t}{T}\right)$$
+
+A trig identity that you may or may not know:
+$$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$$
+
+Using this to expand the above expression, we get
+$$y(x,t)=A\left[\cos\left(2\pi\frac{x}{\lambda}\right)\cos\left(2\pi\frac{t}{T}\right)+\sin\left(2\pi\frac{x}{\lambda}\right)\sin\left(2\pi\frac{x}{\lambda}\right)-\cos\left(2\pi\frac{x}{\lambda}\right)\cos\left(2\pi\frac{t}{T}\right)+\sin\left(2\pi\frac{x}{\lambda}\right)\sin\left(2\pi\frac{x}{\lambda}\right)\right]$$
+$$\boxed{y(x,t)=2A\sin\left(2\pi\frac{x}{\lambda}\right)\sin\left(2\pi\frac{t}{T}\right)}$$
+
+The first sine describes the how the oscillation varies in space, and the second sine describes how it varies in time. Let's think about it in terms of the first harmonic. The displacement is always zero at $x=0$ and $x=L=\lambda/2$, and the displacement is always largest at $x=L/2=\lambda/4$.
+
+\clearpage

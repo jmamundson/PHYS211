@@ -1,0 +1,117 @@
+\section{Rotation of coordinate systems and relative motion}
+Objectives:
+\begin{itemize}
+\item Rotation of coordinate systems
+\item Motion as a vector
+\item Relative motion
+\end{itemize}
+\hrulefill\\
+
+The last couple of classes we've been talking about two-dimensional motion. We'll continue with that today by considering two more types of problems: motion along a ramp and relative motion.
+
+To recap:
+\begin{itemize}
+\item Position, displacement, velocity, and acceleration are all \textit{vectors}. Rules for vector addition and subtraction apply. Vectors can, and often need to, be split into components that point in the $x$- or $y$-directions. Be sure that you understand the difference between $x$ and $\vec x$, $v$ and $\vec v$, $\ldots$
+\item We have separate, but completely equivalent, sets of equations that describe motion in the $x$- and $y$-directions.
+\end{itemize}
+
+\subsection{Motion along a ramp}
+
+One type of two-dimensional motion that we'll encounter frequently this semester is that of objects moving up or down ramps. So let's consider a box sliding down a ramp. For now we will ignore friction.
+
+[Insert diagram of box sliding on a ramp.]
+\vspace{5cm}
+
+Gravity acts downward on the ramp, but the object will move along the ramp (not just vertically downward). To simplify the problem, we can make use of vector components and the fact that we are free to orient our coordinate system whatever way we choose. We will be turning a 2-dimensional problem into a one-dimensional problem.
+
+Steps:\\
+(1) Let $x$ point down the ramp, and $y$ point perpendicular up from the ramp.\\
+(2) Split $g$ into vector components. One component points in the $+x-$direction, the other points in the $-y-$direction. Show that $a_x=g\sin\theta$.\\
+(3) The ramp doesn't allow for motion in the $y-$direction, so we only have to deal with motion in the $x-$direction. This has become a one-dimensional problem.
+
+\subsubsection{Example \#1}
+Let's say that a box is released from a height of $H$, and that the ramp has an angle of $\theta$. What is the speed of the box when it reaches the end of the ramp? How long does it take to reach the end of the ramp?
+
+Given:\\
+$a_x=g\sin\theta$\\
+$x_i=0$\\
+$x_f=\frac{H}{\sin\theta}$\\
+$v_i=0$\\
+
+We want to know $v_f$. This is a problem where solving things algebraically can give great insights.
+
+$$v_f\ds^2-v_i\ds^2=2a\Delta{x}=2g\sin\theta\frac{H}{\sin\theta}=2gH$$
+$$\boxed{v_f=\sqrt{2gH}}$$
+
+The final speed depends \textit{only} on the height from which the box is released!
+
+$$\Delta{x}=v_i\Delta{t}+\frac{1}{2}a\Delta{t}^2=\frac{1}{2}a\Delta{t}^2$$
+$$\Delta{t}=\pm\sqrt{\frac{2\Delta{x}}{a}}=\sqrt{\frac{2\frac{H}{\sin\theta}}{g\sin\theta}}$$
+$$\boxed{\Delta{t}=\sqrt{\frac{2H}{g\sin^2\theta}}}$$
+
+The time it takes to reach the end of the ramp does, however, depend on the angle of the ramp. 
+
+\subsubsection{Example \#2}
+A block slides along a frictionless track with speed $V=2\mbox{ m/s}$. Assume that it turns all corners smoothly with no loss of speed. What is the maximum height that the block reaches?
+\clearpage
+[Insert diagram of block on track.]
+\vspace{5cm}
+
+To solve this, we will rotate the coordinate system so that $x$ points up hill. This will become a one-dimensional problem.
+
+Given:\\
+$v_i=V$\\
+$a=-g\sin\theta$\\
+$\Delta{x}=\frac{H}{\sin\theta}$
+
+If it just reaches the top of the hill, then $v_f=0$
+
+We only need one equation to solve this.
+$$2a\Delta{x}=v_f\ds^2-v_i\ds^2$$
+$$-2g\sin\theta\frac{H}{\sin\theta}=-v_i\ds^2$$
+$$2gH=v_i\ds^2$$
+$$H=\frac{v_i\ds^2}{2g}=\frac{(2\mbox{ m/s})\ds^2}{2\times 9.81\mbox{ m/s}\ds^2}\approx 0.2\mbox{ m}$$
+
+\subsubsection{Conceptual problem}
+Imagine that a marble is rolling down a ramp that is sitting on a table. The marble leaves the end of the ramp, travels through the air, and hits the ground. Where will the marble hit the ground?
+
+How would you solve this problem?
+\begin{itemize}
+\item Solve for speed of the marble when it reaches the end of the ramp.
+\item Use result from (1) to calculate initial horizontal and vertical speeds for the projectile motion portion of the problem.
+\item Solve for the time it takes the marble to hit the ground.
+\item Calculate the distance that the marble travels through the air.
+\end{itemize}
+
+If we tried to do this problem right now, we'd overestimate the distance that the marble travels because we don't yet know how to account for \textit{rolling friction}. We'll come back to this problem later in the semester. 
+
+\subsection{Relative motion}
+In physics we often encounter problems where we need to know the motion of an object relative to another object. In order to talk about relative motion, we need to be comfortable with vectors. Should I review vectors again?
+
+\begin{enumerate}
+\item Motion of an object is always relative to some reference frame. 
+\item Reference frames \textit{can} move. (If a reference frame is accelerating, then we have to use Einstein's theory or general relativity. Don't worry, we're not going to do that.)
+\end{enumerate}
+
+You've all experienced relative motion in one way or another. For example, if you're sitting in a parked car, and the car next to you starts to move, you sometimes get the sensation that you've started moving.
+
+We are going to start with relative motion in one-dimension, because this is easier to understand than motion in two-dimensions.
+
+Let's assume that Alex and Barbara each have their own reference frame; they are located at the origin of their reference frames. We will assume that Alex and Barbara are stationary.
+
+[Insert diagram of Alex and Barbara and point P.]
+\vspace{5cm}
+
+For Alex, $P$ is at a positive position, whereas $P$ is at a negative position for Barbara. We can relate the relative position of $P$ to Alex with the relative position of $P$ to Barbara.
+$$x_{pa}=x_{pb}+x_{ba}$$
+The order of indices here matters --- $x_{pa}=-x_{ap}$. Why does this expression make sense?
+
+Ok, so what if point $P$ is moving? Can we write down a similar expression using velocities? What are $v_{pa}$ and $v_{pb}$?
+$$v_{pa}=\frac{\Delta{x_{pa}}}{\Delta{t}}$$
+$$v_{pb}=\frac{\Delta{x_{pb}}}{\Delta{t}}$$
+We already saw that $x_{pa}=x_{pb}+x_{ba}$, so
+$$v_{pa}=\frac{\Delta(x_{pb}+x_{ba})}{\Delta{t}}=\frac{\Delta{x_{pb}}}{\Delta{t}}+\frac{\Delta{x_{ba}}}{\Delta{t}}=v_{pb}+v_{ba}=v_{pb}.$$
+Alex and Barbara observe $P$ moving at the same speed (in this example).
+
+
+\clearpage

@@ -1,0 +1,120 @@
+\section{Introduction to energy}
+Objectives:
+\begin{itemize}
+\item Brief review
+\item Energy
+\item Work-energy theorem
+\item Vector dot products
+\end{itemize}
+\hrulefill
+\subsection{Energy}
+[Start by summarizing what we've covered so far this semester using diagram in the syllabus.]
+
+Who has heard of energy? What is energy? What kinds of energy have you heard of?
+
+Don't worry, you're not the only one that doesn't understand energy. Here is a quote from Richard Feynman, a Nobel prize winner in physics and one of the more colorful characters in physics.
+
+\begin{quote}
+It is important to realize that in physics today, we have no knowledge of what energy is. We do not have a picture that energy comes in little blobs of a definite amount. It is not that way. However, there are formulas for calculating some numerical quantity, and we add it all together it gives ``28'' --  always the same number. It is an abstract thing in that it does not tell us the mechanism or the reasons for the various formulas.
+\attrib{Richard Feynman} 
+\end{quote}
+
+Energy is
+\begin{itemize}
+\item an indirectly observed scalar (not vector!) quantity
+\item the ability of one system to do work on another system
+\end{itemize}
+
+The concept of energy is extremely powerful because, like momentum, it allows us to ignore some complex interactions. Even more importantly, energy is what allows us to bridge together different fields of science --- in some sense it is the universal currency of physics. To me, this is where physics starts to become really exciting. Although energy is a rather abstract idea, it is also extremely important. 
+
+There are several different types of energy:
+\begin{itemize}
+\item kinetic energy, $K$
+\item potential (stored) energy, $U$ (we'll discuss a couple of types of potential energy)
+\item chemical energy, $E_{chem}$
+\item thermal energy, $E_{th}$
+\item ...
+\end{itemize}
+
+We are going to define the total energy of a system as the sum of all of these energies,
+$$E=K+U+E_{chem}+E_{th}+...$$
+
+Energy can be transformed from one form to another (within the system). Can you think of some examples?
+\begin{itemize}
+\item The chemical energy stored in wood can be transformed into thermal energy.
+\item The chemical energy of food is converted into kinetic energy when you move.
+\item A falling object loses potential energy and gains kinetic energy.
+\end{itemize}
+
+Some transformations are ``easier'' than others. Its ``easy'' to create thermal energy, but difficult to turn thermal energy into potential energy or kinetic energy.
+
+Energy transformation: Changes in energy within a system.\\
+Energy transfer: Energy exchange between the system and the environment.\\
+Environment: Everything not in the system...
+
+Just like when we talked about momentum, we can define the system in any way that is convenient.
+
+Energy transfer occurs primarily as ``work'' (i.e., a mechanical transfer of energy) or ``heat'' (i.e., a thermodynamic transfer of energy due to a temperature difference).
+
+If there is no heat being transferred into the system, then the work done on a system changes the energy of the system
+$$\Delta E=W$$
+This means that
+$$\Delta{E}=\Delta{K}+\Delta{U}+\Delta{E_{chem}}+\Delta{E_{th}}+...=W.$$
+This is referred to as the work-energy theorem.
+
+If our system is isolated (i.e., there is no work being done to or by the system), $W=0$ and 
+$$\Delta{E}=0.$$
+Any idea what this is referred to? Its the conservation of energy, one of the most powerful concepts in classical mechanics.
+
+OK, so this is all nice and dandy, but what are $K$, $U$, $E_{chem}$, $E_{th}$, $W$, $...$?
+
+\subsection{Work}
+Let's first discuss work, the mechanical transfer of energy by an external force. We'll define work as the integral of force with respect to \textit{distance}. Recall that momentum was the integral of force with respect to \textit{time}.
+$$\ds W= \int_{c}\vec{F}\cdot d\vec{x}$$
+where we are integrating along a path, $d\vec{x}$, and $\vec F$ is the net external force applied to the system.
+
+Aside on dot products:
+$$\vec{F}\cdot d\vec{x} = \langle{F_x,F_y\rangle}\cdot\langle{dx,dy\rangle}= F_xdx + F_ydy = |\vec{F}||d\vec{x}|\cos\theta$$
+
+\clearpage
+[Insert diagram showing how this works.]
+\vspace{5cm}
+
+
+Plugging this into the integral,
+$$\ds W = \int_c F_x\,dx + \int_c F_y\,dy$$
+The problem now though is that $dx$ and $dy$ are not necessarly constant... So, we will generally consider straight paths (it makes this a lot easier), in which case
+$$\ds W=\int F\,dx$$
+where $F$ is the force in the direction of motion.
+
+Work has units of joules, with $1\mbox{ J}=1\mbox{ N}\cdot\mbox{m}$. Don't confuse this with torque, even though the units are the same!
+
+By the work-energy theorem, this means that
+$$\Delta E=\ds\int F\,dx$$
+
+\subsection{Example problems}
+\subsubsection{Example \#1: Walking while carrying a textbook}
+You walk at a steady rate while carrying a physics book across the room. How much work do you do to the book (if you ignore the initial acceleration)?
+
+$$a=0\Rightarrow F=0$$
+$$W=Fd=0\mbox{ J}$$
+
+You then drop the book. How much work does gravity do to the book?
+
+$$W_g=F_g\Delta{y}$$
+
+We need to be careful here. From the definition of work, we need the force that points in the \textit{direction of displacement}. If our coordinate system points up, then $F_g$ points in the negative direction and $\Delta{y}<0$. If the book weighs 1 kg and it falls a distance of 1 m, the work done by gravity is 
+$$W_g=9.81\mbox{ J}.$$
+
+\subsubsection{Example \#2: Pulling a crate with a rope}
+You pull a crate with a rope at a constant velocity for 3 m. The tension in the rope is 70 N. How much work is done to the crate, and where does this energy go?
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$W=F_t\cos\theta\cdot{d}=182\mbox{ J}$$
+
+As we'll see, the kinetic energy and potential energy of the crate is unchanged; the 182 J goes into thermal energy from friction.
+
+
+\clearpage

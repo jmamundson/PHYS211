@@ -1,0 +1,27 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{array}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage[small]{caption}
+\usepackage{graphpap}
+\usepackage{tabularx}
+\usepackage{makecell}
+\newcolumntype{?}{!{\vrule width 1pt}}
+
+\begin{document}
+Grading rubric for formal lab reports
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{p{1in}?X|X|X|}
+  & \textbf{Exceeds Standards} & \textbf{Meets Standards} & \textbf{Standards Not Met} \\ \Xhline{2\arrayrulewidth}
+  \textbf{Introduction} & Describes theory in detail; indicates how the theory will be tested (15 pts) & Some theory is lacking and/or it's not clear how theory will be tested (10 pts) & Background is lacking important details (5 pts)\\ \hline
+  \textbf{Methods} & Clearly describes the experimental set-up and experiments to be conducted; uses a figure to help illustrate the experiment; may include manipulation of equations, if appropriate (15 pts) & Methodology is incomplete or reads like a recipe; not clear how the experiments relate to the theory to be tested (10 pts) & Includes some description but a reader unfamiliar with the lab may be unable to reproduce the experiment(s) (5 pts) \\ \hline
+  \textbf{Results} & Guides the reader through the key results; figures and tables are clearly labeled with captions, x- and y-labels, and units; does not include any interpretation of the results (30 pts) & All necessary data is presented but figures are poorly labeled; very little text to guide the reader through the results; some interpretation mixed in with the results  (20 pts) & Missing data or contains data that is clearly incorrect; figures and tables are not labelled; no text to guide the reader (10 pts) \\ \hline
+  \textbf{Discussion \& Conclusions} & Clearly summarizes key findings; compares theory to observations; includes discussion of sources of error \textit{and} their impact on the data (25 pts) & Some key findings are missing or results not compared to theory; errors are mentioned but not discussed in the context of discrepancies between results and theory (15 pts) & Little to no interpretation; minimal discussion of errors (5 pts) \\ \hline
+  \textbf{Composition} & Report is easy to read; few grammatical mistakes; somebody unfamiliar with the experiments would understand everything that was done (15 pts) & Some grammatical mistakes or unclear wording, but generally easy to follow (10 pts) & Numerous grammatical mistakes and unclear passages; insufficient descriptions; somebody unfamiliar with the lab would not understand the report (5 pts)  \\ \hline
+\end{tabularx}
+
+\end{table}
+\end{document}

@@ -1,0 +1,114 @@
+\documentclass[11pt,letterpaper,twoside,titlepage]{article}
+\usepackage{array}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{verbatim}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{attrib}
+\usepackage{esint}
+\usepackage{tipa}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+
+% SECTION HEADINGS
+\renewcommand{\thesection}{\arabic{section} }
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection} }
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection} }
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bfseries\MakeUppercase}{\thesection}{0em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries}{\thesubsubsection}{0em}{}
+
+\titlespacing{\section}{0pt}{0.5\baselineskip}{0pt}
+\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{0.5\baselineskip}{0pt}
+
+
+% HEADER AND FOOTER
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{\thesection #1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\subsubsectionmark}[1]{}
+
+\fancyhead[LO,LE]{PHYS S211: General Physics I}
+\fancyhead[RO,RE]{}
+\fancyfoot[RO,LE]{\thepage}
+\fancyfoot[LO,RE]{\rightmark}
+\fancyfoot[CO,CE]{}
+
+% MISCELLANEOUS CHANGES
+\newcommand{\ds}{\displaystyle} % shortcut for displaystyle
+\newcommand{\myrule}{\rule{\linewidth}{0.4pt}}
+
+\author{Jason M. Amundson}
+\title{PHYS S211: General Physics I}
+
+\begin{document}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\clearpage
+\pagenumbering{arabic}
+
+% KINEMATICS
+\input{course_overview.tex}
+\input{intro_to_kinematics.tex}
+\input{kinematic_equations.tex}
+\input{motion_in_2d.tex}
+\input{projectile_motion.tex}
+\input{motion_down_ramps.tex}
+\input{relative_motion.tex}
+\input{circular_motion.tex}
+
+% DYNAMICS
+\input{newtons_laws.tex}
+\input{types_of_forces_I.tex}
+\input{types_of_forces_II.tex}
+\input{types_of_forces_III.tex}
+\input{centripetal_force.tex}
+\input{torque.tex}
+\input{torque_II.tex}
+\input{equilibrium.tex}
+\input{equilibrium_and_elasticity.tex}
+
+% CONSERVATION LAWS
+\input{impulse_and_momentum.tex}
+\input{conservation_of_momentum.tex}
+\input{angular_momentum.tex}
+\input{intro_to_energy.tex}
+\input{work_and_energy.tex}
+\input{work_and_energy_II.tex}
+\input{work_and_energy_III.tex}
+
+% THERMODYNAMICS
+\input{thermodynamics_I.tex}
+\input{thermodynamics_II.tex}
+\input{thermodynamics_III.tex}
+\input{thermodynamics_of_gases.tex}
+
+% FLUIDS
+\input{intro_to_fluids.tex}
+\input{intro_to_fluids_II.tex}
+\input{fluid_dynamics_I.tex}
+\input{fluid_dynamics_II.tex}
+
+% OSCILLATIONS AND WAVES
+\input{oscillations.tex}
+\input{intro_to_waves.tex}
+\input{wave_frequency.tex}
+\input{wave_superposition.tex}
+\input{standing_waves_and_music.tex}
+
+
+
+
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\pagestyle{empty}
+\renewcommand{\labelitemi}{$\cdot$}
+
+\begin{document}
+\noindent Basic definitions of kinematics
+\begin{itemize}
+\item position: $\vec{x}=\langle{x,y}\rangle$
+\item displacement: $\Delta{\vec{x}}=\vec{x}_f-\vec{x}_i$ for finite displacement
+\item instantaneous velocity: $\vec{v}=\displaystyle\frac{d\vec{x}}{dt}$
+\item instantaneous acceleration: $\vec{a}=\displaystyle\frac{d\vec{v}}{dt}=\displaystyle\frac{d^2\vec{x}}{dt^2}$
+\end{itemize}
+Kinematic equations, $\vec{v}=\mbox{constant}$ (i.e., $\vec{a}=0$)
+\begin{itemize}
+\item $\vec{v}=\displaystyle\frac{\Delta{\vec{x}}}{\Delta{t}}$
+\item $\vec{x}_f=\vec{x}_i+\vec{v}\Delta{t}$
+\end{itemize}
+Kinematic equations, $\vec{a}\neq{0}$ and $\vec{a}=\mbox{constant}$
+\begin{itemize}
+\item $\vec{a}=\displaystyle\frac{\Delta{\vec{v}}}{\Delta{t}}$
+\item $\vec{v}_f=\vec{v}_i+\vec{a}\Delta{t}$
+\item $\Delta{\vec{x}}=\vec{v}_i\Delta{t}+\displaystyle\frac{1}{2}\vec{a}\Delta{t}^2$
+\item $\left(v_{x,f}\right)^2-\left(v_{x,i}\right)^2=2a_x\Delta{x}$ and $\left(v_{y,f}\right)^2-\left(v_{y,i}\right)^2=2a_y\Delta{y}$
+\item common example of $a=\mbox{constant}$ is $g=9.81\mbox{ m/s}^2$
+\end{itemize}
+Motion of object A relative to object C
+\begin{itemize}
+\item $\vec{v}_{ac}=\vec{v}_{ab}+\vec{v}_{bc}$
+\end{itemize}
+
+\noindent Basic definitions for circular and rotational motion
+\begin{itemize}
+\item angular position: $\theta\mbox{(radians)}=\displaystyle\frac{s}{r}$; $s=$arclength, $r=$radius
+\item angular displacement: $\Delta\theta=\theta_f-\theta_i$
+\item angular velocity: $\omega=\displaystyle\frac{d\theta}{dt}=2\pi{f}=\displaystyle\frac{2\pi}{T}$; $f=$frequency, $T=$period
+\item angular acceleration: $\alpha=\displaystyle\frac{d\omega}{d{t}}=\frac{d^2\theta}{dt^2}$
+\end{itemize}
+Kinematic equations for constant angular acceleration
+\begin{itemize}
+\item $\omega_f=\omega_i+\alpha\Delta{t}$
+\item $\Delta\theta=\omega_i\Delta{t}+\displaystyle\frac{1}{2}\alpha\Delta{t}^2$; if $\alpha=0$, $\omega_f=\omega_i=\mbox{constant}$.
+\item $\omega_f^2-\omega_i^2=2\alpha\Delta{\theta}$
+\end{itemize}
+
+\clearpage
+\noindent Speed, acceleration, and forces
+\begin{itemize}
+\item speed: $v=\omega{r}$
+\item centripetal acceleration: $a_c=\displaystyle\frac{v^2}{r}=\omega^2r$
+\item centripetal force: $F_c=ma_c=m\displaystyle\frac{v^2}{r}=m\omega^2r$; points toward center of circle
+\item tangential acceleration: $a_t=\alpha{r}$
+\end{itemize}
+Newton's Laws
+\begin{enumerate}
+\item if $\vec{F}_{net}=0\Rightarrow \vec{a}=0$
+\item $\displaystyle\sum\vec{F}=m\vec{a}$
+\item $\vec{F}_{12}=-\vec{F}_{21}$
+\end{enumerate}
+Types of forces
+\begin{itemize}
+\item Newton's Law of Gravity: $F_{12}=F_{21}=\displaystyle\frac{Gm_1m_2}{r^2}$; points from one object to another; this can also be expressed as $\vec{F}_{12}=\displaystyle-\frac{Gm_1m_2}{r^2}\hat{r}_{12}$ where $\hat{r}_{12}$ is the unit vector that points from object 1 to object 2.
+\item Gravitational constant: $G=6.67\times{10}^{-11}\mbox{ N}\cdot\mbox{m}^2/\mbox{kg}^2$
+\item For objects near the Earth's surface, $F_g=mg$
+\item normal force, $\vec{F}_n$, is perpendicular to surface and prevents objects from penetrating the surface
+\item frictional force depends on $\vec{F}_n$ and $\vec{v}$
+\begin{itemize}
+\item if $\vec{v}=0$ use static friction; $\vec{F}_s$ balances other forces as long as $\left|\vec{F}_s\right|\leq\mu_s\left|\vec{F}_n\right|$
+\item if $\vec{v}\neq{0}$ use kinetic friction; $\left|\vec{F}_k\right|=\mu_k\left|\vec{F}_n\right|$
+\end{itemize}
+\item tensional force, $\vec{F}_t$, is transmitted through a rope and around pulleys
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,103 @@
+\section{Fluid dynamics; viscosity}
+Objectives:
+\begin{itemize}
+\item Venturi tube
+\item Viscous flow
+\end{itemize}
+
+\hrulefill
+
+Recall key ideas of fluid dynamics:
+\begin{enumerate}
+\item Ideal fluid: incompressible, laminar, inviscid
+\item Flux continuity: $Q=vA=\mbox{constant}$
+\item Bernoulli's equation: $P+\frac{1}{2}\rho v^2+\rho gh=\mbox{constant}$
+\end{enumerate}
+
+\subsection{Venturi tube}
+One really useful application of Bernoulli's Equation is that it can be used to measure fluid flow through pipes (using a Venturi tube).
+
+[Insert diagram.]
+\vspace{5cm}
+
+If we look at the streamline that passes through the center of this tube,
+$$P_1+\frac{1}{2}\rho v_1\ds^2+\rho gy_1=P_2+\frac{1}{2}\rho v_2\ds^2+\rho gy_2$$
+But points 1 and 2 are at the same elevation, so $y_1=y_2$, and so
+$$P_1+\frac{1}{2}\rho v_1\ds^2=P_2+\frac{1}{2}\rho v_2\ds^2$$
+We can re-arrange this so that
+$$P_2-P_1=\frac{1}{2}\rho(v_1\ds^2-v_2\ds^2)$$
+
+From flux continuity, 
+$$v_1A_1=v_2A_2$$
+so 
+$$v_1=v_2\left(\frac{A_2}{A_1}\right)$$
+
+Plugging this into Bernoulli's equation gives
+$$P_2-P_1=\frac{1}{2}\rho\left(\left(\frac{A_2}{A_1}\right)^2v_2\ds^2-v_2^2\right)=\frac{1}{2}\rho v_2\ds^2\left(\left(\frac{A_2}{A_1}\right)^2-1\right)$$
+
+What is $P_2-P_1$? Because there is no fluid flow in the vertical direction, it must be that the pressures $P_1$ and $P_2$ must equal the hydrostatic pressure of the overlying columns of water. In other words,
+$$P_2 = P_{atm}+\rho g h_2$$
+and
+$$P_1 = P_{atm}+\rho g h_1.$$
+Combining these things,
+$$P_2-P_1=\rho g (h_2-h_1) = \rho gd$$
+Inserting this into Bernoulli's equation,
+$$\rho gd=\frac{1}{2}\rho v_2\ds^2\left(\left(\frac{A_2}{A_1}\right)^2-1\right)$$
+
+Solving for $v_2$ gives
+$$\boxed{v_2=\sqrt{\frac{2gd}{\left(\left(\frac{A_2}{A_1}\right)^2-1\right)}}=A_1\sqrt{\frac{2gd}{\left(A_2^2-A_1^2\right)}}=0.36\mbox{ m/s}}$$
+
+And this means that
+$$\boxed{v_1=1.45\mbox{ m/s}}$$
+
+\subsection{Viscous flow}
+Let's see what happens if we relax the condition that the fluid is inviscid.
+
+[Insert diagram of fluid flow through a pipe with friction.]
+\vspace{5cm}
+
+From conservation of energy:
+$$W=\Delta{K}+\Delta{U_g}+\Delta{E_{th}}$$
+Following the same steps as when we derived Bernoulli's equation,
+$$(P_1-P_2)V=\frac{1}{2}\rho V(v_2\ds^2-v_1\ds^2)+\rho gV(y_2-y_1)+\Delta{E_{th}}$$
+If we consider a horizontal pipe with uniform diameter, $y_1=y_2$ and flux continuity requires that $v_1=v_2$. Therefore,
+$$\Delta{E_{th}}=(P_1-P_2)V$$
+
+Friction within the fluid, and between the fluid and walls of the pipe, cause $\Delta E_{th}>0$. This means that $P_2<P_1$.
+
+Experiments show that the pressure difference need to drive a viscous fluid through a pipe is
+$$P_1-P_2=8\pi\eta\frac{Lv_{\rm avg}}{A}$$
+where $\eta$ is the fluid viscosity and has units of Pa$\cdot$s. The viscosity of water is about 10$^{-3}$ Pa$\cdot$s, while the viscosity of honey is 20--600 Pa$\cdot$s. This equation is referred to as Poiseuille's Equation. It tells us two things. First, the average velocity of fluid flowing through a section of pipe is 
+$$v_{avg}=\frac{(P_1-P_2)}{L}\frac{A}{8\pi\eta}$$
+In other words, you need a pressure gradient to drive flow, large pipes provide less resistance, and fluids with high viscosity flow slowly. How do you keep the velocity high?
+
+Examples:
+\begin{enumerate}
+\item Alaska pipeline: Use pump stations to create large pressure gradients.
+\item Clogged arteries: Use blood thinner to reduce $\eta$, or scraping out arteries to increase $A$.
+\end{enumerate}
+
+Second, we can relate this to the amount of thermal energy that is produced in a section of fluid.
+$$\Delta E_{th}=8\pi\eta\frac{Lv_{avg}}{A}{V}$$
+where $V=A\Delta x$, so
+$$\Delta E_{th}=8\pi\eta Lv_{avg}\Delta{x}$$
+The amount of thermal energy that is generated in the fluid is proportional to the viscosity, length of pipe, velocity, and displacement of the fluid.
+
+So I've now just opened a can of worms... Viscosity is generally highly temperature dependent, and density is sometimes temperature dependent (so assumption of incompressibility is questionable).
+
+\subsubsection{Example: viscous flow through a tube}
+A stiff, 10-cm long tube with an inner diameter of 3.0 mm is attached to a small hole in the side of a tall beaker. The tube sticks out horizontally and is open at one end. The beaker is filled with with 20$^\circ$C water ($\eta=10^{-3}\mbox{ Pa}\cdot\mbox{s}$) to a level 45 cm above the hole, and is continually topped off to maintain that level. What is the volume flow rate (flux) through the tube?
+
+The pressure difference between the ends of the tube is
+$$P_1-P_2=(P_{atm}+\rho gh)-(P_{atm})=\rho gh$$
+
+Poiseuille's equation tells us how the pressure difference relates to the flow of the water.
+$$P_1-P_2=8\pi\eta\frac{v_{\rm avg}L}{A}=\rho gh$$
+So 
+$$v_{\rm avg}=\frac{\rho ghA}{8\pi\eta L}$$
+And so
+$$Q=\frac{\rho ghA^2}{8\pi\eta L}=\frac{\rho gh\pi^2r^4}{8\pi\eta L}=8.8\times 10^{-5}\mbox{ m}^3/\mbox{s}$$
+
+
+
+\clearpage

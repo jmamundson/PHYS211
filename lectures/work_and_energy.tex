@@ -1,0 +1,177 @@
+\section{Work and energy}
+Objectives:
+\begin{itemize}
+\item Kinetic energy
+\item Gravitational potential energy
+\item Thermal energy
+\end{itemize}
+
+\hrulefill
+
+\subsection{Introduction to energy}
+Last class:
+\begin{itemize}
+\item Introduced the concept of energy
+\item Many different types of energy: $K$, $U$, $E_{th}$, $...$
+\item Total energy of a system is $E=K+U+E_{th}+...$
+\item One way to think of energy is the ability of a system to do work on another system
+\item An external force applied to a system does work on the system. It therefore increases the total energy of the system.
+\item When the system does work on the environment, the total energy of the system decreases.
+\item $W=\ds\int_{x_i}^{x_f}F_{ext}\,dx=\Delta{E}$; note that $F_{ext}$ and $d$ should point in the same direction. This is the work-energy theorem.
+\item If $F_{ext}=0$ (and $Q=0$) $\Rightarrow \Delta{E}=0$. This is called the conservation of energy. Conservation of energy, as with conservation of momentum, is especially useful when we aren't interested in time scales.
+\end{itemize}
+
+OK, so work causes a change in energy. But what does this mean? It depends on the forces in the problem and the types of energy involved in the system. Today I'll derive equations for a few different types of energy, and then we'll apply these concepts to some familiar examples.
+
+\subsection{Kinetic Energy}
+Let's consider what happens if you move an object with constant force and no friction or drag. For example, we could be using a rope to pull a box across a frictionless surface.
+$$\sum F=F_t=ma$$
+
+The tensional force is doing work to the box, which is given by
+$$W=\ds\int_{x_i}^{x_f} F_t\,dx=\int_{x_i}^{x_f} ma\,dx=m\int_{x_i}^{x_f} \frac{dv}{dt}\,dx=m\int_{x_i}^{x_f} \frac{d}{dt}v(x)\,dx$$
+because $v=v(x)$. Now using the chain rule,
+$$W=m\ds\int_{x_i}^{x_f}\frac{dv}{dx}\frac{dx}{dt}\,dx$$
+By definition, $v=\frac{dx}{dt}$, and so this becomes
+$$W=m\ds\int_{x_i}^{x_f} v\frac{dv}{dx}\,dx$$
+Now we use integration by substitution (let $du=dv/dx\,dx$ and $u=v$) to see that
+$$W=m\ds\int_{v_i}^{v_f}v\,dv=\frac{1}{2}m\left(v_f^2-v_i^2\right)$$
+
+Let's define the translational kinetic energy (energy of motion) as
+$$\boxed{K_{trans}=\frac{1}{2}mv^2}$$
+Note that $v$ is the \textit{speed}, not the velocity vector. 
+
+In this particular example, the work done on the box changed its kinetic energy.
+$$W=\Delta{K}$$
+
+We can do a similar analysis for angular motion, and we find that
+$$\boxed{K_{rot}=\frac{1}{2}I\omega^2}$$
+The total kinetic energy of an object is
+$$K_{total}=K_{trans}+K_{rot}.$$
+
+
+\subsubsection{Elastic collision}
+Let's look at an elastic collision. A cart moving on a frictionless track collides elastically with a stationary cart of the same size (i.e., $m_1=m_2$). (An elastic collision means that no energy is lost during the collision.) Assume that the initial velocity of the moving cart is known. What are the velocities of the carts after the collision?
+
+Previously, we started analyzing this type of collision using conservation of momentum.
+$$P_i=P_f$$
+$$m_1v_{1,i}+m_2v_{2,i}=m_1v_{1,f}+m_2v_{2,f}$$
+Cart 2 is initially stationary, so
+$$v_{1,i}=v_{1,f}+v_{2,f}$$
+This is one equation with two unknowns ($v_{1,f}$ and $v_{2,f}$). We need more information, which we can get from conservation of energy.
+$$E_i=E_f$$
+In this case, there is no change in elevation, so $\Delta{U_g}=0$ for both carts. Therefore, 
+$$\frac{1}{2}m_1v_{1,i}\ds^2+\frac{1}{2}m_2v_{2,i}\ds^2=\frac{1}{2}m_1v_{1,f}\ds^2+\frac{1}{2}m_2v_{2,f}\ds^2.$$
+Because $v_{2,i}=0$ and $m_1=m_2$, this reduces to
+$$v_{1,i}\ds^2=v_{1,f}\ds^2+v_{2,f}\ds^2.$$
+Now we have two equations with two unknowns. Rearranging the conservation of momentum equation,
+$$v_{1,f}=v_{1,i}-v_{2,f}$$
+and plugging it into the conservation of energy equation gives
+$$v_{1,i}\ds^2=(v_{1,i}-v_{2,f})\ds^2+v_{2,f}\ds^2.$$
+Rearranging gives
+$$v_{1,i}\ds^2=v_{1,i}\ds^2-2v_{1,i}v_{2,f}+v_{2,f}\ds^2+v_{2,f}\ds^2.$$
+$$0=-2v_{1,i}v_{2,f}+2v_{2,f}\ds^2$$
+$$\boxed{v_{2,f}=v_{1,i}}$$
+And therefore,
+$$\boxed{v_{1,f}=0}$$
+
+We could have also done this using different size carts --- and we will later. All that changes is that the algebra becomes a bit more messy.
+
+\subsection{Gravitational potential energy}
+What if instead we had moved the object vertically some distance $\Delta y$ at a constant speed with some force $F_{ext}$?
+$$\sum F_y=F_{ext}-F_g=ma_y$$
+Since the object is moving at a constant speed, $a_y=0$ and therefore
+$$F_{ext}=F_g=mg.$$
+The work done on the object is
+$$W=\ds\int_{y_i}^{y_f}F_{ext}\,dt=mg\Delta{y}=\Delta{E}.$$
+We will call
+$$\boxed{\Delta{U_g}=mg\Delta{y}}$$
+the change in gravitational potential energy (or often, just potential energy). Potential energy is always relative to some reference state, and so we always have to talk about \textit{changes in potential energy}. Notice also that the path that we take doesn't affect the solution; the force that caused this motion is a conservative force because it conserves mechanical energy.
+
+Potential energy is a stored energy; forces that store energy are called conservative.
+
+How would this derivation have been different if I had allowed for changes in velocity?
+
+$$F_{ext}=ma_y+mg$$
+$$W=\ds\int_{y_i}^{y_f}m\frac{dv}{dt}+mg\,dy=\ds\int_{y_i}^{y_f}m\frac{dv}{dt}\,dy+\int_{y_i}^{y_f}mg\,dy$$
+We've already seen these two integrals, and so we would find that
+$$W=\Delta K + \Delta U_g$$
+
+
+\subsubsection{Example \#1: A ball is dropped}
+A ball is dropped from a height of 1 m. What is its speed right before it hits the ground?
+
+The old method, using forces and kinematics:
+$$\sum F_y=-F_g=ma_y\Rightarrow a_y=-g$$
+$$v_f\ds^2-v_i\ds^2=2a_y\Delta{y}\Rightarrow v_f\ds^2=-2g\Delta{y}\Rightarrow \boxed{v_f=\sqrt{-2g\Delta{y}}}$$
+
+The new method, using conservation of energy (define system to include ball and the Earth):
+$$\Delta{E}=\Delta{K}+\Delta{U_g}=0$$
+$$\frac{1}{2}mv_f\ds^2-\frac{1}{2}mv_i\ds^2+mg\Delta{y}=0\Rightarrow \boxed{v_f=\sqrt{-2g\Delta{y}}}$$
+
+\subsubsection{Example \#2: A box slides down a ramp}
+A box slides down a frictionless ramp. What is its speed at the end of the ramp?
+
+The old method, using forces and kinematics:
+$$\sum F_x=F_g\sin\theta=ma_x\Rightarrow a_y=-g\sin\theta$$
+Then, same as with the previous example,
+$$v_f=\sqrt{-2g\sin\theta\Delta{y}},$$
+but $\Delta{y}=-H/\sin\theta$, so
+$$\boxed{v_f=\sqrt{-2gH}}$$
+
+The new method, using conservation of energy (define system to include the ramp and the box):
+$$\Delta K+\Delta U_g=0=\frac{1}{2}mv_f\ds^2-\frac{1}{2}mv_i\ds^2+mg\Delta{y}$$
+$H=-\Delta{y}$ and $v_i=0$, so
+$$\boxed{v_f=\sqrt{-2gH}}$$
+
+\subsection{Thermal Energy}
+Let's add a bit of complexity by thinking about friction and thermal energy. We'll start with a simple system: a box is pulled across a horizontal, rough surface. What is the work done on the box by friction?
+
+$$\sum F_x=F_t=ma_x$$
+The only external force acting on the system is the tension from the rope, which has to equal the frictional force between the box and the floor (otherwise the box wouldn't move with constant speed). Defining the system as the box and the floor, the work done on the box is:
+$$W=\ds\int_{x_i}^{x_f}F_t\,dx=F_t\Delta{x}=F_k\Delta{x}=\Delta{E}$$
+There was a change in energy, but the box did not (i) speed up or (ii) change elevation. This work caused molecules at the box's surface to vibrate (i.e., heat up), so we refer to this as thermal energy.
+$$\boxed{\Delta{E_{th}}=F_k\Delta{x}}$$
+
+\subsubsection{Example \#1: You sled down a hill}
+You sled down a 3-m tall hill. The hill is frictionless, but there is some soft snow at the bottom that has a coefficient of kinetic friction of $\mu_k=0.05$. The ground at the bottom of the hill is horizontal. How far will you slide before coming to rest?
+
+[Insert diagram of hill.]
+\vspace{5cm}
+
+How would we have we solved this previously? Its fairly involved, but we could do this using forces and kinematics. But its super easy using conservation of energy.
+
+$$\Delta{E}=\Delta{K}+\Delta{U_g}+\Delta{E_{th}}=0$$.
+You start at rest and finish at rest, so $\Delta{K}=$. This equation therefore becomes
+$$mg\Delta{y}+F_k\Delta{x}=0,$$
+where $\Delta{x}$ is the distance that you travel after reaching the bottom of the hill. Recall that the frictional force is given by
+$$F_k=\mu_kF_n$$
+In this problem, it easy to see that $F_n=F_g=mg$ when you are sliding on horizontal ground. So, this means that
+$$mg\Delta{y}+\mu_k mg\Delta{x}=0$$
+$$\Delta{y}+\mu_k \Delta{x}=0\Rightarrow \boxed{\Delta{x}=\frac{-\Delta{y}}{\mu_k}=60\mbox{ m}}$$
+Note that the solution does not depend on the angle or length of the hill!
+
+\subsubsection{Example \#2: An object rolls down a ramp}
+Let's look at the velocity of an object rolling down a ramp. Define the system as the being the object and the ramp, so there are no external forces. We will assume that the object starts at rest.
+$$\Delta{E}=0=\Delta{K}+\Delta{U_g}$$
+In this problem, there is no sliding, and so $\Delta{E_{th}}=0$. In this problem we have to worry about rotational kinetic energy.
+$$0=\Delta{K_{trans}}+\Delta{K_{rot}}+\Delta{U_g}=\frac{1}{2}mv_f\ds^2+\frac{1}{2}I\omega_f\ds^2+mg\Delta y$$
+We have seen previously that 
+$$v_t=\omega r.$$
+In this problem, $v>0$, but $\omega<0$. This means that 
+$$\omega=\frac{-v}{r}.$$
+Plugging this into the energy balance equation gives
+$$0=\frac{1}{2}mv_f\ds^2+\frac{1}{2}I\left(\frac{v_f}{r}\right)^2+mg\Delta y=v_f\ds^2\left(m+\frac{I}{r^2}\right)+2mg\Delta{y}$$
+Rearranging,
+$$v_f\ds^2=\frac{-2mg\Delta{y}}{m+\frac{I}{r^2}}$$
+or
+$$\boxed{v_f=\sqrt{\frac{-2mg\Delta{y}}{m+\frac{I}{r^2}}}}$$
+
+We did essentially the same exercise earlier in the semester, and during lab. 
+%Let's write this in terms of acceleration by using the kinematic equations for constant acceleration.
+%$$v_f\ds^2-v_i\ds^2=2a\Delta{x}\Rightarrow a=\frac{v_f\ds^2}{2\Delta{x}}$$
+%$$a=\frac{1}{2\Delta{x}}\frac{-2mg\Delta{y}}{m+\frac{I}{r^2}}=\frac{2mg(-\Delta{y}/\Delta{x})}{m+\frac{I}{r^2}}$$
+%Notice that $-\Delta{y}/\Delta{x}=\sin\theta$, so this gives
+%$$\boxed{a=\frac{2mg\sin\theta}{m+\frac{I}{r^2}}}$$
+%This is exactly the same solution as what we arrived at previously.
+
+\clearpage

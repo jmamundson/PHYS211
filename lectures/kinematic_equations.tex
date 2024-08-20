@@ -1,0 +1,128 @@
+\section{Kinematic equations}
+Objectives:
+\begin{enumerate}
+\item Transforming between displacement, velocity, and acceleration
+\item Describing motion with graphs
+\item Kinematic equations for constant acceleration  
+\end{enumerate}
+
+\hrulefill\\
+
+Last class, I introduced the concepts of position, displacement, velocity, and acceleration.
+\begin{itemize}
+\item position: $x$ [L]
+\item displacement: $\Delta{x}$ for large displacements, or $dx$ for infinitesimal displacements [L]
+\item velocity: $v=\Delta{x}/\Delta{t}$ for average velocity, or $v=dx/dt$ for instantaneous velocity [L]/[T]
+\item acceleration: $a=\Delta{v}/\Delta{t}$ for average acceleration, or $a=dv/dt=d^2x/dt^2$ for instantaneous acceleration [L]/[T$^2$]
+\end{itemize}
+
+In other words, we saw that velocity is the slope of the displacement curve, and acceleration is the slope of the velocity curve. 
+
+[Insert diagram demonstrating that velocity is slope of displacement and acceleration is slope of velocity.]
+\vspace{5cm}
+
+
+I also briefly touched on the fact that you can calculate displacements if you know how the velocity varies with time, and similarly you can calculate changes in velocity if you know how the acceleration varies with time.
+
+\textit{Transforming from velocity to displacement:}\\
+$$\ds v=\frac{dx}{dt}\Rightarrow \int_{t_0}^{t_1}v\,dt=\int_{t_0}^{t_1}\frac{dx}{dt}\,dt=\Delta{x}=x_1-x_0$$
+$$\ds x_1=\int_{t_0}^{t_1}v\,dt+x_0$$
+If you don't know the initial position, $x_0$, you can't calculate the final position, $x_1$, just the change in position.\\
+
+\textit{Transforming from acceleration to velocity:}\\
+$$\ds a=\frac{dv}{dt}\Rightarrow \int_{t_0}^{t_1}a\,dt=\int_{t_0}^{t_1}\frac{dv}{dt}\,dt=\Delta{v}=v_1-v_0$$
+$$\ds v_1= \int_{t_0}^{t_1}a\,dt+v_0$$
+If you don't know the initial velocity, $v_0$, you can't calculate the final velocity, $v_1$, just the change in velocity.
+
+Does anybody remember how you develop the idea of integral in calculus? Basically, by calculating the area under a curve. In other words, the change in velocity is the area under the acceleration curve and displacement is the area under the velocity curve.
+
+[Insert diagram relating area under curves to change in velocity and displacement.]
+\vspace{5cm}
+
+\subsection{Kinematic equations for constant acceleration}
+What I'd like to do for the rest of the class is to reinforce these relationships by analyzing the special case of constant acceleration. I'll do it two different ways: using calculus and by analyzing graphs. Constant acceleration is something that we see quite often in physics, so this isn't that unusual. Where would we see constant acceleration? A typical case is that we often assume that objects near the Earth's surface accelerate downward with a constant acceleration.
+
+\subsubsection{Analysis using calculus}
+This analysis is similar to what we did previously.
+$$a=\frac{dv}{dt}\Rightarrow v=\int_{t_i}^t a\,dt^\prime = a(t-t_i) + v_0$$
+Note that this is the equation for a straight line. Often we will simplify $t-t_i$ as $\Delta{t}$, which is the change in time, and we will similarly set $\Delta{v}=v-v_i$. This allows us to write
+$$\boxed{\Delta{v}=a\Delta{t}+v_0}$$
+
+Now let's calculate the displacement:
+$$v=\frac{dx}{dt}\Rightarrow x=\int_{t_i}^t v\,dt^\prime$$
+The velocity, $v$, is a function of time. So
+$$x=\int_{t_i}^t a(t-t_i)+v_0\,dt^\prime=\frac{1}{2}a(t-t_i)^2+v_0(t-t_i)+x_0$$
+Similar to what we did with the change in velocity, this will often be written as
+$$\boxed{\Delta{x}=\frac{1}{2}a\Delta{t}^2+v_0\Delta{t}}$$
+
+From these two equations we can create other useful equations. Solve the first equation for $\Delta{t}$,
+$$\Delta{t}=\frac{v-v_0}{a}$$
+and insert it into the second equation
+$$\Delta{x}=\frac{1}{2}a\left(\frac{\Delta{v}}{a}\right)^2 + \frac{v_0\Delta{v}}{a}$$
+Distribute and rearrange to arrive at
+$$\boxed{2a\Delta{x}=v^2-v_0^2}$$
+What is this equation missing? Time! Sometimes we don't know how long something takes but we know the initial and final states. The three equations that I just derived will be very useful for solving many problems that we encounter.
+
+\subsubsection{Analysis using graphs}
+Before applying the kinematic equations for constant acceleration, I want to show that the equations can also be derived by analyzing graphs.
+
+For the case of constant acceleration,
+$$a=\frac{\Delta{v}}{\Delta{t}}\rightarrow \Delta{v}=a\Delta{t} \rightarrow \boxed{v=a\cdot{t}+v_0}$$
+Graphically, this looks like
+
+[Insert constant acceleration graph.]
+\vspace{5cm}
+
+Note that the area under the curve is $a(t-t_i)$, which represents the change in velocity. Similarly, the area under the velocity curve is the displacement. We just saw the the velocity curve is a straight line. 
+
+[Insert linear velocity graph.]
+\vspace{5cm}
+
+The area under the velocity curve consists of two parts: a rectangle and a triangle. Therefore,
+$$\Delta{x}=v_0\cdot{t}+\frac{1}{2}\Delta{v}{t}$$
+But we've already seen that $\Delta{v}=a\cdot{t}$, so this becomes
+$$\Delta{x}=v_0t+\frac{1}{2}a\cdot t^2$$
+which means that
+$$\boxed{x=\frac{1}{2}a\cdot t^2+v_0t+x_0}$$
+
+\subsection{Example problems}
+Time to start working through problems. Let's start with somewhat conceptual problems.
+
+[Insert graphs for graphical differentiation.]
+
+[Insert graphs for graphical integration.]
+
+
+\clearpage
+%\hrulefill\\
+Example problem (have students attempt it first):\\
+A 747 has a length of 59.7 m. The plane lands on a runway that intersects another runway. The width of the intersection is 25.0 m. The plane decelerates through the intersection at 5.70 m/s$^2$ and clears the intersection with a final speed of 45.0 m/s. How long does it take the plane to clear the intersection.
+
+Approach to solving problems:
+\begin{enumerate}
+\item Draw a diagram if applicable.
+\item Write down what is known.
+\item Write down what you want to find out.
+\item Try to figure out what equations to use. This is often the most difficult part. Keep in mind what equations we have available to us. Often we will be making a choice from just a few equations. 
+\item Solve problem algebraically as much as possible. This is easier than carrying numbers around, makes it easier for others (especially me) to figure out what you did, and sometimes results in a simple and elegant algebraic solution that gives you new insights into the problem.
+\item After arriving at a solution, check that it makes sense.
+\end{enumerate}
+
+Given:\\
+$x_i=0.0$ m\\
+$x_f=25.0\mbox{ m }+\mbox{ }59.7\mbox{ m }=\mbox{ }84.7\mbox{ m}$\\
+$v_f=45.0\mbox{ m/s}$\\
+$a=-5.70\mbox{ m/s}^2$\\
+
+Want to know $\Delta{t}$; note that $v_i$ is not given.
+
+We can calculate $v_i$ from $2a\Delta{x}=v_f^2-v_i^2$.
+$$v_i=\sqrt{v_f^2-2a\Delta{x}}$$
+Then, using $a=\Delta{v}/\Delta{t}$,
+$$\Delta{t}=\frac{\Delta{v}}{a}=\frac{v_f-v_i}{a}=\frac{v_f-\sqrt{v_f^2-2a\Delta{x}}}{a}=1.7\mbox{ s}$$
+
+Does this make sense? How might you check? Use approximation and check units.
+
+
+
+\clearpage

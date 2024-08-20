@@ -1,0 +1,118 @@
+\section{Conservation of momentum}
+Objectives:
+\begin{itemize}
+\item Review impulse, momentum, and conservation of momentum
+\item Example problems
+\end{itemize}
+
+\hrulefill
+
+\subsection{Review}
+Last class:
+\begin{itemize}
+\item Impulse: $\vec{J}=\ds\int_{t_i}^{t_f}F\,dt=\vec{F}_{avg}\Delta{t}$
+\item Impulse approximation: during a collision there may be other forces acting on an object other than the normal force from the collision. During that short time interval, the other forces may be relatively small compared to the impulsive force, and so we can ignore them. 
+\item Momentum: $\vec{p}=m\vec{v}$
+\item Impulse-momentum theorem (for single particles): $\vec{J}=\Delta{\vec{p}}=m\vec{v}_f-m\vec{v}_i$; derived with Newton's Second Law
+\item Total momentum (for a system of particles): $\vec{P}=\vec{p}_1+\vec{p}_2+...=\ds\sum_i^N \vec{p}_i$
+\item Conservation of momentum: $\Delta{\vec{P}}=0$, or equivalently, $\vec{P}_f=\vec{P}_i$; derived with Newton's Third Law
+\end{itemize}
+
+I'm not going to introduce any more material today; instead I'd like to focus on understanding these concepts through examples. The first two examples will use impulses and the impulse-momentum theorem. Then we'll do some examples with conservation of momentum.
+
+\subsection{Example problems}
+\subsubsection{Example \#1: Ball bounces off of the ground}
+A 0.5-kg ball is dropped from rest at a height of 1.2 m. The ball rebounds to a height of 0.7 m. What impulse was applied to the ball? If the collision lasted 0.01 s, what was the average force exerted on the ball by the ground?
+
+Here is an example where will have to use the impulse approximation because gravity is always acting on the ball, including during the collision.
+
+Four parts:\\
+(1) Find the momentum before the collision. What do we need to calculate the momentum?
+$$v_f\ds^2-v_i\ds^2=2a\Delta{y}$$
+The initial velocity is zero, and $a=-g=-9.81\mbox{ m/s}^2$. So
+$$v_f=-\sqrt{-2g\Delta{y}}$$
+(note that I had to add a negative sign) and so 
+$$p_1=mv_f=m\sqrt{-2g\Delta{y}}=-2.43\mbox{ kg}\cdot\mbox{m/s}$$
+This is the momentum immediately before the ball hits the ground.
+
+(2) Find the momentum immediately after the collision. What do we need to calculate the momentum?
+$$v_f\ds^2-v_i\ds^2=2a\Delta{y}$$
+Here, $v_f=0$, so
+$$v_i=\sqrt{2g\Delta{y}}$$
+and so
+$$p_2=m\sqrt{2g\Delta{y}}=1.85\mbox{ kg}\cdot\mbox{m/s}$$
+This is the momentum immediately after the ball leaves the ground.
+
+(3) Calculate the impulse.
+$$J=\Delta{p}=p_2-p_1=4.28\mbox{ kg}\cdot\mbox{m/s}$$
+
+(4) Find the average force.
+$$J=F_{avg}\Delta{t}\Rightarrow F_{avg}=\frac{J}{\Delta{t}}=428\mbox{ N}$$
+How does this compare to the force of gravity acting on the ball?
+$$F_g=mg=4.91\mbox{ N}$$
+
+\subsubsection{Example \#2: Baseball struck by baseball bat}
+A 150-g baseball is travelling horizontally through the air at 35 m/s when it is struck by a baseball bat. Immediately after being hit, the ball travels at a speed of 55 m/s at an angle of 25$^\circ$ from horizontal. What is the impulse delivered to the ball?
+
+[Insert diagram.]
+\vspace{5cm}
+
+HINT: You need to take into account the fact that impulse and momentum are vectors.
+
+$$\vec{p}_i=\langle{p_{x,i},p_{y,i}}\rangle=\langle{mv_{x,i},0}\rangle=\langle{5.25\mbox{ kg}\cdot\mbox{m/s},0}\rangle$$
+$$\vec{p}_f=\langle{p_{x,f},p_{y,f}}\rangle=\langle{-mv_f\cos\theta,mv_f\sin\theta}\rangle=\langle{-7.48\mbox{ kg}\cdot\mbox{m/s},3.48\mbox{ kg}\cdot\mbox{m/s}}\rangle$$
+$$\vec{J}=\Delta{\vec{p}}=\langle{-12.7\mbox{ kg}\cdot\mbox{m/s},3.5\mbox{ kg}\cdot\mbox{m/s}}\rangle$$
+$$|\vec{J}|=13.2\mbox{ kg}\cdot\mbox{m/s}$$
+
+
+\subsubsection{Example \#3: Person running on a cart}
+A person is standing on a long wheeled cart.  The person and the cart are both initially stationary. The person weighs 80 kg and the cart is 500 kg. The person starts running until reaching a speed of 8 m/s to the right. What are the speed and direction of the cart?
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$\Delta{P}=P_f-P_i=0$$
+$$P_i=m_pv_{p,i}+m_cv_{c,i}=0$$
+So this means that
+$$P_f=m_pv_{p,f}+m_cv_{c,f}=0\Rightarrow v_{c,f}=\frac{-m_pv_{p,f}}{m_c}=-1.28\mbox{ m/s}$$
+
+\subsubsection{Example \#4: Two skaters push off each other}
+Example: Two skaters, standing at rest at the center of a rink, push off of each other. The skaters weigh 50 and 75 kg, respectively. The rink is 60 m long. It takes 20 s for the heavier skater to reach the edge of the rink. How long does it take the lighter skater?
+
+[Insert diagram.]
+\vspace{5cm}
+
+Set-up: Once the skaters start moving, the net force on each skater is zero. They will travel at constant velocity. Because they are initially at rest, their initial momentum is zero, and therefore the final total momentum must also be zero.
+
+$$v_1=\frac{\Delta{x_1}}{\Delta{t_1}}=-15\mbox{ m/s}$$
+$$P_f=p_{1,f}+p_{2,f}=0\Rightarrow m_1v_1+m_2v_2=0\Rightarrow v_2=-\frac{m_1v_1}{m_2}=2.25\mbox{ m/s}$$
+$$\Delta{t_2}=\frac{\Delta{x_2}}{v_2}=13.3\mbox{ s}$$
+
+Note: The most difficult part of solving conservation of momentum problems is often identifying the system. In this particular case, during the initial collision the net force on each skater is nonzero and so the momentum of each skater changes. However, if we define the system to be both skaters, then the net force on the system is zero (i.e., there are no external forces acting on the system).
+
+\subsubsection{Example \#5: Exploding spaceship}
+A spaceship of mass 2.0$\times$10$^6$ kg is cruising at a speed of 5.0$\times$10$^6$ m/s when it explodes into three parts. One section, with mass $5.0\times 10^5$ kg, shots straight backward at a speed of $2.0\times 10^6$ m/s. The second section, with mass $8.0\times 10^5$ kg, shoots off at a 90$^\circ$ angle at a speed of $1.0\times 10^6$ m/s. What are the direction and speed of the third piece?
+
+This is a conservation of momentum problem. Recall that momentum is a vector quantity.
+
+[Insert diagram.]
+\vspace{5cm}
+
+Initial momentum: 
+$$\vec{P}_i=m\vec{v}_i=\langle{10^{13}\mbox{ kg}\cdot\mbox{m/s}, 0}\rangle$$
+
+Final momentum:
+$$\vec{P}_f=\vec{p}_{1,f}+\vec{p}_{2,f}+\vec{p}_{3,f}=\vec{P}_i$$
+$$\vec{p}_{1,f}=\langle{-10^{12}\mbox{ kg}\cdot\mbox{m/s},0}\rangle$$
+$$\vec{p}_{2,f}=\langle{0.8\times 10^{11}\mbox{ kg}\cdot\mbox{m/s}}\rangle$$
+
+So, this means that we have
+$$\langle{10^{13}\mbox{ kg}\cdot\mbox{m/s},0}\rangle=\langle{-10^{12}\mbox{ kg}\cdot\mbox{m/s},0}\rangle+\langle{0,8\times 10^{11}\mbox{ kg}\cdot\mbox{m/s}}\rangle+\langle{p_{3,x},p_{3,y}}\rangle$$
+And so
+$$p_{3,x}=1.1\times 10^{13}\mbox{ kg}\cdot\mbox{m/s}$$
+$$p_{3,y}=-8.0\times 10^{11}\mbox{ kg}\cdot\mbox{m/s}$$
+
+To find the velocity, we need to know that the mass of the third piece is $m_3=7\times 10^5$ kg.
+$$\vec{v}_3=\frac{\vec{p}_3}{m_3}=\langle{1.67\times 10^7\mbox{ m/s},-1.1\times 10^6\mbox{ m/s}}\rangle$$
+
+\clearpage

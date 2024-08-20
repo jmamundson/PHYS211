@@ -1,0 +1,146 @@
+\section{Fluid dynamics}
+Objectives:
+\begin{itemize}
+\item Ideal fluids
+\item Flux continuity equation
+\item Bernoulli's equation
+\end{itemize}
+
+
+\hrulefill
+
+The last couple of classes we have discussed hydrostatics. One of the results was that water pressure depends on depth. As we'll see today, differences in pressure drive fluid flow. One demo that shows that is a bottle filled with water that has holes in it. When I pull the pins out, the water at depth shoots out farther than the water near the top.
+
+\subsection{Ideal fluids}
+Its more interesting to talk about fluid dynamics, or fluid motion. To do this, we are going to consider an ideal fluid flowing through a pipe. The ideal-fluid model is not perfect, but it captures the essence of fluid flow while eliminating unnecessary details. We will assume three things:
+\begin{enumerate}
+\item The fluid is incompressible. This is a good approximation for many fluids, especially water.
+\item The fluid flow is steady (laminar) and non-turbulent.
+[Insert diagram.]
+\vspace{5cm}
+
+The transition from laminar to turbulent flow depends on the fluid properties, the flow speed, and the geometry of the flow.
+\item The fluid is non-viscous. Viscosity is a fluid's resistance to flow; think of it as internal friction. Water has a low viscosity, syrup has a high viscosity.
+\end{enumerate}
+
+Because the fluid flow is assumed incompressible, we will have a convenient equation that describes mass continuity.
+
+The amount of fluid that enters the upstream end of a pipe in time $\Delta{t}$ has to equal the amount of fluid that pass through the downstream end of a pipe.
+
+Volume $V_1$ enters the pipe in time $\Delta{t}$; volume $V_2$ exits the pipe in the same amount of time. Due to incompressibility, $V_1=V_2$.
+$$V_1=A_1\Delta{x_1}=A_1v_1\Delta{t}$$
+$$V_2=A_2\Delta{x_2}=A_2v_2\Delta{t}$$
+Because we are dealing with an ideal fluid, the velocity across each cross-section is constant.
+And so
+$$\boxed{A_1v_1=A_2v_2}$$
+If $A_2<A_1$, as is the case for the diagram that I've drawn, then the fluid velocity increases.
+
+We'll define a new term, called the flux, or volume flux, as 
+$$Q=\frac{V}{\Delta{t}}=Av\mbox{ [m}^3\mbox{/s]}$$
+
+The flux is constant in a pipe.
+
+These assumptions lead to a nice continuity equation for fluid flow through a pipe:
+$$Q=Av=\mbox{constant}$$
+where $Q$ is the flux [m$^3$/s], $v$ is the velocity, and $A$ is the cross-sectional area. Note that for ideal fluids, the flow velocity does not vary across the channel. 
+
+This continuity equation also applies for rivers as long as the river stage (i.e., depth) is constant and $v$ is the average velocity through a cross-section.
+
+\subsubsection{Example: Pipe with variable diameter}
+Water enters a pipe with a diameter of 1 cm at 4 m/s. The pipe expands to 2 cm, then shrinks to 0.5 cm. (a) What is the flux? (b) What are the water speeds in each section of pipe?
+
+(a) Flux:
+$$Q=Av=\pi r^2v=\pi(0.05\mbox{ m})^2\times 4\mbox{ m/s}=0.03\mbox{ m}^3/s$$
+
+(b) Speed at points 2 and 3:
+$$v_2=\frac{A_1v_1}{A_2}=1\mbox{ m/s}$$
+$$v_3=\frac{A_1v_1}{A_3}=16\mbox{ m/s}$$
+
+
+\subsection{Bernoulli's equation}
+Ok, that's great, but what causes fluid motion? Fluid flow is constant through straight stretches of pipe, but accelerates or decelerates as the pipe diameter varies.
+
+For an ideal fluid in a pipe, there are no external forces acting on the fluid --- only pressure.
+
+Consider a small section of fluid in a pipe:
+
+\clearpage
+[Insert diagram.]
+\vspace{5cm}
+
+$$\sum F_x=P_lA-P_rA=A(P_l-P_r)=A\Delta{P}=ma_x$$
+$\Delta{P}$ represents a pressure difference. If $\Delta{P}>0$, the water accelerates to the right. The larger the pressure difference, the greater the acceleration. %This means that pressure is high where the fluid is moving slowly, and low where the fluid is moving quickly. This is referred to as the Bernoulli effect.
+
+%It also means that pressure is low in narrow sections of pipe. Weird!
+
+OK, so pressure gradients (differences) are one thing that causes fluid to flow. Gravity also causes fluids to flow. Pressure gradients and gravity both represent forces; we want to relate these things to fluid flow in a single equation. To do this, we'll use the work-energy theorem.
+
+Recall:
+$$W=\Delta E=\Delta K+\Delta U_g$$
+Here we are assuming that the fluid is inviscid, so there is no change in thermal energy.
+
+We're going to look at what happens to a volume of water as it flows through a pipe that changes elevation and has a change in area.
+
+[Insert diagram.]
+\vspace{5cm}
+
+As the parcel of water moves through the pipe, there is a loss of volume on the left and a gain in volume on the right. 
+$$V_1=A_1\Delta{x_1}$$
+or
+$$V_2=A_2\Delta{x_2}$$
+Due to incompressibility, $V_1=V_2=V$. 
+
+The change in kinetic energy is
+$$\boxed{\Delta K=\frac{1}{2}\rho V(v_2\ds^2-v_1\ds^2)}$$
+
+The change in potential energy is
+$$\boxed{\Delta U_g=mg\Delta h=\rho V(h_2-h_1)}$$
+
+Ok, so we have $\Delta{K}$ and $\Delta{U_g}$. How much work was done to the volume of water? Work done by pressure on the left was
+$$W_1=F_1\Delta x_1=P_1A_1\Delta x_1=P_1 V$$
+
+Work done by pressure on the right is the opposite, so
+$$W_2=-F_2\Delta x_2=-P_2A_2\Delta x_2=-P_2 V$$
+
+The net work is 
+$$\boxed{W=W_1+W_2=(P_1-P_2)V}$$
+
+Putting this all together,
+$$(P_1-P_2)V=\frac{1}{2}\rho V(v_2\ds^2-v_1\ds^2)+\rho V(h_2-h_1)$$
+Dividing by $V$ and re-arranging,
+$$\boxed{P_1+\frac{1}{2}\rho v_1\ds^2+\rho gh_1=P_2+\frac{1}{2}\rho v_2\ds^2+\rho gh_2=\mbox{constant}}$$
+This is referred to as Bernoulli's Equation.
+
+This quantity is constant along a streamline (a path that a particle takes) in an ideal fluid.
+
+Let's think about what this means by looking at the fluid flow through a pipe that has changes in elevation and diameter.
+
+[Insert diagram.]
+\vspace{5cm}
+
+\subsubsection{Example: Water flowing from a reservoir}
+Water flows from a reservoir, through an intake tube, and down to a turbine. The intake tube has a diameter of 100 cm and is 50 m below the reservoir surface. The water drops 200 m to the turbine; water flows into the turbine through a 50 cm diameter nozzle. (a) What is the water speed into the turbine? (b) By how much does the inlet pressure differ from hydrostatic pressure?
+
+(a) There is no flow at the surface of the reservoir, and the elevation at $y_3=0$. 
+$$P_{\rm atm}+\rho g y_1=P_{\rm atm}+\frac{1}{2}\rho_g v_3^2$$
+$$v_3=\sqrt{2gy_1}=70\mbox{ m/s}$$
+Note that the speed decreases as the reservoir drains.
+
+(b) The inlet pressure differs from hydrostatic pressure because the water is flowing. 
+$$v_2A_2=v_3A_3$$
+$$v_2\pi r_2^2=v_3\pi r_3^2$$
+$$v_2=v_3\frac{r_3^2}{r_2^2}=v_3\left(\frac{r_3}{r_2}\right)^2=\frac{v_3}{4}=\frac{\sqrt{2gy_1}}{4}$$
+
+Now we use Bernoulli's equation:
+$$P_{\rm atm}+\rho g y_1=P_2+\frac{1}{2}\rho v_2^2+\rho g y_2$$
+$$P_2=P_{\rm atm}+\rho g(y_1-y_2)-\frac{1}{2}\rho v_2^2$$
+Notice that
+$$P_{\rm static}=P_{\rm atm}+\rho g(y_1-y_2)$$
+so the difference in pressure from hydrostatic pressure is simply
+$$\frac{1}{2}\rho v_2^2=\frac{1}{2}\rho\frac{2gy_1}{16}=\frac{\rho gy_1}{16}=153000\mbox{ Pa}\approx 1.5\mbox{ atm}$$
+
+The hydrostatic pressure at this depth is 5918000 Pa, or about 6 atm.
+
+
+
+\clearpage

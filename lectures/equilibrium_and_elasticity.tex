@@ -1,0 +1,104 @@
+\section{Equilibrium and elasticity}
+Objectives:
+\begin{itemize}
+\item Static equilibrium
+\item Stability
+\item Elastic deformation
+\end{itemize}
+
+\hrulefill
+
+\subsection{Static equilibrium}
+Last class we discussed problems involving static equilibrium. When an object is in static equilibrium,
+$$\sum F_x=0$$
+$$\sum F_y=0$$
+$$\sum \tau=0$$
+When calculating torques, you are free to pick any axis of rotation (the book refers to this as a ``pivot point'') that you'd like. Torque can be caused by any force, including gravity. Gravitational torque is especially important in the context of stability and balance. The gravitational torque is calculated by applying the gravitational force at the object's center of mass. OK, but what is meant by an object's center of mass?
+
+Center of mass is the ``unique point where the weighted relative position of the distributed mass sums to zero''. There is a gravitational force acting downward on each point within an object. Adding up the torques produced by each of these forces is equivalent to applying the total gravitational force to the object's center of mass.
+
+\subsection{Stability}
+We can find the angle at which an object will tip over by calculating the torque as a function of the tilt angle. When $\tau=0$ the object is either completely stable or meta-stable. If it is meta-stable, tilting it a little bit one way or the other will cause it to topple.
+
+[Insert diagram of a box about to tip over.]
+\vspace{5cm}
+
+\subsubsection{Example: Stability of a table}
+How close can a 70-kg person stand to the end of a 56-kg table before it tips over?
+
+[Insert diagram of the table. The edge of the table extends beyond the legs of the table.]
+\vspace{5cm}
+
+$$\sum F_x = 0$$
+$$\sum F_y = F_{n,1}+F_{n,2}-F_{g,t}-F_{g,p}=0$$
+$$\sum \tau = F_{g,t}l_1-F_{n,1}l_2-F_{g,p}L=0$$
+Rearranging the torque balance gives
+$$F_{n,1}=\frac{F_{g,t}l_1-F_{g,p}L}{l_2}=0$$
+(When $F_{n,1}=0$, the table is just starting to tip.) Solving for $L$
+$$L=\frac{F_{g,t}}{2F_{g,p}}=\frac{m_t}{2m_p}=0.4\mbox{ m}$$
+$L$ is the distance from the leg of the table. The person can therefore stand 0.15 m from the end of the table.
+
+\subsection{Elasticity}
+So far in our analysis of static equilibrium we've assumed that objects maintain their shape. In reality, all objects stretch, compress, and deform. We've already talked about this a little bit in the context of normal forces and tensional forces, which are a result of compression and tension occurring at the molecular scale. These forces are ``restoring forces'' that try to restore the objects to their equilibrium position. Materials that have restoring forces are called ``elastic''. 
+
+We can model these elastic restoring forces by treating them as springs.
+
+What do we know about springs? If you pull a spring, it will pull back in the opposite direction. If you push a spring, it will push back in the opposite direction. In other words, springs provide ``restoring forces''; they always try to return to the equilibrium length (i.e., the length they would be if there is no force being exerted on the spring). Furthermore, the magnitude of that force depends on how far the spring has been stretched or compressed. As we've already seen, we write the restoring force of a spring as
+$$\boxed{F_{sp}=-k\Delta{x}}$$
+where $k$ is an empirical spring constant and $\Delta{x}$ is the displacement of the spring from equilibrium. The spring force points in the direction of the spring. This expression is referred to as Hooke's Law, though its not really a law because it breaks down if you stretch the spring too much. The notation can be a little bit confusing. Because the spring force can point either direction (depending on whether the spring is stretched or compressed), you need to use this formula to figure out the direction of the force.
+
+[Insert several diagrams showing a spring being stretched or compressed, and discuss in terms of whether the force is positive or negative.]
+\vspace{5cm}
+
+Hooke's Law tells us that the force applied to a spring is linearly related to the displacement of the spring. So if we double the force, we double the displacement. 
+
+When modeling elastic materials, we will replace $k$ with
+$$k=\frac{YA}{L}$$
+where $Y$ is Young's modulus (a material property), $A$ is the cross-sectional area of the object, and $L$ is the length of the object. An object with a large Young's modulus is resistant to changes in length.
+
+When writing the elastic force, we often replace $\Delta{x}$ with $\Delta{L}$. So
+$$F=-\frac{YA}{L}\Delta{L}=\Rightarrow \frac{F}{A}=-Y\frac{\Delta{L}}{L}$$
+$F/A$ is the stress and $\Delta{L}/L$ is the strain (i.e., fractional change in length).
+
+What does this equation tell us? What if we apply a large force to a thin rope? What if we construct a thicker rope out of the same material?
+
+This equation also tells us that we should think about normal forces (and tensional forces) as being applied everywhere that two surfaces are in contact. However, instead of adding up a whole bunch of little forces, it is much easier to calculate the total force and apply it at the center of where two object's come in contact.
+
+We were to make a plot of $F/A$ vs. $\Delta{L}/L$, we would find a linear relationship for small $\Delta{L}$. This is the range for which Hooke's Law is valid. Beyond that the material will remain elastic for a little bit more deformation until it reaches the elastic limit. Beyond that the material behaves plastically --- it changes length will very little change in force --- until it reaches the breaking point, or tensile/compressive strength.
+
+[Insert diagram.]
+\vspace{5cm}
+
+Interestingly, some materials stretch a lot before breaking while others can only stretch a little bit. For example, steel and spider silk have similar tensile strengths (break at the same stress), but silk undergoes much more extension than steel.
+
+[Insert diagram.]
+\vspace{5cm}
+
+Like torque, elasticity is also a very important concept in biology --- for example, it comes up in the context of extension and compression of bones.
+
+\subsubsection{Example: Static equilibrium, torque, and elasticity}
+Let's finish with an example problem that incorporates static equilibrium, torque, and elasticity.
+
+A 100-kg, 3.5-m-long plank is supported on its end by a 7.0-mm-diameter rope with a tensile strength of 6.0$\times$10$^7$ N/m$^2$. How far along the plank, measured from the pivot, can an 800-kg piece of machinery be moved along the plank before the rope snaps?
+
+[Insert diagram.]
+\clearpage
+
+We want to find at what point does $F_t/A=6.0\times 10^7\mbox{ N/m}^2$. The cross-sectional area is $A=\pi r^2=3.85\times 10^{-5}\mbox{ m}^2$, so we need to determine when $F_t=2310\mbox{ N}$.
+
+$$\sum F_y=F_n-F_{g,p}-F_{g,m}+F_t=0$$
+$F_t$ and $F_n$ are unknown, so we need one another equation. We want to remove $F_n$ from the first equation. The way to do this is to sum the torques around the point where the rope is holding up the plank. Let's call the length of the plank $L$, and the distance from the pivot to the machinery $l$.
+$$\sum \tau=F_{g,p}\frac{L}{2}+F_{g,m}(L-l)-F_nL=0$$
+$$F_nL=F_{g,p}\frac{L}{2}+F_{g,m}(L-l)$$
+$$F_n=\frac{1}{2}F_{g,p}+F_{g,m}\left(1-\frac{l}{L}\right)$$
+Let's plug the result into the force balance equation.
+$$\frac{1}{2}F_{g,p}+F_{g,m}\left(1-\frac{l}{L}\right)-F_{g,p}-F_{g,m}+F_t=0$$
+$$-\frac{1}{2}F_{g,p}-F_{g,m}\frac{l}{L}+F_t=0$$
+Solve this for $l$; we want to find for what $l$ does $F_t=2310\mbox{ N}$.
+$$F_{g,m}\frac{l}{L}=F_t-\frac{1}{2}F_{g,p}$$
+$$l=\left(F_t-\frac{1}{2}F_{g,p}\right)\frac{L}{F_{g,m}}$$
+Now we can plug in values, and we find that
+$$\boxed{l=0.81\mbox{ m}}$$
+
+
+\clearpage

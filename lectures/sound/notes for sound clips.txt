@@ -1,0 +1,40 @@
+------------------------------------------------------------------------------------
+
+note1.wav: f1=220 Hz (note "A")
+
+note2.wav: f1=440 Hz (note "A", one octave higher)
+
+note3.wav: f1=880 Hz (note "A", two octaves higher)
+
+------------------------------------------------------------------------------------ 
+
+beats1.wav: f1=400 Hz; f2=410 Hz; fbeat=10 Hz => T=0.1 s => can't hear beats
+
+beats2.wav: f1=400 Hz; f2=401 Hz; fbeat=1 Hz => T=1 s
+
+beats3.wav: f1=400 Hz; f2=400.5 Hz; fbeat=0.5 Hz => T=2 s
+
+beats4.wav: f1=100 Hz; f2=101 Hz; fbeat=1 Hz => T=1 s
+
+------------------------------------------------------------------------------------ 
+
+harmonic_A.wav: f1=220 Hz (dropped an octave), f2=440 Hz, f3=660 Hz, f4=880 Hz, f5=1100 Hz
+
+harmonic_Csharp.wav: 
+
+harmonic_D.wav: f1=293.33 Hz, f2=586.67 Hz, f3=880 Hz, f4=1173.33 Hz, f5=1466.67 Hz
+
+harmonic_E.wav: f1=330 Hz, f2=660 Hz, f3=990 Hz, f4=1320 Hz, f5=1650
+
+consonance_fifth_AE.wav: combine A and E; some harmonics match and sounds good 
+f1_E=3/2*f1_A
+
+consonance_fourth_AD.wav: combine A and E; some harmonics match and sounds good 
+f1_D=4/3*f1_A
+
+chord_ACE.wav: root, third, and fifth: A, C#, and E
+
+chord_ACE_harmonics.wav: same as above, but uses harmonics for richers sounds
+
+dissonance_AAsharp.wav: simultaneously play two adjacent notes (A and A#); feels unsettled or unresolved
+- dissonance is not necessarily a bad thing

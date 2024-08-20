@@ -1,0 +1,164 @@
+\section{Torque}
+Objectives:
+\begin{itemize}
+\item Definition of torque
+\item Rotational equivalent of Newton's Second Law
+\end{itemize}
+
+\hrulefill
+
+Last class we discussed how forces can produce uniform circular motion. Essentially, you need a force that produces a centripetal acceleration. This force can be any type of force or combination of forces that points toward the center of a circle.
+$$\sum F_r=\frac{mv^2}{r}=m\omega^2r$$
+
+Forces can also cause rigid bodies to rotate around some axis of rotation. We will use the term \textit{torque} to refer to the ability of a force to cause a rotation, and we'll define torque as 
+$$\boxed{\tau=rF_\perp=rF\sin\theta}$$
+where $\tau$ is torque and has units of N$\cdot$m, $r$ is the radial distance from the axis of rotation to the point at which the force is being applied, and $F$ is the force, and $\theta$ is the angle between the radial line and the line of action. Following standard conventions, $\tau>0$ for counter-clockwise rotation. The equation for torque can be thought of in two different, but equivalent ways.
+
+\begin{itemize}
+\item $\tau=r(F\sin\theta)$, where $F\sin\theta$ is the component of the force that acts perpendicular to the radial line.
+\item $\tau=(r\sin\theta)F$, where $r\sin\theta$ is the lever arm, or perpendicular distance from the axis of rotation to the line of action.
+\end{itemize}
+
+[Insert diagram showing alternative view points.]
+\vspace{5cm}
+
+
+Although the concept of torque is a little bit strange, its something that we can easily test.
+
+\clearpage
+[Demo of object hanging on a rod.]
+\vspace{3cm}
+
+
+
+Consider the torque acting on a wrench: 
+
+[Include diagram of the wrench and forces.]
+\vspace{5cm}
+
+
+If you apply force $F$ at a distance $r$ from the center of the bolt, and $r\perp F$, then you are exerting a torque $\tau=rF>0$.  If you exert the force at an angle $\theta=45^\circ$ relative to the radial axis, then $\tau=rF\sin\theta$ (in this case, $r\perp F\sin\theta$). If you double the radius, then $\tau=2rF$.
+
+\subsection{Example problems: torque}
+\subsubsection{Example \#1}
+Two forces act on a rod that pivots about its center. Force $F_2$ is perpendicular to the rod and is a distance $l$ from the axis of rotation. Force $F_1$ has a magnitude of 20 N and is oriented at a 45$^\circ$ angle to the rod. The force is acting on the other side of the axis of rotation and at a distance of $2l$ from the axis. What should $F_2$ be so that $\tau_{net}=0$?
+
+[Include diagram.]
+\vspace{5cm}
+
+$$\sum\tau=2lF_1\sin\theta-lF_1=0$$
+$$F_2=2F_1\sin\theta=28\mbox{ N}$$
+
+\subsubsection{Example \#2}
+Various forces act on a rod. The rod can pivot around one of its ends. Rank the forces in order of smallest to largest torque.
+
+[Insert diagram.]
+\vspace{5cm}
+
+\subsection{Rotational equivalent of Newton's second law}
+Torque affects the rotational motion of an object. It is the rotational equivalent of force. To see how it affects motion, let's start with a really simple system consisting of a point mass, $m$, attached to a massless rod of length $l$. The rod can rotate around its end.
+
+[Insert diagram.]
+\vspace{5cm}
+
+A force is exerted on the mass; the force is perpendicular to the rod. It therefore produces a tangential acceleration of the mass.
+$$F_\perp=ma_t$$
+Recalling that $a_t=\alpha r$,
+$$F_\perp=m\alpha r.$$
+Since $\tau=rF_\perp$,
+$$\boxed{\tau = mr^2\alpha}$$
+
+What about a system of particles, or a solid object?
+
+\clearpage
+[Insert diagram showing forces acting on a rotating object.]
+\vspace{5cm}
+
+The response of each particle is given by the torque acting on that particle. Thus, $\tau_1=m_1r_1\ds^2\alpha$, $\tau_2=m_2r_2\ds^2\alpha$, $...$ Because this is rigid body rotation, all points on the body have the same angular acceleration, $\alpha$. The net torque is $\tau_{net}=\tau_1+\tau_2+\tau_3+...$
+$$\tau_{net}=\alpha\sum_{i=1}^Nm_ir_i\ds^2$$
+The summation can only be calculated analytically for simple objects. So instead we replace the summation with
+$$I=\sum_{i=1}^Nm_ir_i\ds^2,$$
+where $I$ is the moment of inertia, giving
+$$\tau_{net}=I\alpha$$
+or equivalently,
+$$\boxed{\sum\tau=I\alpha}$$
+Does this look at all familiar? It is Newton's Second Law for rotation. The moment of inertia is a rotational equivalent to mass; it is an object's \textit{resistance to rotation}. Rotation about different axes of the same body yield different moments of inertia. The moment of inertia can be calculated for some objects, for others it must be measured. Some that can be calculated:
+
+Solid cylinder: $I=\frac{1}{2}MR^2$\\
+Thin-walled cylinder: $I=MR^2$\\
+Solid sphere: $I=\frac{2}{5}MR^2$\\
+Spherical shell: $I=\frac{2}{3}MR^2$
+
+Note that they all have a dependence on mass and radius squared.
+
+\subsection{Example problems: $\sum\tau=I\alpha$}
+\subsubsection{Example \#1}
+A 0.2 kg, 0.2-m-diameter disk is spun around its central axis by a motor. What torque must the motor supply to take the disk from 0 to 1800 rpm in 4.0 s?
+
+$$\tau_{net}=\sum\tau=I\alpha$$
+$$\alpha=\frac{\Delta\omega}{\Delta t}$$
+
+Given:\\
+$\omega_i=0$\\
+$\omega_f=1800\mbox{ rpm}\times\frac{1\mbox{ min}}{60\mbox{ s}}\times\frac{2\pi}{1\mbox{ rev}}=188.5\mbox{ rad/s}$\\
+$\Delta t=4.0\mbox{ s}$
+
+So, from this $\boxed{\alpha=47.1\mbox{ rad/s}^2}$.
+
+The moment of inertia can be calculated for a disk: $I=\frac{1}{2}mr^2=1\times 10^{-3}\mbox{ kg}\cdot\mbox{m}^2$.
+
+Inserting into the expression for $\tau$, we get that $\boxed{\tau_{net}=0.05\mbox{ N}\cdot\mbox{m}}$.
+
+
+\subsubsection{Example \#2}
+How does a pulley affect the motion of a system? Consider an Atwood machine.
+\clearpage
+[Insert diagram.]
+\vspace{5cm}
+
+If we assume that the pulley is massless and frictionless, then we can assume that the tension is uniform in the rope. The force balance equations become
+
+$$T-m_1g=m_1a$$
+$$T-m_2g=-m_2a$$
+
+We have two equations and two unknowns. Subtracting the second equation from the first equation gives
+$$(m_2-m_1)g=(m_1+m_2)a\Rightarrow \boxed{a=\frac{(m_2-m_1)g}{m_1+m_2}}$$
+
+If the pulley is not massless, but still frictionless, then we are no longer allowed to assume that the tension in the rope is uniform. Therefore,
+$$T_1-m_1g=m_1a$$
+$$T_2-m_2g=-m_2a$$
+We have two equations and three unknowns. We need another equation, which comes from applying a torque balance to the pulley.
+
+$$rT_1-rT_2=I\alpha=-I\frac{a}{r}$$
+
+Dividing both sides by $r$,
+$$T_1-T_2=-I\frac{a}{r^2}$$
+
+Now subtracting the second equation from the first equation,
+$$T_1-T_2+(m_2-m_1)g=(m_1+m_2)a$$
+inserting the torque balance,
+$$-I\frac{a}{r^2}+(m_2-m_1)g=(m_1+m_2)a$$
+and rearranging,
+$$\boxed{a=\frac{(m_2-m_1)g}{m_1+m_2+\frac{I}{r^2}}}$$
+
+Is the last term in the denominator small compared to the other terms? If so, its okay to assume that the pulley is massless.
+
+
+\subsection{Derivation of $\tau=rF_\perp$}
+Define torque as the derivative of work with respect to the angular position $\theta$. (Force is similar defined as the derivative of work with respect to linear position.)
+$$\displaystyle W = \int_a^b F\,ds$$
+If the work is done along a circle, than $ds = rd\theta$ and therefore
+$$\displaystyle W = \int_{\theta_a}^{\theta_b} rF_\perp\,d\theta$$
+Because $\omega=d\theta/dt$, we can substitute in $d\theta=\omega dt$
+$$\displaystyle W = \int_{t_a}^{t_b}rF_\perp\omega\,dt$$
+The work has to equal the change in kinetic energy.
+$$K = \sum\frac{1}{2}m_iv_i^2 = \sum\frac{1}{2}m_i\left(\omega r_i \right)^2 = \frac{1}{2}\omega^2\sum{m_ir_i^2} = \frac{1}{2}I\omega^2$$ 
+and so
+$$\frac{1}{2}I\left(\omega_b^2-\omega_a^2\right) =  \int_{t_a}^{t_b}rF_\perp\omega\,dt$$
+Differentiating both sides with respect to time gives
+$$I\omega\alpha = rF_\perp\omega$$
+and therefore
+$$\boxed{\tau\equiv rF_\perp = I\alpha}$$
+
+
+\clearpage

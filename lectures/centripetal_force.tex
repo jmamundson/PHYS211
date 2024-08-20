@@ -1,0 +1,78 @@
+\section{Centripetal force}
+Objectives:
+\begin{itemize}
+\item What causes circular motion?
+\item True weight vs. apparent weight
+\end{itemize}
+
+\hrulefill
+
+\subsection{Overview and demos}
+We spent the last few lectures talking about different types of forces, and discussing how they affect linear motion. In the next two classes I'll talk about how forces cause circular and rotational motion by talking about the centripetal force (today) and torque (next class). The centripetal force is not really a new type of force --- rather, it is any force that causes an object to rotate in a circle. It can be a tensional force, as in the case of tetherball, or gravity in the case of a satellite orbiting the Earth.\\
+
+Demo: Why doesn't the object move in a straight line? Identify the centripetal force. (1) Bucket full of water. (2) Object on the end of a string. (3) Object sitting on a rotating disk.\\
+
+
+We've already seen that if an object is moving in a circle, the object's acceleration must point toward the center of the circle. We referred to this as the centripetal acceleration, and saw that
+$$a_c=\frac{v^2}{r}=\omega^2r$$
+A centripetal force, then, is any force that produces a centripetal acceleration. So
+$$F_c=ma_c=m\frac{v^2}{r}=m\omega^2r$$
+The one thing that makes centripetal forces difficult to deal with is that when we add up forces, we have to add them in up in the ``radial'' direction.
+
+\subsection{Example problems}
+\subsubsection{Example \#1}
+One simple example of a centripetal force is a satellite orbiting the Earth.
+
+[Insert diagram.]
+\vspace{5cm}
+
+If the satellite is far enough from the Earth we don't have to worry about drag (i.e., the satellite is not passing through the Earth's atmosphere). The only force acting on the satellite is gravity. Recall that
+$$F_g=\frac{Gm_1m_2}{r^2}$$
+In order for the satellite to stay in a circular orbit, this force must point toward the center of the circle (it does) and equal the centripetal force ($F_g=F_c$). So this gives
+$$\frac{Gm_1m_2}{r^2}=m_2\frac{v^2}{r}$$
+Rearranging, we find the orbital velocity:
+$$\boxed{v=\sqrt{\frac{Gm_1}{r}}}$$
+
+The International Space Station is 330 km above the Earth's surface, so $r=6371\mbox{ km}+330\mbox{ km} = 6671\mbox{ km}$. $m_1$ is the mass of the Earth, or $m_1=5.972\times 10^{24}\mbox{ kg}$, and $G=6.67\times 10^{-11}\mbox{ N}\cdot\mbox{m}^2/\mbox{kg}^2$. Therefore, its orbital velocity is 27,700 km/h.
+
+Satellites are generally not entirely out of the Earth's atmosphere. Friction eventually slows them down, and so they crash to the Earth.
+
+(Note that if we are close to the Earth's surface, and air resistance is ignored, then $v=\sqrt{gr}\approx 28500\mbox{ km/hr}$.)
+
+\subsubsection{Example \#2}
+As a roller-coaster car crosses the top of a 40-m-diameter loop-the-loop, its apparent weight is the same as its true weight. What is the car's speed at the top? How does the apparent weight at the bottom of the loop-the-loop (assuming that the speed remains constant) compare to its true weight?
+
+True weight: $F_g=mg$\\
+Apparent weight: $F_n$; this is the force that you feel pushing against you. If you were on a free-falling elevator, your apparent weight would be 0 because you wouldn't feel the elevator pushing upward. 
+
+At the top of the loop-de-loop, $F_g$ and $F_n$ are both pointing toward the center of the circle. Adding them up,
+$$\sum F_r=F_g+F_n=ma_c=m\frac{v^2}{r}$$
+Since the apparent weight is the same as the true weight, $F_g=F_n$, and so
+$$2F_g=m\frac{v^2}{r}$$
+$$2mg=m\frac{v^2}{r}$$
+Rearranging,
+$$\boxed{v=\sqrt{2gr}=20\mbox{ m/s}}$$
+
+At the bottom of the loop-de-loop,
+$$\sum F_r=F_n-F_g=ma_c=v\frac{v^2}{r}$$
+$$F_n=F_g+m\frac{v^2}{r}=mg+m\frac{v^2}{r}$$
+$$\frac{v^2}{r}=2F_g$$
+So, this means that
+$$\boxed{F_n=F_g+2F_g=3F_g}$$
+
+\subsubsection{Example \#3}
+A 75 kg person weighs themselves at the north pole and at the equator. Which scale reading is higher, and by how much? Assume that the Earth is a perfect sphere.
+
+At the north pole, the person just spins in a circle. There is no centripetal acceleration. Therefore, summing the forces gives
+$$\sum F_r=F_g-F_n=ma_c=0$$
+$$F_n=F_g=ma=735.8\mbox{ N}$$
+
+At the equator, the person travels with in a circle, and so there is a centripetal force.
+$$\sum F_r=F_g-F_n=m\omega^2r$$
+$$F_n=F_g-m\omega^2r$$
+The radius of the Earth is about $r=6.37\times 10^6\mbox{ m}$. It takes the Earth 86400 s to rotate once about its axis, and so $\omega=(2\pi)/(86400\mbox{ s})$. As a result, the apparent weight is about 2.5 N lower at the equator than at the pole.
+
+
+
+
+\clearpage

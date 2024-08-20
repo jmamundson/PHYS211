@@ -1,0 +1,109 @@
+\section{Relative motion and circular motion}
+Objectives:
+\begin{itemize}
+\item Relative motion in 1D and 2D
+  \begin{itemize}
+  \item Emphasize that motion is always relative to a reference frame
+  \item Opportunity to practice with 2D motion and vectors
+  \end{itemize} 
+\item Circular motion as a type of 1D motion
+\end{itemize}
+\hrulefill
+
+\subsection{Galilean relativity}
+reference frame = abstract coordinate system of an observer
+
+Assumptions of Galilean relativity
+\begin{itemize}
+\item We will assume inertial reference frames (i.e., the observers are not accelerating relative to each other).
+\item The reference frames share a universal time (i.e., time is not relative).
+\end{itemize}
+  
+[Insert diagram illustrating relative position.]
+\vspace{5cm}
+
+Position:
+$$\boxed{x_{BA}=x_{BP}+x_{PA}}$$
+
+Take derivatives to find relative velocity:
+$$\frac{dx_{BA}}{dt}=\frac{dx_{BP}}{dt}+\frac{dx_{PA}}{dt}$$
+$$\boxed{v_{BA}=v_{BP}+v_{PA}}$$
+
+If points $A$ and $B$ are moving with the same velocity, then $v_{BA}=0$ and
+$$v_{PA}=-v_{BP}=v_{PB}$$
+In other words, observers at $A$ and $B$ observe the object at $P$ moving with the same velocity.
+
+We can take one more derivative to describe the relative acceleration.
+$$\frac{dv_{BA}}{dt}=\frac{dv_{BP}}{dt}+\frac{dv_{PA}}{dt}$$
+$$a_{BA}=a_{BP}+a_{PA}$$
+
+In this class we will only concern ourselves with inertial reference frames. If we wanted to account for noninertial reference frames we'd have to incorporate Einstein's Theory of General Relativity. So for our purposes, $a_{BA}=0$, and thus
+$$a_{PA}=-a_{BP}\Rightarrow \boxed{a_{PA}=a_{PB}}$$
+In inertial reference frames, observers at $A$ and $B$ observe objects accelerating at the same rate.
+
+We have derived these equations in one-dimension, but it is straight forward enough to discuss relative motion in two-dimensions.
+
+$$\vec x_{BA}=\vec x_{BP}+\vec x_{PA}$$
+$$\vec v_{BA}=\vec v_{BP}+\vec v_{PA}$$
+$$0=\vec a_{BP}+\vec a_{PA}$$
+
+\subsubsection{Example \#1}
+A boat travels upriver at 14 km/h relative to the water. The water flows 9 km/h relative to the ground.
+
+(a) What are the magnitude and direction of the boat's velocity relative to the ground?\\
+(b) A child walks to from the bow to the stern at 6 km/h. What are the magnitude and direction of the child's velocity relative to the ground?
+
+Have students work on these.
+
+(a) Given: $v_{bw}=-14\mbox{ km/h}$; $v_{wg}=9\mbox{ km/h}$. Want to find $v_{bg}$.
+$$v_{bg}=v_{bw}+v_{wg}=-14+9=-5\mbox{ km/h}$$
+So the boat travels at $5$ km/h upstream.
+
+(b) Given: $v_{bg}=-5\mbox{ km/h}$; $v_{cb}=6\mbox{ km/h}$. Want to find $v_{cg}$.
+$$v_{cg}=v_{cb}+v_{bg}=6-5=1\mbox{ km/h}$$
+
+\subsubsection{Example \#2}
+You are trying to cross a river with a boat and would like to be exactly on the opposite side of the river. Your boat can travel 20 m/s (relative to the water). The river is flowing 2 m/s and is 1000 m wide. What angle should you leave shore at, and how long will it take you to reach the other side?
+
+\clearpage
+[Insert diagram showing what happens if you go straight across the river.]
+\vspace{5cm}
+
+If you head straight across the river, it will take you 50 s to cross the river ($\Delta{t}=\Delta{x}/v_x$), you will end up 100 m downstream from your objective.
+
+[Insert diagram showing angle $\theta$.]
+\vspace{5cm}
+
+$$\vec{v}_{bw}+\vec{v}_{wo}=\vec{v}_{bo}$$
+$$\langle{V\cos\theta,V\sin\theta}\rangle+\langle{0,-V_w}\rangle=\langle{V_o,0}\rangle$$
+
+We want to find $\theta$ and $V_o$; the latter will tell us how long it takes to cross the river. This vector equation is the same thing as writing down two equations (with two unknowns).
+$$V\cos\theta=V_o$$
+$$V\sin\theta-V_w=0$$
+From the second equation,
+$$\theta=\sin\ds^{-1}\left(\frac{V_w}{V}\right)\approx 5.7^\circ$$
+Inserting this into the first equation gives
+$$V_o=19.9\mbox{ m/s}$$
+So,
+$$\Delta{t}=\frac{\Delta{x}}{V_o}=\frac{1000\mbox{ m}}{19.9 \mbox{ m/s}}=50.3\mbox{ s}$$
+
+\subsubsection{Example \#3}
+A hockey player is skating due south at 7.0 m/s. A puck is passed to him with a speed of 11.0 m/s and direction 22$^\circ$ west of south. What are the magnitude and direction (relative to due south) of the puck's velocity, relative to the hockey player?
+
+Given:\\
+$V_h=7.0\mbox{ m/s}$\\
+$V_p=11.0\mbox{ m/s}$ at angle of $22^\circ$ west of south
+
+We want to know $\vec{v}_{ph}$.
+
+$$\vec{v}_{ph}=\vec{v}_{pi}+\vec{v}_{ih}=\vec{v}_{pi}-\vec{v}_{hi}$$
+$$\vec{v}_{ph}=\langle{-V_p\sin\theta,-V_p\cos\theta}\rangle+\langle{0,-V_h}\rangle=\langle{-V_p\sin\theta,-V_p\cos\theta}\rangle-\langle{0,-V_h}\rangle$$
+$$\vec{v}_{ph}=\langle{-V_p\sin\theta,-V_p\cos\theta+V_h}\rangle=\langle{-4.12,-17.2}\rangle$$
+
+speed = 5.2 m/s\\
+angle = 52.2$^\circ$ 
+
+
+
+
+\clearpage

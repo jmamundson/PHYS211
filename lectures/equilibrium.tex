@@ -1,0 +1,119 @@
+\section{Static equilibrium}
+Objectives:
+\begin{itemize}
+\item torque
+\item static equilibrium
+\item stability
+\end{itemize}
+
+\hrulefill
+
+\subsection{Review of torque}
+Spend the next couple of lectures discussing static equilibrium. First, I'll refresh your memory about torque and discuss gravitational torque by way of couple of demos.
+
+First, review torque and discuss gravitational torque.
+
+[Demo: meter stick rotates when it falls if one end is on the end of a table. This is due to gravity causing rotation around the axis of rotation.]
+
+Torque on each element of the meter stick:
+$$\tau=mgr=(\rho dr)gr=\rho g r\,dr$$
+$$\tau_{net}=\ds\int_0^L\rho g r\,dr=\frac{1}{2}\rho gL^2=\frac{1}{2}mgL=mg\frac{L}{2}$$
+
+The gravitational force can be thought of as being applied at the center of mass.
+
+[Demo: pennies on a meter stick that falls. Why do some pennies detach from the meter stick as the stick rotates?]
+
+$$\sum\tau=mg\frac{L}{2}=I\alpha$$
+$$\alpha=\frac{a}{r}$$
+
+So...
+$$a=g\left(\frac{mLr}{2I}\right)$$
+
+For a thin rod rotating about the axis,
+$$I=\frac{1}{3}mL^2$$
+
+$$\boxed{a=g\left(\frac{3}{2}\frac{r}{l}\right)}$$
+
+\subsection{Static equilibrium}
+
+I'd like to spend the next couple of lectures discussing equilibrium and elasticity --- two topics that we've briefly touched on. I won't really be introducing much new material.
+
+What do we know about object's that are at rest?
+
+$$\sum F_x = 0$$
+$$\sum F_y = 0$$
+$$\sum \tau = 0$$
+
+These equations tell us that the an object is fixed in space relative to some reference frame that may or may not be moving.
+
+We have already done problems where $\sum \vec{F}=0$. Now we'll also enforce that the objects don't rotate. We've already seen that $\tau=rF_\perp$. But if the object isn't rotating, what do we choose as our axis of rotation? Turns out that it doesn't matter, we pick any point that we want! We just have to be careful with the sign of the torques.
+
+\subsection{Example problems}
+\subsubsection{Example \#1: Person standing on a board}
+A 64-kg person stands on a 2-m long board that is lying across two scales. Assume that the board is light (i.e., massless) and rigid. What are the readings on the scales when the person stands 0.5 m from one of the boards (and 1.5 m from the other)?
+
+[Insert diagram.]
+\vspace{5cm}
+
+We need to add the forces and torques acting on the board.
+
+The force-balance equations give us one equation and two unknowns:
+$$\sum F_x = 0$$
+$$\sum F_y = F_{n,1}+F_{n,2}-F_g=0$$
+
+The torque balance gives us one additional equation. We are free to pick a convenient rotation axis. Let's pick a point where one of the unknown forces is acting.
+$$\sum \tau = F_{n,1}\cdot{0}+F_{n,2}\cdot{2\mbox{ m}}-F_g\cdot{1.5\mbox{ m}}=0$$
+
+We now have three equations and three unknowns ($F_g$ can be readily calculated). From the torque balance, we can find that
+$$F_{n,2}=\frac{3}{4}F_g=\frac{3}{4}mg\Rightarrow \boxed{F_{n,2}=470\mbox{ N}}$$.
+
+From the force balance,
+$$F_{n,1}+\frac{3}{4}F_g-F_g=0\Rightarrow F_{n,1}=\frac{1}{4}F_g\Rightarrow \boxed{F_{n,1}=160 \mbox{N}}$$
+
+\subsubsection{Example \#2: Ladder leaning against a wall}
+A 3-m long ladder leans against a frictionless wall. The coefficient of static friction between the floor and the ladder is $\mu_s=0.2$. At what angle does the ladder start to slide?
+
+[Insert diagram.]
+\vspace{5cm}
+
+Identify forces and sum the forces and torques.
+$$\sum F_x = F_w-F_s=0 \Rightarrow F_s=F_w$$
+$$\sum F_y = F_n - F_g=0 \Rightarrow F_n=F_g$$
+
+We want to know at what angle does $F_w$ exceed $\max F_s$. Let's play with these equations for a minute before dealing with torque. We know that
+$$\max F_s=\mu_sF_n=\mu_sF_g$$
+So we need to know when $F_w$ exceeds $\mu_sF_g$.
+
+When can calculate $F_w$ by summing the torques. We can pick any axis of rotation. What would be a convenient one here?
+$$\sum \tau=-F_wl\cos\theta+\frac{1}{2}F_gl\sin\theta=0$$
+$$F_w=\frac{1}{2}F_g\tan\theta$$
+
+When is
+$$\frac{1}{2}F_g\tan\theta > \mu_s F_g?$$
+$$\tan\theta > 2\mu_s$$
+$$\theta > \tan\ds^{-1}(2\mu_s)=21.8^\circ$$
+
+We could also use this to calculate the coefficient of static friction (demo).
+
+
+\subsubsection{Example \#3: Finding a meter stick's center of mass}
+Demo: Use fingers to hold meter stick horizontally. Bring them together, and they will arrive at the stick's center of mass. Why?
+\vspace{5cm}
+
+\subsection{Stability}
+Static equilibrium is very much related to the concept of stability. If you tilt an object, does torque due to gravity cause an the object to return to its original position or to tip over? The threshold is $\sum \tau =0$. When we think about torque due to gravity, keep in mind that gravity acts on an object's center of mass. What do I mean by center of mass?
+
+[Insert diagrams of boxes tipping over.]
+\vspace{5cm}
+
+Consider the stability of a car.
+
+[Insert diagram of a car with width $W$ and center-of-mass height $H$.]
+\vspace{5cm}
+
+When the car is just about to roll, the center of mass of the car is positioned directly above the wheels. In other words, the torque acting about that point is zero. The critical angle, $\theta_c$, at which this happens is related to $W$ and $H$:
+$$\tan\theta_c=\frac{W/2}{H}\Rightarrow \theta_c=\tan\ds^{-1}\frac{W}{2H}$$
+
+With a wider or shorter car, you have to tilt the car to a larger angle before it rolls over.
+
+\clearpage

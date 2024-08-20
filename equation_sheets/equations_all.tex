@@ -1,0 +1,175 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\pagestyle{empty}
+\renewcommand{\labelitemi}{$\cdot$}
+
+\begin{document}
+\noindent Basic definitions of kinematics
+\begin{itemize}
+\item position: $\vec{x}=\langle{x,y}\rangle$
+\item displacement: $\Delta{\vec{x}}=\vec{x}_f-\vec{x}_i$ for finite displacement
+\item instantaneous velocity: $\vec{v}=\displaystyle\frac{d\vec{x}}{dt}$
+\item instantaneous acceleration: $\vec{a}=\displaystyle\frac{d\vec{v}}{dt}=\displaystyle\frac{d^2\vec{x}}{dt^2}$
+\end{itemize}
+Kinematic equations, $\vec{v}=\mbox{constant}$ (i.e., $\vec{a}=0$)
+\begin{itemize}
+\item $\vec{v}=\displaystyle\frac{\Delta{\vec{x}}}{\Delta{t}}$
+\item $\vec{x}_f=\vec{x}_i+\vec{v}\Delta{t}$
+\end{itemize}
+Kinematic equations, $\vec{a}\neq{0}$ and $\vec{a}=\mbox{constant}$
+\begin{itemize}
+\item $\vec{a}=\displaystyle\frac{\Delta{\vec{v}}}{\Delta{t}}$
+\item $\vec{v}_f=\vec{v}_i+\vec{a}\Delta{t}$
+\item $\Delta{\vec{x}}=\vec{v}_i\Delta{t}+\displaystyle\frac{1}{2}\vec{a}\Delta{t}^2$
+\item $\left(v_{x,f}\right)^2-\left(v_{x,i}\right)^2=2a_x\Delta{x}$ and $\left(v_{y,f}\right)^2-\left(v_{y,i}\right)^2=2a_y\Delta{y}$
+\item common example of $a=\mbox{constant}$ is $g=9.81\mbox{ m/s}^2$
+\end{itemize}
+Motion of object A relative to object C
+\begin{itemize}
+\item $\vec{v}_{ac}=\vec{v}_{ab}+\vec{v}_{bc}$
+\end{itemize}
+
+\noindent Basic definitions for circular and rotational motion
+\begin{itemize}
+\item angular position: $\theta\mbox{(radians)}=\displaystyle\frac{s}{r}$; $s=$arclength, $r=$radius
+\item angular displacement: $\Delta\theta=\theta_f-\theta_i$
+\item angular velocity: $\omega=\displaystyle\frac{d\theta}{dt}=2\pi{f}=\displaystyle\frac{2\pi}{T}$; $f=$frequency, $T=$period
+\item angular acceleration: $\alpha=\displaystyle\frac{d\omega}{d{t}}=\frac{d^2\theta}{dt^2}$
+\end{itemize}
+Kinematic equations for constant angular acceleration
+\begin{itemize}
+\item $\omega_f=\omega_i+\alpha\Delta{t}$
+\item $\Delta\theta=\omega_i\Delta{t}+\displaystyle\frac{1}{2}\alpha\Delta{t}^2$; if $\alpha=0$, $\omega_f=\omega_i=\mbox{constant}$.
+\item $\omega_f^2-\omega_i^2=2\alpha\Delta{\theta}$
+\end{itemize}
+
+\clearpage
+\noindent Speed, acceleration, and forces
+\begin{itemize}
+\item speed: $v=\omega{r}$
+\item centripetal acceleration: $a_c=\displaystyle\frac{v^2}{r}=\omega^2r$
+\item centripetal force: $F_c=ma_c=m\displaystyle\frac{v^2}{r}=m\omega^2r$; points toward center of circle
+\item tangential acceleration: $a_t=\alpha{r}$
+\end{itemize}
+Newton's Laws
+\begin{enumerate}
+\item if $\vec{F}_{net}=0\Rightarrow \vec{a}=0$
+\item $\displaystyle\sum\vec{F}=m\vec{a}$
+\item $\vec{F}_{12}=-\vec{F}_{21}$
+\end{enumerate}
+Types of forces
+\begin{itemize}
+\item Newton's Law of Gravity: $F_{12}=F_{21}=\displaystyle\frac{Gm_1m_2}{r^2}$; points from one object to another; this can also be expressed as $\vec{F}_{12}=\displaystyle-\frac{Gm_1m_2}{r^2}\hat{r}_{12}$ where $\hat{r}_{12}$ is the unit vector that points from object 1 to object 2.
+\item Gravitational constant: $G=6.67\times{10}^{-11}\mbox{ N}\cdot\mbox{m}^2/\mbox{kg}^2$
+\item For objects near the Earth's surface, $F_g=mg$
+\item normal force, $\vec{F}_n$, is perpendicular to surface and prevents objects from penetrating the surface
+\item frictional force depends on $\vec{F}_n$ and $\vec{v}$
+\begin{itemize}
+\item if $\vec{v}=0$ use static friction; $\vec{F}_s$ balances other forces as long as $\left|\vec{F}_s\right|\leq\mu_s\left|\vec{F}_n\right|$
+\item if $\vec{v}\neq{0}$ use kinetic friction; $\left|\vec{F}_k\right|=\mu_k\left|\vec{F}_n\right|$
+\end{itemize}
+\item tensional force, $\vec{F}_t$, is transmitted through a rope and around pulleys
+\end{itemize}
+Impulse and momentum
+\begin{itemize}
+\item momentum, $\vec{p}=m\vec{v}$
+\item Newton's second law, $\displaystyle\sum\vec{F}=\displaystyle\frac{d\vec{p}}{dt}$
+\item Impulse-Momentum Theorem, $\vec{J}=\Delta{\vec{p}}=\displaystyle\int_{t_0}^{t_1}\vec{F}_{net}\,dt=\vec{F}_{avg}\Delta{t}$
+\item total momentum, $\vec{P}=\vec{p}_1+\vec{p}_2+...$
+\item conservation of momentum, $\Delta{P}=0$ if $\vec{F}_{net}=0$ or if $\vec{F}_{net}$ is small compared to other forces for short $\Delta{t}$
+\end{itemize}
+
+Orbits and gravity
+\begin{itemize}
+\item orbital velocity: $v=\displaystyle\sqrt{\displaystyle\frac{GM}{r}}$ at a distance of $r$ from the center of a planet with mass $M$
+\end{itemize}
+Torque and moment of inertia
+\begin{itemize}
+\item Torque: $\tau=rF_\perp$; $F_\perp$ is force perpendicular to radial axis; depending on what angles are given, you may find that $F_\perp=F\sin\phi$
+\item Newton's Second Law for rotation: $\sum\tau=I\alpha=\displaystyle\frac{dL}{dt}$; $L=$angular momentum.
+\item Moment of inertia: $I$, indicates how difficult it is to rotate an object
+\item Conservation of angular momentum: if $\tau_{ext}=0$ then $\Delta{L}=0$.
+\item Rolling constraint: $v=\omega{R}$ and $a=\alpha{R}$; rolling object, with perfect friction, moves forward with this velocity
+\end{itemize}
+Static equilibrium
+\begin{itemize}
+\item $\sum{F_x}=0$; $\sum{F_y}=0$; $\sum\tau=0$
+\item Choose convenient pivot point
+\end{itemize}
+Stability and balance
+\begin{itemize}
+\item Does torque restore object to its original position?
+\item Critical angle: $\theta_c=\tan^{-1}\left(\displaystyle\frac{t}{2h}\right)$; $t=$width of object's base, $h$ is the height to the center of mass
+\end{itemize}
+Springs and elasticity
+\begin{itemize}
+\item Hooke's `Law': $F=-k\Delta{x}$; $k$ is empirically determined spring constant
+\item For elastic materials, $k=\displaystyle\frac{YA}{L}$; $Y=$Young's modulus
+\item Hooke's Law sometimes written $\displaystyle\left(\frac{F}{A}\right)=Y\left(\displaystyle\frac{\Delta{L}}{L}\right)$; $\mbox{stress}=Y\times\mbox{strain}$
+\end{itemize}
+Energy and work
+\begin{itemize}
+\item Total energy: $E=K+U_g+U_s+E_{th}+...$
+\item Work: $W=\displaystyle\int_{x_0}^{x_1}F_{ext}\,dx=\Delta{E}$; mechanical transfer of energy into or out of a system
+\item Conservation of energy: for an isolated system, $F_{ext}=0$ and therefore and therefore $W=\Delta{E}=0$.
+\item Work: $W=F_\parallel\cdot{d}$; force $\times$ displacement
+\item Translational kinetic energy: $K_{trans}=\displaystyle\frac{1}{2}mv^2$; scalar quantity (note that $v$ is speed, not velocity)
+\item Rotational kinetic energy: $K_{rot}=\displaystyle\frac{1}{2}I\omega^2$
+\item Total kinetic energy: $K=K_{trans}+K_{rot}$
+\item Gravitational potential energy: $\Delta{U_g}=mg\Delta{y}$; choose convenient reference height
+\item Elastic potential energy: $U_s=\displaystyle\frac{1}{2}k(\Delta{x})^2$; $k$ is the spring constant
+\item Thermal energy (from friction): $\Delta{E_{th}}=F_f\Delta{x}$
+\item Conservation of mechanical energy: for isolated system with no friction, $\Delta{K}+\Delta{U_g}+\Delta{U_s}=0$
+\item Power: $P=\displaystyle\frac{d{E}}{d{t}}$
+\end{itemize}
+
+
+Thermodynamics
+\begin{itemize}
+\item 1st Law: $Q+W=\Delta{E}$; $Q$ is heat transferred into or out of the system
+\item 2nd Law: Entropy in a closed system (which describes disorder) can never decrease
+\item energy needed to change material's temperature: $Q=mc\Delta{T}$; $c$ is the specific heat capacity, a material property
+\item energy need to change a material's phase: $Q=\pm mL_f$ to melt solid and $Q=\pm mL_v$ to turn liquid into gas; use negative sign if going from gas to liquid or liquid to solid
+\item $L_v>L_f$ (specific latent heat of vaporization is greater than specific latent heat of fusion)
+\item conduction: $\frac{Q}{\Delta{t}}=\left(\frac{kA}{L}\right)\Delta{T}$; $k$ is thermal conductivity
+\item advection/convection: need to solve for motion of an object
+\item radiation: $\frac{Q}{\Delta{t}}=e\sigma{A}T^4$; $e$ is emissivity and $\sigma=5.67\times{10}^{-8}\frac{\mbox{W}}{\mbox{m}^2\mbox{K}^4}$ is the Stefan-Boltzmann constant
+\item ideal gas law: $PV=nRT$, where $R=8.314\mbox{ J/(mol}\cdot\mbox{K)}$ is the gas constant
+\item for ideal gas in enclosed, insulated container, $\frac{PV}{T}=\mbox{constant}$
+\item work done by expanding a gas at constant pressure: $W_{\mathrm{gas}}=P\Delta{V}$
+\item note that for gases, specific heat at constant pressure $c_p$ differs from specific heat at constant volume $c_v$. $c_p$ is approximately 50$\%$ larger than $c_v$
+\item Conversions: 1 cm$^3$=10$^{-6}$ m$^3$; 1 atm = 101.3 kPa
+\end{itemize}
+Fluids
+\begin{itemize}
+\item density: $\rho=\frac{m}{V}$
+\item hydrostatic pressure: $P=\rho{g}d+P_0$; $P_0$ is pressure from above
+\item gauge pressure: $P_g=P_{gas}-P_{atm}$; $P_{atm}=101.3\mbox{ kPa}$
+\item Archimedes' principle (upward buoyant force): $F_b=\rho_f{g}V$; $\rho_f$ is fluid density and $V$ is volume displaced
+\item flux: $Q=vA$; $Q$ is constant in a pipe for ideal fluid
+\item Bernoulli's equation: along a streamline, $P+\frac{1}{2}\rho{v^2}+\rho{g}h=\mathrm{constant}$
+\end{itemize}
+
+Simple harmonic motion
+\begin{itemize}
+\item displacement: $x(t)=A\cos(2\pi{f}t)$
+\item velocity: $v(t)=-v_{\mathrm{max}}\sin(2\pi{f}t)$
+\item acceleration: $a(t)=-a_{\mathrm{max}}\cos(2\pi{f}t)$
+\item $v_{\mathrm{max}}=2\pi{f}A$ and $a_{\mathrm{max}}=(2\pi{f})^2A$
+\item for a spring, $f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}$; for a pendulum, $f=\frac{1}{2\pi}\sqrt{\frac{g}{L}}$
+\item damped oscillation: $x(t)=A\exp^{-t/\tau}\cos(2\pi{f}t)$, where $\tau$ is a decay constant
+\end{itemize}
+Waves
+\begin{itemize}
+\item in general, $v=\lambda/T$, where $\lambda$ is wavelength and $T$ is period
+\item velocity of a wave on a string: $v=\sqrt{\frac{F_t}{\mu}}$, where $\mu$ is linear density
+\item velocity of sound waves in ideal gas: $v=\sqrt{\frac{\gamma{RT}}{M}}$, where $\gamma$ is adiabatic index, $R$ is the gas constant, $T$ is temperature in Kelvin, and $M$ is the molar mass
+\item travelling wave displacement: $y(x,t)=A\sin\left(2\pi\frac{x}{\lambda}\pm 2\pi\frac{t}{T}+\phi\right)$; Use $-$ if wave is travelling to the right, $+$ if it is travelling to the left
+\item Doppler effect: $f=f_0\displaystyle\left(\frac{v}{v\pm{v_s}}\right)$; $v_s$ is speed of source, $v$ is wave speed. Use $+$ if the source is moving away from the receiver, $-$ if the source is moving toward the receiver.
+\item wave superposition: $y(x,t)=y_1+y_2+y_3$ where $y_i$ are given by different amplitudes, wavelengths, and frequencies/periods.
+\item standing wave displacement: $y(x,t)=A\sin\left(2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)\right)+A\sin\left(2\pi\left(\frac{x}{\lambda}+\frac{t}{T}\right)\right)$
+\item harmonics: $\lambda_m=\frac{2L}{m}$, where $m=1,2,3$\ldots; for a string that is pinned on both ends, a tube that is open on both ends, and a tube that is closed on both ends.
+\item harmonics: $\lambda_m=\frac{4L}{m}$, where $m=1,3,5$\ldots; for a tube that is open on one end and closed on the other
+\end{itemize}
+
+\end{document}

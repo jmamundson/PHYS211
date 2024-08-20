@@ -1,0 +1,131 @@
+\section{Types of forces, part I}
+Objectives:
+\begin{itemize}
+\item Gravitational forces
+\item Normal forces
+\item Tensional forces
+\end{itemize}
+
+\hrulefill
+
+Last class I introduced Newton's Laws:
+\begin{enumerate}
+\item if $\sum\vec{F}=0\Rightarrow \vec{a}=0$
+\item $\sum\vec{F}=m\vec{a}$
+\item $\vec{F}_{ab}=-\vec{F}_{ba}$
+\end{enumerate}
+We then discussed how to use them to solve problems. The general approach is:
+\begin{enumerate}
+\item Draw a free-body diagram.
+\item Insert forces into Newton's first or second law.
+\item Do some algebra with one or more equations.
+\item If necessary, use results to solve for an object's motion.
+\end{enumerate}
+We went through some conceptual examples, but didn't fully solve them because we didn't have a good understanding of the different types of forces. During the next couple of classes we will carefully go through some of the more common forces.
+
+\subsection{Gravitational force}
+Prior to Newton, it was known that
+\begin{enumerate}
+\item Objects near the Earth's surface fall with constant acceleration (Galileo)
+\item Planetary orbits obey $T^2=cR^3$ (Kepler's third law)
+\end{enumerate}
+Newton supposed that all object's must obey the same physical laws, regardless of whether they were located on Earth or in space, and he reasoned that planetary orbits are a result of gravity. He was able to come up with an equation that could explain both of these phenomenon:
+$$\boxed{F_g=\frac{Gm_1m_2}{r^2}},$$
+where $F_g$ is the magnitude of the gravitational force, $G=6.67\times10^{-11}\mbox{ N}\cdot\mbox{m}^2\mbox{/kg}^2$, $m_1$ and $m_2$ are the masses of two objects, and $r$ is the distance between the objects' centers of mass. The gravitational force is directed along the line joining the two objects.
+
+For objects near the Earth's surface, $m_1=m_{earth}=5.972\times 10^{24}\mbox{ kg}$ and $r\approx 6,371\mbox{ km}$. Therefore,
+$$\frac{Gm_1}{r^2}\approx 9.81\mbox{ m/s}^2=g,$$
+and so
+$$F_g=mg,$$
+where we've now defined $m$ as being the mass of an object near the Earth's surface.
+
+Let's consider an object in free-fall. If we add up the forces acting on the object, we have
+$$\sum F_y=-F_g=ma_y.$$
+But since $F_g=mg$,
+$$-mg=ma_y\Rightarrow \boxed{a_y=-g},$$
+and so all objects fall with with constant acceleration (as long as we ignore the effects of air resistance). So Newton's Law of Gravitation explains Galileo's observations. It also explains Kepler's Law of Harmony. We can show this crudely by assuming that planets travel in circular orbits with constant speed. (We would need to use calculus to take into account the fact that planets have elliptical orbits.)
+
+In order for a planet to travel in a circle, it must have some centripetal acceleration, $a_c$, that points toward the center of the orbit. From Newton's Second Law, we know that this acceleration must be caused by a force that points toward the center of the circle; we'll call that force a ``centripetal force''. If the centripetal force is due to gravity, then
+$$F_g=ma_c.$$
+We saw previously that $a_c=\omega^2 r$, and that angular frequency is related to orbital period through $\omega=2\pi/T$. Therefore, $a_c=(2\pi)^2r/T$ and as a result,
+$$F_g=\frac{m(2\pi)^2r}{T^2}.$$
+Substituting in for $F_g$,
+$$\frac{Gm_1m}{r^2}=\frac{m(2\pi)^2r}{T^2}.$$
+Cancelling like terms and re-arranging,
+$$\boxed{T^2=\left(\frac{(2\pi)^2}{Gm_1}\right)r^3=kr^3}.$$
+
+To reiterate, near the Earth's surface, use $F_g=mg$, and farther away use $F_g=\frac{Gm_1m_2}{r^2}$.
+
+\subsection{Normal forces}
+If a an object is sitting on the ground, there will be a gravitational force acting downward on the object and a normal force that keeps the object from moving through the ground. The normal force is always oriented normal (i.e., orthogonal) to the surface and it adjusts its magnitude to keep the object from moving through the surface.
+
+\clearpage
+[Insert free-body diagram of box sitting on the ground.]
+\vspace{5cm}
+
+You can think of this force like a stiff spring under compression. The molecules in the ground are being compressed, and so they respond by pushing upward. The normal force prevents the object from moving through ground. In this simple example, we have
+$$\sum F_y=F_n-F_g=0$$
+$$F_n=F_g=mg$$
+(Note that it is not generally true that $F_n=mg$.)
+
+\subsection{Tensional forces}
+Tensional forces are similar to normal forces in the sense that they are a response to other forces. You can think of tension as being like a stiff spring under extension. The molecular bonds in the rope or string are stretched just a little bit, and they are trying to return to their equilibrium lengths.
+
+[Insert diagram of mass hanging from a string.]
+\vspace{5cm}
+
+In the above diagram, there are two forces acting on the hanging mass: gravity and the tensional force from the string. According to Newton's second law, 
+$$\sum F_y=F_t-F_g=ma_y=0,$$
+so
+$$F_t=F_g=mg.$$
+The larger the mass, the greater the tensional force (i.e., the tensional force adjusts its magnitude --- until the string breaks!). We will often use the ``massless string approximation'', which allows us to set the tensional force constant throughout a string. To see why we can do this, let's consider 
+the same problem as before, but now let's calculate the tensional force at the top of the string where it connects to the ceiling.
+
+[Insert modified diagram of mass hanging from a string.]
+\vspace{5cm}
+
+Like before, we have
+$$\sum F_y=F_t-F_g=ma_y=0,$$
+and so
+$$F_t=F_g=mg.$$
+However, the mass $m$ now includes the mass of the object \textit{and} the mass of the string. In other words, $m=m_o+m_s$. Thus,
+$$F_t=(m_o+m_s)g.$$
+How important is $m_s$? If $m_o=100$ kg and $m_s=1$ kg, then the tension at the top of the rope will be 1\% larger than the tension at the bottom of the rope. For a lot of problems, that 1\% difference is irrelevant (especially considering errors associated with lab experiments) and so we can ignore the mass of the rope.
+
+\subsection{Example problems}
+\subsubsection{Example \#1}
+A box is pulled along a frictionless surface with a rope. The rope makes an angle $\theta$ with horizontal. Derive expressions for the normal force and the horizontal acceleration.
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$\sum F_x=F_t\cos\theta=ma_x$$
+$$\boxed{a_x=\frac{F_t}{m}\cos\theta}$$
+
+$$\sum F_y=F_n+F_t\sin\theta-F_g=ma_y=0$$
+$$\boxed{F_n=F_g-F_t\sin\theta}$$
+The normal force doesn't always balance gravity. It simply prevents the box from passing through the ground. In this case, tension in the rope decreases the normal force. Furthermore, two objects can be in contact but have $F_n=0$. In this problem, if $F_g=F_t\sin\theta$, then $F_n=0$. A normal force cannot cause an acceleration by itself, and thus $F_n\leq{0}$. 
+
+\subsubsection{Example \#2}
+A automobile engine has a weight of 3150 N. The engine is being positioned above an engine compartment. To position the engine, a worker is using a rope. Find the tension in the supporting cable and in the positioning rope. The cable is 10$^\circ$ from vertical, and the rope is 80$^\circ$ from vertical.
+
+[Insert diagram.]
+\vspace{5cm}
+
+To solve this, think about the forces that are acting on the ring that connects the cable, the rope, and the engine.
+
+$$\sum F_x = -T_1\sin\theta_1+T_2\sin\theta_2=0$$
+$$\sum F_y = T_1\cos\theta_1-T_2\cos\theta_2-F_g = 0$$
+From the first equation,
+$$T_1=T_2\frac{\sin\theta_2}{\sin\theta_1}$$
+Inserting this into the second equation,
+$$T_2\frac{\sin\theta_2}{\sin\theta_1}\cos\theta_1-T_2\cos\theta_2-F_g = 0$$
+$$T_2\left(\frac{\sin\theta_2}{\sin\theta_1}\cos\theta_1-\cos\theta_2\right)=F_g$$
+$$T_2=\frac{F_g}{\frac{\sin\theta_2}{\sin\theta_1}\cos\theta_1-\cos\theta_2}\Rightarrow \boxed{T_2=582\mbox{ N}}$$
+Plugging this result back into the expression for $T_1$ gives
+$$\boxed{T_1=3.30\times 10^5\mbox{ N}}$$
+
+
+
+
+\clearpage

@@ -1,0 +1,105 @@
+\section{Introduction to fluids}
+Objectives:
+\begin{itemize}
+\item Review thermodynamics of gases
+\item Hydrostatics
+\end{itemize}
+
+\hrulefill
+
+\subsection{Thermodynamics of gases}
+Important ideas from last time:
+\begin{itemize}
+\item Ideal gas law: $PV=nRT$. For closed containers, we can saw that $\frac{PV}{T}=\mbox{constant}$.
+\item Change in thermal energy of a \textit{monatomic} gas is given by $\Delta{E_{th}}=\frac{3}{2}nR\Delta{T}$
+\item Work and heat (transfer) can change the total energy of a gas
+\item Isochoric or isovolumetric process: heat transferred into a gas container with no change in volume
+  $$Q=\frac{3}{2}nR\Delta{T}=nC_v\Delta{T}$$
+\item Isobaric process: pressure is constant, but volume and temperature can change due to work or heat transfer
+  $$Q=\frac{5}{2}nR\Delta{T}=nC_p\Delta{T}$$
+\item Isothermal process: no change in temperature (or thermal energy), so work done by a gas must balance with heat transfer into the gas
+  $$W_{gas}=Q$$
+\item Adiabatic process: no heat transfer between the system and the environment
+  $$W=\Delta{E_{th}}$$
+\item Work done to/by a gas is the area under the pressure-volume curve. A consequence of this is that the heat transfer into or out of a gas depends on the \textit{path}.  
+\end{itemize}
+
+[Insert PV-diagram showing how different paths result in different amounts of work and heat.]
+\vspace{6cm}
+
+\subsubsection{Example \#1: Expandable cube}
+An expandable cube, initially 20 cm on each side, contains 3.0 g of helium at 20$^\circ$C. 1000 J of heat are transferred into this gas. What are (a) the final pressure if the process is at a constant volume and (b) the final volume if the process is at constant pressure?
+
+Also given:\\
+3 g of He is 0.75 mol\\
+$C_v=12.5$ J/(mol$\cdot$K)\\
+$C_p=20.8$ J/(mol$\cdot$K)
+
+(a) Since we want to find $P_f$, let's rearrange the ideal gas law:
+$$P_f = \frac{nRT_f}{V}$$
+What is $T_f$? We know that $T_i=293\mbox{ K}$. Heating the gas will change its temperature
+$$Q=nC_v\Delta{T}\Rightarrow \Delta{T}=\frac{Q}{nC_v}=107\mbox{ K},$$
+so $T_f=400$ K.
+
+Plugging this into the equation for $P_f$ gives
+$$\boxed{P_f=311\mbox{ kPa}}$$
+
+(b) Because this is constant pressure, we have
+$$\frac{PV}{T}=\mbox{constant}\Rightarrow \frac{V}{T}=\mbox{constant}$$
+This means that
+$$\frac{V_i}{T_i}=\frac{V_f}{T_f}\Rightarrow V_f=\frac{T_f}{T_i}V_i$$
+
+The initial volume and temperature are given. The initial volume is $(0.20\mbox{ m})^3=0.008\mbox{ m}^3=8\mbox{ L}$. We just need to calculate $T_f$.
+$$Q=nC_p\Delta{T}\Rightarrow \Delta{T}=\frac{Q}{nC_p}=64.1\mbox{ K},$$
+so $T_f=357\mbox{ K}$. Consequently, 
+$$\boxed{V_f=0.00975\mbox{ m}^3=9.75\mbox{ L}}$$.
+
+\subsection{Hydrostatics}
+That's all that I have to say (for now, anyway) about thermodynamics and gases. I'd like to now turn our attention to fluids. We'll first focus on hydrostatics --- fluids at rest.
+
+What is a fluid? Its a substance that flows and takes the shape of a container.
+
+\clearpage
+[Diagram of container containing a fluid.]
+\vspace{5cm}
+
+In a fluid, molecules are weakly bonded but can slide past each other.
+
+An important parameter for describing fluids is density.
+$$\rho=\frac{m}{V}$$
+
+
+Examples:\\
+sea water: $\sim 1030$ kg/m$^3$; it depends on salinity, temperature, and pressure
+
+fresh water: $\sim 1000$ kg/m$^3$; it depends on temperature\\
+\begin{itemize}
+\item at 20$^\circ$C, $\rho=998.2071$ kg/m$^3$
+\item at 4$^\circ$C, $\rho=999.9720$ kg/m$^3$
+\item at 0$^\circ$C, $\rho=998.8395$ kg/m$^3$
+\end{itemize} 
+
+ice: $\sim 917$ kg/m$^3$ (if bubble free, otherwise $<917$ kg/m$^3$)
+
+firn: $\sim 800$ kg/m$^3$
+
+fresh snow: $100$--$300$ kg/m$^3$
+
+Water is \underline{weird}. For most substances, the solid form is more dense than the liquid form. If this were also true for water, life wouldn't exist --- at least not as we know it. Its also weird that the densest fresh water is 4$^\circ$C.
+
+Ice that forms in a water body floats at the surface, and it insulates the water from cold air. The water at depth remains liquid.
+
+[Draw diagram.]
+\vspace{5cm}
+
+Its very difficult to form thick lake ice or sea ice. ``Multi-year'' ice in the Arctic Ocean is just a few meters thick.
+
+One important process involving water is the overturning of lakes during spring and fall, which is due to the fact that the densest water is at 4$^\circ$C.
+
+[Draw diagrams showing overturning lakes and temperature profiles.]
+\vspace{5cm}
+
+%\hrulefill\\
+%\clearpage
+
+\clearpage

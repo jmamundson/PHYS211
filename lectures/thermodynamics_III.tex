@@ -1,0 +1,183 @@
+\section{THERMODYNAMICS, PART III}
+Objectives:
+\begin{itemize}
+\item Relating heat, work, and energy through an example
+\item Mechanisms of heat transfer
+\end{itemize}
+
+\hrulefill
+
+\subsection{Climbing Mt. Juneau}
+We've spent the last couple of classes discussing the First and Second Laws of Thermodynamics, and what happens when heat is transferred into or out of a system or object (change in temperature or change in phase).
+
+One of the super useful things about thermodynamics is that it connects different branches of science. For example, we can ask questions like, ``How many Snickers bars does it take me to climb Mt. Juneau?'' and ``During the climb, how much would my body temperature change if I don't have an efficient way of transferring heat away from my body?''. Let's say that I weigh 75 kg and the mountain is 1000 m tall.
+
+How would we go about addressing these questions? What do we need to know to address these questions?
+
+\begin{itemize}
+\item The amount of energy it takes to climb Mt. Juneau.
+\item The amount of (chemical) energy stored in a Snickers bar.
+\item The efficiency of the human body.
+\end{itemize}
+
+Overview:
+
+If no heat loss, $W+Q=0=\Delta{U_g}+\Delta{E_{ch}}+\Delta{E_{th}}$
+
+If heat loss, $Q=\Delta{U_g}+\Delta{E_{ch}}$
+
+
+The amount of energy that I need is
+$\Delta{U_g}=mg\Delta{y}\approx 7.5\times 10^5\mbox{ J}$
+
+We can use calorimetry to figure out how much energy is stored in a Snickers bar.
+
+[Insert diagram of calorimeter.]
+\vspace{5cm}
+
+In a bomb calorimeter, you burn a sample of food -- essentially, heat released by the sample is absorbed by the water. You measure the temperature change of the water and you can figure out how much heat was released.
+
+Here,
+$$Q+W=\Delta{E}$$
+$$Q=\Delta{E_{ch}}$$
+
+So you are essentially measuring $Q$.
+
+1 kilocalorie is the amount of energy needed to raise the temperature of 1 kg of water by 1 K, which is equal to 4200 J. (Labels on food are actually in kilocalories.)
+
+This provides an upper bound on the amount of work that can be done by eating some amount of food. In reality --- not everything is processed and organisms lose energy to the environment through heat.
+
+There are about 250 kcal in a Snickers bar, or $1.05\times 10^6\mbox{ J}$. 
+
+So, from conservation of energy,
+$$W+Q=0=\Delta{E}=\Delta{U_g}+\Delta{E_{ch}}+\Delta{E_{th}}$$
+
+Let's set $\Delta{E_{ch}}=n\Delta{E_{Snickers}}$, where $n$ is the number of of Snickers bars that I eat. The change in chemical energy depends on how many Snickers bars are consumed. We can think of chemical energy as stored energy. In this case, the change in chemical energy is a negative number, indicating that I am using up stored energy.
+
+If my body is 100\% efficient, then no energy is ``lost'' to thermal energy, and so 
+$$0=\Delta{U_g}+n\Delta{E_{Snickers}}$$
+Therefore
+$$n=\frac{-\Delta{U_g}}{\Delta{E_{Snickers}}}=0.72\mbox{ Snickers}$$
+
+Hmm... I think I'm going to be pretty hungry by the time that I get to the top. In reality, the human body is closer to 25\% efficiency. (You can figure out a person's efficiency by doing experiments similar to the one that was used to figure out how much energy is in food. Feed somebody some food and watch their body temperature change. Okay, its a little more complicated than that, but you get the idea.)
+
+This means that 75\% of the energy that I get from the Snickers (from chemical energy) will be transformed into thermal energy. So let's set
+$$\Delta{E_{th}}=-\frac{3}{4}n\Delta{E_{Snickers}}.$$
+Our energy balance is
+$$0=\Delta{U_g}+\Delta{E_{chem}}+\Delta{E_{th}}$$
+$$0=\Delta{U_g}+n\Delta{E_{Snickers}}-\frac{3}{4}n\Delta{E_{Snickers}}=\Delta{U_g}+\frac{1}{4}n\Delta{E_{Snickers}}$$
+Solving for $n$ gives
+$$n=\frac{-4\Delta{U_g}}{\Delta{E_{Snickers}}}=\boxed{2.86\mbox{ Snickers}}$$
+
+That sounds better!
+
+How much thermal energy is generated?
+$$\Delta{E_{th}}=\boxed{2.25\times 10^6\mbox{ J}}$$
+
+If I don't have an efficient way to get rid of this, my body temperature will change.
+$$Q=mc\Delta{T}$$
+Or
+$$\Delta{T}=\frac{Q}{mc}$$
+Usually we use $Q$ to refer to heat that is transferred into or out of a system, but we can also use it to describe heat transfer between components within a system...
+
+For mammals, $c\approx 3400\mbox{ J/(kg}\cdot\mbox{K)}$.
+
+Using my mass and the change in thermal energy,
+$$\boxed{\Delta{T}=8.8\mbox{ K!!!}}$$
+
+We better figure out a way to get rid of the excess thermal energy. (Unless its winter and we want to keep that thermal energy....)
+
+The way that our bodies do that is by sweating. Sweat transfers some of the heat to the outside of our bodies. The sweat then evaporates. This evaporation occurs below the boiling point. Why? Because some of the hotter than average molecules (which have high energy) manage to escape. This helps to keep us cool. We can calculate how much sweat must evaporate to keep the body temperature constant.
+
+During the climb up Mt. Juneau, I generated $2.25\times 10^6\mbox{ J}$ of thermal energy. We want to get rid of all of that via evaporation.
+$$Q=mL_v$$
+$$m=\frac{Q}{L_v}$$
+
+The latent heat of vaporization for water is $2.26\times 10^6\mbox{ J/kg}$. This means that I need to produce about 1 kg (1 L) of sweat. To stay hydrated I would need to drink that same amount. Also sounds quite reasonable.
+
+\subsection{Heat transfer}
+Basic types of heat transfer:
+\begin{itemize}
+\item conduction
+\item convection/advection
+\item electromagnetic radiation
+%\item evaporative cooling
+\end{itemize}
+
+\subsubsection{Conduction}
+When there is a temperature difference across an object, energy is transferred from the warm side (w/ fast molecules) to the cool side (w/ slow molecules). (We already saw this.)
+
+\clearpage
+[Insert diagram; rod with fire on one end and ice on the other.
+\vspace{5cm}
+
+The \textit{rate} at which heat is transferred depends on the object's composition, length, cross-sectional area, and the temperature difference.
+$$\frac{Q}{\Delta{t}}=\left(\frac{kA}{L}\right)\Delta{T},$$
+where $k$ is the thermal conductivity (a material property) and has units of W/(m K).
+
+Copper: $k=400$ W/(m$\cdot$K)\\
+Wood: $k=0.2$ W/(m$\cdot$K)\\
+
+This is why you typically use a wood spoon when cooking. 
+
+Notice that the rate of heat transfer depends on $\Delta{T}$. What happens when two objects equilibrate?
+
+Example: We can think about the rate at which heat travels through a floor. Let's say that the room temperature is 19.6$^\circ$C, the temperature below the floor is 16.2$^\circ$C, and the floor has an area of 22 m$^2$ and is 0.018 m thick.
+
+The rate of heat transfer is 
+$$\frac{Q}{\Delta{t}}=\left(\frac{kA}{L}\right)\Delta{T}=830\mbox{ J/s}=830\mbox{ W}$$
+
+(Rate at which energy is changing is the \textit{power}, and has units of watts.)
+
+\subsubsection{Advection/convection}
+Advection $\rightarrow$ transport of heat by a moving material\\
+Convection $\rightarrow$ vertical transport of heat (e.g., heat a pot of water from below)
+
+Advection and convection are especially important for fluids and gases. In order to fully understand this method of heat transport, you have to model both fluid flow and thermodynamics. And advection and convection are often linked to conduction.
+
+For example, consider warm water flowing through a pipe. 
+
+\clearpage
+[Insert diagram.]
+\vspace{5cm} 
+
+The warm water is carrying heat; this is advection. If the water is warmer than the air on the outside of the pipe, then heat will conduct through the pipe and radiate into the environment.
+
+\subsubsection{Electromagnetic radiation}
+(We'll talk about this in much more detail next semester.) Basically what you need to know now is that object's emit electromagnetic waves. The energy that the waves carry, as well as the wavelength of the waves, depends on the material properties, the surface area, and the temperature.
+
+$$\frac{Q}{\Delta{t}}=e\sigma AT^4$$
+
+(We find this equation by modifying some other equations that we haven't seen yet...)
+
+$e$ is the emissivity (unitless); it is the ratio of energy radiated to energy absorbed. $e=0.97$ for humans\\
+$\sigma$ is the Stefan-Boltzmann constant; $\sigma=5.67\times 10^{-8}\frac{\mbox{W}}{\mbox{m}^2\mbox{K}^4}$\\
+$A$ is the surface area\\
+$T$ is temperature in Kelvin
+
+Because the environment is also radiating based on its temperature, the net radiation from an object is
+$$\frac{Q_{net}}{\Delta{t}}=e\sigma A(T^4-T_0^4),$$
+where $T_0$ is the temperature of the environment. If $T>T_0$, the object cools; if $T<T_0$, the object warms up.
+
+There is an important feedback here that comes into play when thinking about the temperature of a planet. If you increase the temperature of the planet, you also increase the rate at which it radiates energy outward (and a small change in temperature results in a big change in radiation) which counteracts the warming of the planet. This helps to stabilize a planet's temperature.
+
+%How does heat loss from radiation compare to heat loss by conduction?
+%$$\frac{Q_{rad}/\Delta{t}}{Q_{cond}/\Delta{t}}= \frac{e\sigma A(T^4-T_o^4)}{kA/L(T-T_o)}=\frac{e\sigma L}{k}(T+T_o)(T^2+T_o^2)$$
+
+%For skin, $k\approx 0.37$ and $L\approx 0.003\mbox{ m}$. Human body temperature is $T=37^\circ\mbox{C}=310\mbox{ K}$. This ratio is around 0.05 for all values of $T_o$. In other words, this back of the envelope calculation suggests that heat conduction is a more efficient means of heat loss than radiation --- for humans.
+
+
+%\subsection*{Evaporative cooling}
+%A fourth way that you can transfer energy out of a system is by evaporation. Let's discuss this by way of an example.
+
+%A 68 kg woman cycles at a constant 15 km/h. All of the metabolic energy that does not go to forward propulsion is converted to thermal energy in her body. If the only way her body has to keep cool is by evaporation, how many kilograms of water must she lose to perspiration each hour to keep her body temperature constant?
+
+%The metabolic power of a 68 kg cyclist going 15 km/h is 480 W (480 J/s). This is the rate at which the cyclist is using energy and is essentially determined experimentally. 75\% of this is transformed into thermal energy. So 360 W of thermal energy is produced; this much must be released by evaporation to keep the cyclists temperature constant. So
+%$$\frac{Q}{\Delta{t}}=\frac{mL_v}{\Delta{t}}$$
+%$$\frac{m}{\Delta{t}}=\frac{Q}{\Delta{t}}\frac{1}{L_v}=1.5\times 10^{-4}\mbox{ kg/s}=0.54\mbox{ kg/hr}$$
+
+%This is about half a liter per hour. Seems reasonable.
+
+%When you perspire, warm water (sweat) moves to the outside of your body. It then evaporates; evaporation requires heat, so it reduces the thermal energy of the sweat that is left behind...
+
+\clearpage

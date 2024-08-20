@@ -1,0 +1,173 @@
+\section{Circular and rotational motion}
+Objectives:
+\begin{itemize}
+\item Definitions and equations of circular and rotational motion
+\item Relating circular motion and linear motion  
+\item Example problems
+\end{itemize}
+\hrulefill
+
+\subsection{Basic definitions and equations}
+I introduced relative motion partially as a way of getting you comfortable with the fact that you can switch between reference frames or coordinate systems. One common case in which this occurs is very circular motion.
+
+[Demo: ball on a string]
+
+To describe motion around a circle, it is convenient to define position using the angle from the positive $x-$axis.
+
+[Insert diagram defining $\theta$.]
+\vspace{5cm}
+
+Angular position is defined as $\theta=s/r$, in radians. Radians are \textit{not} units! However, it is sometimes convenient to report a measurement as being in radians so that it is clear that the number represents an angle. $\theta>0$ if counterclockwise from positive $x-$axis. Sometimes we will want to know the distance that an object has travelled along a circle, in which case we might use $s=r\theta$.
+
+How do we convert between radians and degrees? $1\mbox{ rad}=\pi/180$
+
+From here, we can probably guess how to define angular displacement, angular velocity, and angular acceleration.
+
+Angular displacement: $\Delta{\theta}=\theta_f-\theta_i$\\
+Angular velocity: $\omega=\frac{d\theta}{d{t}}$, [1/s]\\
+Angular speed = $|\omega|$, [1/s]\\
+Angular acceleration: $\alpha=\frac{d\omega}{d{t}}$, [1/s$^2$]
+
+Like before, angular velocity is the slope of the angular position-versus-time graph, and angular acceleration is the slope of the angular velocity-versus-time graph. Conversely, angular displacement is the area under the angular velocity-versus-time graph, and the change in angular velocity is the area under the angular acceleration-versus-time graph. 
+
+What is meant by positive or negative angular velocity? What is meant by positive or negative angular acceleration?
+
+Sometimes we will need to convert between angular velocity (a.k.a. angular frequency) and frequency.
+$$\omega=2\pi/T=2\pi f$$
+
+I won't go through the derivations for the kinematic equations for circular motion because they are exactly analogous to what we did for one-dimensional motion. For constant angular acceleration:
+$$\Delta\omega=\alpha\Delta{t}$$
+$$\Delta\theta=\omega_i\Delta{t}+\frac{1}{2}\alpha\Delta{t}^2$$
+$$\omega_f\ds^2-\omega_i\ds^2=2\alpha\Delta\theta$$
+When $\alpha=0$, this reduces to
+$$\Delta\theta=\omega\Delta{t}.$$
+
+\subsection{Relating angular quantities to linear quantities}
+Often we'll want to be able to convert between angular quantities and linear quantities. The derivation that I'm about to do should help to cement your understanding of vectors.
+
+Note: The book arrives at these equations in a different, less elegant way.
+
+For all of the following we will assume that the radius is constant.
+
+\textbf{Position:}
+$$x=r\cos\theta$$
+$$y=r\sin\theta$$
+
+Or, in vector notation:
+
+$$\boxed{\vec x=\langle{r\cos\theta,r\sin\theta}\rangle}$$
+
+\textbf{Velocity:}
+$$\vec v=\frac{d\vec x}{dt}$$
+$$\boxed{\vec v=\left\langle{-r\sin\theta\frac{d\theta}{dt},r\cos\theta\frac{d\theta}{dt}}\right\rangle=\langle{-r\omega\sin\theta,r\omega\cos\theta}\rangle}$$
+
+The speed is the magnitude of the velocity:
+$$v=|\vec{v}|=\sqrt{(-r\omega\sin\theta)^2+(r\omega\cos\theta)^2}=\sqrt{r^2\omega^2(\sin^2\theta+\cos^2\theta)}$$
+$$\boxed{|\vec{v}|=|\omega| r} \mbox{ or, in shorter notation } \boxed{v=\omega r}$$
+
+
+\textbf{Acceleration:}
+$$\vec{a}=\frac{d\vec{v}}{dt}$$
+$$\vec{a}=\left\langle{-r\cos\theta\left(\frac{d\theta}{dt}\right)^2-r\sin\theta\frac{d^2\theta}{dt^2}},-r\sin\theta\left(\frac{d\theta}{dt}\right)^2+r\cos\theta\frac{d^2\theta}{dt^2}\right\rangle$$
+
+$$\boxed{\vec a=\left\langle{-r\omega^2\cos\theta-r\alpha\sin\theta,-r\omega^2\sin\theta+r\alpha\cos\theta}\right\rangle}$$
+
+The acceleration consists of two parts: a component that cause the velocity vector to change direction (centripetal acceleration), and a component that cause the magnitude of the velocity vector to change (tangential acceleration).
+
+Let's seperate the net acceleration into a centripetal acceleration and a tangential acceleration.
+
+$$\vec a=\langle{-r\omega^2\cos\theta,-r\omega^2\sin\theta}\rangle+\langle{-r\alpha\sin\theta,r\alpha\cos\theta}\rangle=\vec{a}_c+\vec{a}_t$$
+
+Note that the centripetal acceleration is non-zero as long as the object is moving in a circle. The tangential acceleration is only non-zero when the object's speed is changing.
+
+[Insert diagram showing direction of the acceleration vectors, and pointing out that $\vec{a}_c$ always points inward and that $\vec{a}_c\perp\vec{a}_t$.]
+\vspace{5cm}
+
+The magnitude of the centripetal acceleration is
+$$|\vec{a}_c|=\sqrt{(-r\omega^2\cos\theta)^2+(-r\omega^2\sin\theta)^2)}=\sqrt{r^2\omega^4(\cos^2\theta+\sin^2\theta)}$$
+$$\boxed{a_c=\omega^2r=\frac{v^2}{r}}$$
+
+The magnitude of the tangential acceleration is
+$$|\vec{a}_t|=\sqrt{(-r\alpha\sin\theta)^2+(r\alpha\cos\theta)^2}=\sqrt{r^2\alpha^2(\sin^2\theta+\cos^2\theta)}$$
+$$\boxed{a_t=\alpha r}$$
+
+The centripetal acceleration and tangential acceleration are perpendicular to each other. This means that you can add them together to find the magnitude of the net acceleration by using the Pythagorean theorem.
+
+$$a_{net}=\sqrt{a_c^2+a_t^2}$$
+$$a_{net}=\sqrt{(\omega^2 r)^2+(\alpha r)^2}$$
+$$\boxed{a_{net}=r\sqrt{\omega^4+\alpha^2}}$$
+
+\subsection{Comments on rotational motion}
+Everything that we've learned so far about circular motion also applies to rotational motion (i.e., the rigid body rotation of an object around some axis). An example of rotational motion is a bicycle wheel spinning around its axle. The fundamental difference between circular motion and rotation motion is that in rotational motion, all parts of an object DO NOT move at the same \textit{linear} speed/velocity. They do have the same angular velocity.
+
+And all of the equations for circular motion can be easily adapted to rotational motion. So we know that the tangential speed is $v_t=\omega{r}$. The parts of the bicycle wheel that are farthest from axle move the fastest. 
+
+If we want a fast bicycle, should we make the wheels big or small? (Actually its kind of a trick question, because big wheels are more difficult to turn!)
+
+\subsection{Example problems}
+\subsubsection{Example \#1}
+Ex: The disk in a hard drive in desktop computer rotates at 7200 rpm. The disk has a radius of 13 cm. What is the angular speed of the disk?
+
+Given:\\
+$f=7200\mbox{ rpm}=120\mbox{ rev/s}$\\
+$r=0.13\mbox{ m}$
+
+$$\omega{r}=2\pi f=750\mbox{ s}^{-1}$$
+
+\subsubsection{Example \#2}
+The shaft of an elevator motor turns clockwise at 180 rpm for 10 s, is at rest for 15 s, then turns counterclockwise at 240 rpm for 12.5 s. What is the angular displacement of the shaft during this motion. Draw angular position and angular velocity graphs for the shaft's motion.
+
+Angular velocity during the first interval: $\omega_1=-3\mbox{ rad/s}$\\
+Angular displacement during the first interval: $\Delta\theta_1=\omega_1\Delta{t_1}=-30\mbox{ rad}$
+
+Angular velocity during the third interval: $\omega_3=4\mbox{ rad/s}$\\
+Angular displacement during the third interval: $\Delta\theta_3=\omega_3\Delta{t_3}=50\mbox{ rad}$
+
+Net displacement: 20 rad
+
+[Insert position-time and velocity-time graphs.]
+
+\clearpage
+\subsubsection{Example \#3}
+You wrap a rope around the axle of a cart. The axle is 8 cm in diameter, and the wheels on the cart are 1 m in diameter. Assume that there is perfect friction between the rope and axle; in other words, the wheels roll when you pull on the rope without slipping. If you pull the rope at a constant 0.5 m/s, how quickly will the cart move (toward you!)? 
+
+Given:\\
+$r_{axle}=0.04\mbox{ m}$\\
+$r_{wheel}=0.5\mbox{ m}$\\
+$v_{t,axle}=1\mbox{ m/s}$
+
+Want to know: $v$
+
+How do we solve this? Let's first think about rolling motion.
+
+[Insert diagram showing trajectory of a particle on the outside of the wheel.]
+\vspace{5cm}
+
+If the wheel rotates without slipping, during one revolution the center of the wheel will have moved forward a distance
+$$\Delta x=v\Delta t=2\pi R,$$
+and so
+$$v=\frac{\Delta x}{\Delta t}=\frac{2\pi R}{\Delta t}.$$
+Since the time to turn one revolution is the period, $T$, we find that
+$$v=\frac{2\pi R}{T}.$$
+Can we further simplify? Yes, we saw earlier that $\omega=2\pi/T$, so
+$$\boxed{v=\omega R}$$
+This is referred to as the rolling constraint.
+
+An alternative way to derive this is using calculus.
+$$v=\frac{dx}{dt}$$
+In this case, the distance that wheel travels is the arclength of the wheel. Let $x=s$, so
+$$v=\frac{ds}{dt}=\frac{d(r\theta)}{dt}=r\frac{d\theta}{dt}=r\omega$$
+
+From this analysis we can also deduce that rolling motion is a combination of translation and rotation.
+
+\clearpage
+[Insert diagram of translation + rotation = rolling.]
+\vspace{5cm}
+
+Back to our example problem: once we calculate the angular velocity of the wheel, it is straightforward to calculate its speed.
+$$v_{axle}=\omega r_{axle}$$
+$$\omega=\frac{v_{t,axle}}{r_{axle}}=25\mbox{ rad/s}$$
+$$v=\omega R=12.5\mbox{ m/s}$$
+This is slightly faster than a person can run.
+
+\clearpage

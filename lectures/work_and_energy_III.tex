@@ -1,0 +1,124 @@
+\section{WORK AND ENERGY, PART 3}
+Finished last class by talking about the energy lost during elastic collisions. I'd like to discuss them a little bit more in the context of energy that is converted from kinetic energy to thermal energy.
+\begin{itemize}
+\item Perfectly elastic collision involves no change in kinetic energy (i.e., it is conserved). We can use $P_i=P_f$ and $K_i=K_f$ to solve for the motion of objects that collide elastically.
+\item Collisions are generally not perfectly elastic. For the case of one object colliding into a stationary object, we saw that $\Delta{E_{th}}=K_i(1-C_r\ds^2)$, where $C_r$ is an empirically determined coefficient of restitution. (Its more complicated if both objects move before or after the collision.)
+\item What happens during perfectly inelastic collisions, when two objects collide and stick together? You saw this in lab yesterday...
+\end{itemize}
+
+\subsection*{Spring force}
+We need to define one more type of energy (for now), which is elastic potential energy. Springs store energy. If we compress or extend the spring at a constant rate, we can find how much energy is stored in the spring. We'll apply an external force to the spring, so that
+$$W=\Delta{E}=\Delta{U_s}$$
+
+When I started talking about types of forces, I used a spring to demonstrate the idea of a force and as an analogy for tensional forces and normal forces --- they can both be thought of as really stiff springs.
+
+What do we know about springs? If you pull a spring, it will pull back in the opposite direction. If you push a spring, it will push back in the opposite direction. In other words, springs provide ``restoring forces''; they always try to return to their equilibrium length (i.e., the length they would be if there is no force being exerted on the spring). Furthermore, the magnitude of that force depends on how far the spring has been stretched or compressed. This was first shown by Robert Hooke, and curiously, published as a latin anagram: ``ceiiinosssttuv''. If you unscramble that, you come up with ``Ut tensio, sic vis'', meaning ``As the extension, so the force''.
+
+[Insert diagram of applied force, varying linearly with $x$.]
+\vspace{5cm}
+
+$$\boxed{F_{sp}=-kx}$$
+where $k$ is an empirical spring constant and $x$ is the displacement of the spring from equilibrium. The spring force points in the direction of the spring. This expression is referred to as Hooke's Law, though its not really a law because it breaks down if you stretch the spring too much. The notation can be a little bit confusing. Because the spring force can point either direction (depending on whether the spring is stretched or compressed), you need to use this formula to figure out the direction of the force.
+
+[Insert several diagrams showing a spring being stretched or compressed, and discuss in terms of whether the force is positive or negative.]
+\vspace{5cm}
+
+Hooke's Law tells us that the force applied to a spring is linearly related to the displacement of the spring. So if we double the force, we double the displacement. As an example, let's consider a mass hanging from a spring.
+
+[Insert diagram of mass hanging from a spring.]
+\vspace{5cm}
+
+If the system is in equilibrium, then the mass is not accelerating, and therefore
+$$\sum F_y = F_s-F_g=0$$
+$$-ky-mg=0\Rightarrow \Delta{y}=\frac{-mg}{k}<0$$
+Why is $y<0$? Because the spring is being stretched in the negative $y$-direction.
+
+[Insert diagram showing change in position of the end of the spring.]
+\vspace{5cm}
+
+Demo: If I double the mass, the displacement of the spring doubles (as long as my masses aren't too large!).
+
+\hrulefill\\
+Example: A scale used to weigh fish consists of a spring hung from a ceiling. The spring's equilibrium (unstretched length) is 30 cm. When a 4.0 kg fish is suspended from the spring, it stretches to a length of 42 cm.
+
+a) What is the spring constant?\\
+b) What is the length of the spring if an 8.0 kg fish is hung from the scale?
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$\sum F_y=F_s-F_g=0$$
+$$-ky-mg=0$$
+$$k=\frac{mg}{-{y}}\Rightarrow \boxed{k=330\mbox{ N/m}}$$
+
+Rearranging,
+$${y}=\frac{-mg}{k}=-0.24\mbox{ m}$$
+The spring has been stretched downward by 24 cm. Its new length is therefore $\boxed{54\mbox{ cm}}$.
+
+\hrulefill\\
+Example: A toy train uses a spring to pull a 2.0 kg block across a horizontal surface. The train is motorized and moves forward at 5.0 cm/s. The spring constant has been measured to be 50 N/m, and the coefficient of static friction between the block and the surface is $\mu_s=0.60$. The spring is at its equilibrium length at $t=0$. Assume that at $t=0$, the train instantaneously accelerates from rest to 5.0 cm/s, and then moves forward at a constant rate. When does the block slip?
+
+[Insert diagram.]
+\vspace{5cm}
+
+$$\sum F_y = F_n-F_g=ma_y=0 \Rightarrow F_n=F_g=mg$$
+$$\sum F_x = F_{sp}-F_s=ma_x$$
+Up until the time at which the block starts sliding, $a_x=0$. We want to find the time at which $F_{sp}=\max F_s$.
+$$F_{sp}-\max F_s=0\Rightarrow F_{sp}=\max F_s$$
+What is the spring force? The spring is being stretch by the train, so the force exerted by the spring on the train is $F_{sp}=-kx$. As the train moves to the right, the force pulling back on the train increases. (This means that the force exerted by the trains motor must also increase with time.) If the force exerted by the spring on the train is $-kx$, then the force exerted on the block is $kx$ (Newton's third law). Therefore,
+$$kx=\max F_s=\mu_s F_n=\mu_s mg$$
+$$x=\frac{\mu_s mg}{k}=0.235\mbox{ m}$$
+How long does it take the train to go that distance?
+$$x=v\Delta{t}\Rightarrow \Delta{t}=\frac{x}{v}=4.7\mbox{ s}$$
+
+\subsection*{Elastic potential energy}
+Let's calculate the work that is done in compressing a spring a constant rate (i.e., $a=0$). This means that the force used to compress or extend the spring is $F_a=-F_s$. The work done in compressing or extending the spring is therefore
+$$W=\ds\int_{x_i}^{x_f}kx\,dx=\frac{1}{2}k\left(x_f^2-x_i^2\right)$$
+
+The change in elastic potential energy is
+$$\boxed{\Delta U_s=\frac{1}{2}k\left(x_f^2-x_i^2\right)}$$
+
+We typically define $U_s=0$ when the spring is in its equilibrium length, so we can write
+$$\boxed{U_s=\frac{1}{2}kx\ds^2}$$
+Note that this is always positive. The spring stores energy whether it is in extension or compression.
+
+\hrulefill\\
+Example: How far must you stretch a spring to store 200 J if $k=1000$ N/m?
+
+$$U_s=\frac{1}{2}kx^2$$
+$$\Delta{x}=\sqrt{\frac{2U_s}{k}}=0.63\mbox{ m}$$
+
+\hrulefill\\
+Example: A spring is clamped to a table. You compress the spring a distance of 0.2 m, and use the spring to shoot a marble horizontally. The marble, which has a mass of 0.02 kg, travels a distance of 5 m (horizontally) and 1.5 m (vertically). What is the spring constant?
+
+There are (at least) a couple of ways to solve this, both making use of $\Delta{E}=0$.
+
+Most direct way: let $t_i$ be when the spring is fully compressed, and $t_f$ be the time when the marble hits the ground. Conservation of energy tells us that:
+
+$$0=\Delta{E}=\Delta{K}+\Delta{U_g}+\Delta{U_s}=\frac{1}{2}mv_f\ds^2-\frac{1}{2}mv_i\ds^2+mg\Delta{y}-\frac{1}{2}kx\ds^2$$
+
+We know that $v_i=0$, so this reduces to
+$$0=\frac{1}{2}mv_f\ds^2+mg\Delta{y}+\frac{1}{2}kx\ds^2$$
+
+What is $v_f$? It is the final speed, so we need to find
+$$v_f=\sqrt{v_{x,f}\ds^2+v_{y,f}\ds^2}.$$
+
+We can figure out $v_{x,f}\ds^2$ and $v_{y,f}\ds^2$ using kinematics. First let's find the time that it takes the marble to fall to the ground.
+$$\Delta{y}=v_{y,i}\Delta{t}+\frac{1}{2}a_y\Delta{t}^2\Rightarrow \boxed{\Delta{t}^2=\frac{-2\Delta{y}}{g}}$$
+So
+$$v_{x,f}\ds^2=\left(\frac{L}{\Delta{t}}\right)^2\Rightarrow \boxed{v_{x,f}\ds^2=\frac{gL^2}{-2\Delta{y}}}$$
+
+How about $v_{y,f}\ds^2$?
+$$v_{y,f}-v_{y,i}=a_y\Delta{t}$$
+$$v_{y,f}^2=g^2\Delta{t}^2=g^2\frac{-2\Delta{y}}{g}\Rightarrow \boxed{v_{y,f}\ds^2=-2g\Delta{y}}$$
+
+This means that
+$$\boxed{v_f\ds^2=\frac{gL^2}{-2\Delta{y}}-2g\Delta{y}}$$
+
+Now, plugging this into the conservation of energy equation,
+$$0=\frac{1}{2}m\left(\frac{gL^2}{-2\Delta{y}}-2g\Delta{y}\right)+mg\Delta{y}-\frac{1}{2}kx^2$$
+$$0=\frac{mgL^2}{-4\Delta{y}}-mg\Delta{y}+mg\Delta{y}-\frac{1}{2}kx^2$$
+$$0=\frac{mgL^2}{-4\Delta{y}}-\frac{1}{2}kx^2$$
+$$k=\frac{mgL^2}{-2\Delta{y}x^2}=\boxed{48.9\mbox{ N/m}^2}$$
+
+\clearpage
