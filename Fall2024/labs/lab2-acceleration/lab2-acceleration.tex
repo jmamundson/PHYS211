@@ -42,7 +42,7 @@
 \begin{flushright}
 PHYS S211\\
 Lab 2: Acceleration and gravity\\
-9/6/22 (due 9/20/22)
+9/10/24 (due 9/17/24)
 \end{flushright}
 
 Name(s):\\
@@ -151,7 +151,7 @@ In this section of the lab you will attempt to determine the acceleration due to
 
 \question{Tilt the track and, after measuring the tilt angle with an inclinometer (or using trigonometry), release the cart from rest so that it rolls \textit{away} from the motion sensor. The cart will roll down the incline as it is pulled by gravity. The component of gravity that is parallel to the track (the cart's direction of motion) is $g\sin\theta$, which represents the acceleration of the cart (neglecting friction). \textbf{Remove any excess data collected before the cart starts moving or after it stops moving. Then plot the position-time and velocity-time graphs of this motion.} Use \verb+polyfit+ to fit a quadratic equation through your position data. To use \verb+polyfit+,
 \begin{verbatim}>> coeffs = polyfit(t,x,2) % calculate coefficients of a 2nd order polynomial\end{verbatim}
-What is the physical significance of each coefficient? What is $g$? To help your interpret the output of \verb+polyfit+, you can try typing
+What is the physical significance of each coefficient? Use the coefficients to calculate $g$. To help your interpret the output of \verb+polyfit+, you can try typing
 \begin{verbatim}>> help polyfit\end{verbatim}}
 
 \question{Mount two photogates to a stand and string them together, one above the other. Connect them to the LabQuest interface. The photogates work by recording the time at which the ``gates'' are blocked and unblocked. They have both internal and external gates. Make sure that the internal gates are open. After pressing collect, drop one of the black rubber balls through the top gate. You should see four times appear: the times that the first gate is blocked and then unblocked again, and then the times that the second gate is blocked and then unblocked. Use this information to calculate the ball's free fall acceleration.}
