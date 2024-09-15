@@ -95,7 +95,7 @@ You may submit a group report. The next lab will require a formal report (detail
 
 
 \section{HORIZONTAL ACCELERATION} 
-Plug the Force Probe and the Motion Probe into the LabQuest logger. Make sure the sensors are properly calibrated. In other words, make sure that you trust the numbers that the probes and computer are telling you. Does the force probe read zero when there is zero force?
+Plug the Force Probe and the Motion Sensor into the LabQuest logger. Make sure the sensors are properly calibrated. In other words, make sure that you trust the numbers that the probes and computer are telling you. Does the force probe read zero when there is zero force?
 
 Next, using a string and table mounted pulley, set-up the cart, force probe, and bench as illustrated:
 
@@ -108,18 +108,18 @@ Next, using a string and table mounted pulley, set-up the cart, force probe, and
 
 Hanging 300~g produces a gravitational force of 2.94 N.  Check that this is what the force probe reads, keeping in mind that the hanger has a mass of 50~g.  What is the precision of the scale? How accurate is the force probe?  Using the Live Readout values at the bottom of the graph, check the calibration. Add mass to the hanger and check the measured force.  Does changing the orientation of the probe (to vertical, for example) change the measured value of force? Why? You do not need to answer these questions in your lab report, but do keep them in mind when analyzing and plotting the data that you collect.
 
-Now using the cart, pulley, and weights, you will use the motion probe and force probe to explore the relationship between force and acceleration. Collect both motion and force data for the cart as it accelerates away from the motion sensor (use measurements at distances greater than about 50 cm from the motion sensor for the best results).  Using the position-time graph, select the data before you released the cart and ``Strike Through Data Cells'' under the Edit menu.  Similarly mark out the data after the cart reached the end of the track.  Adjust the time axis to zoom in on this subset of the data.  Can you reliably measure the acceleration with the motion sensor?  Try using the slope of the velocity curve to make a better estimate of the
+Now using the cart, pulley, and weights, you will use the motion sensor and force probe to explore the relationship between force and acceleration. Collect both motion and force data for the cart as it accelerates away from the motion sensor (use measurements at distances greater than about 50 cm from the motion sensor for the best results).  Using the position-time graph, select the data before you released the cart and ``Strike Through Data Cells'' under the Edit menu.  Similarly mark out the data after the cart reached the end of the track.  Adjust the time axis to zoom in on this subset of the data.  Can you reliably measure the acceleration with the motion sensor?  Try using the slope of the velocity curve to make a better estimate of the
 acceleration. Use either the button marked ``M=?'' to find the instantaneous slope of the line or the button marked ``R=?'' to find the mean slope over a time interval. \textbf{Include in your report plots of position, velocity, acceleration, and force vs. time from one experiment, produced using MATLAB.}% Also include a plot of force vs. acceleration.}  
 
 Next, using different masses on the hanger, measure five different sets of force (mean force) and acceleration (mean acceleration) pairs. Make a plot of your measured force ($y$-axis) vs. acceleration ($x$-axis). 
 
-Here's how to do it in MATLAB:
+Here's how to do it in MATLAB (comments after the \% do not need to be entered into MATLAB):
 \begin{verbatim}>> force=[F1 F2 F3 F4 F5]; % enter your force measurements F1, F2, etc. \end{verbatim}
-\begin{verbatim}>> acceleration=[a1 a2 a3 a4 a5]; % enter your acceleration measurements; \end{verbatim}
+\begin{verbatim}>> acceleration=[a1 a2 a3 a4 a5]; % enter your acceleration measurements \end{verbatim}
 \begin{verbatim}>> p=polyfit(acceleration,force,1); \end{verbatim}
 \begin{verbatim}>> plot(acceleration,force,acceleration,p(1)*acceleration+p(2)) \end{verbatim}
 
-The \verb+polyfit+ command used above fits a first-order polynomial (a line) to the data and returns two coefficients. \verb+p(1)+ gives the slope of the line. Note that you always get information about a MATLAB command by typing, e.g., 
+The \verb+polyfit+ command used above fits a first-order polynomial (a line) to the data and returns two coefficients. \verb+p(1)+ gives the slope of the line. Note that you can always get information about a MATLAB command by typing, e.g., 
 \begin{verbatim}>> help polyfit\end{verbatim}
 
  \textbf{Submit this plot}.  What are the units of the slope?  What does the value of the slope of this plot correspond to physically? What is the y-intercept, and what is its signficance?
@@ -127,7 +127,7 @@ The \verb+polyfit+ command used above fits a first-order polynomial (a line) to 
 Check with me that you understand the relationship between the force acting on the cart and the motion of the cart before continuing on to Parts 2 and 3.
 
 \section{FRICTION}
-In this part of the lab you will measure the coefficient of friction between a block and the track. Use the same set-up as in Part 1, except replace the cart with one of the friction blocks. Do not use the force probe or motion sensor. Measure the mass of the block and the distance that the block slides, which will be the same as the distance that the hanging mass falls. Record the amount of time that it takes the hanging mass to fall to the floor, and then use kinematics to determine it's acceleration. Using this acceleration and what you learned about forces in Part 1, write down a system of equations involving forces and solve for the coefficient of kinetic friction. You should assume that tensional force acting on the block and the tensional force acting on the falling mass have the same magnitude.
+In this part of the lab you will measure the coefficient of friction between a block and the track. Use the same set-up as in Part 1, except replace the cart with one of the friction blocks. Do not use the force probe or motion sensor. Measure the mass of the block and the distance that the block slides, which will be the same as the distance that the hanging mass falls. Record the amount of time that it takes the hanging mass to fall to the floor, and then use kinematics to determine its acceleration. Using this acceleration and what you learned about forces in Part 1, write down a system of equations involving forces and solve for the coefficient of kinetic friction. You should assume that the tensional force acting on the block and the tensional force acting on the falling mass have the same magnitude.
 
 \textbf{Submit a derivation showing how you estimated the coefficient of friction. Indicate what you measured for the acceleration and mass of the block, and calculate the coefficient of friction.} 
 
