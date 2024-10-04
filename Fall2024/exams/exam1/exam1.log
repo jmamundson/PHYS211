@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.9)  24 SEP 2024 17:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.9)  25 SEP 2024 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -286,7 +286,7 @@ t_and_pulley.pdf>]
 File: exam1_2.jpg Graphic file (type jpg)
 <use exam1_2.jpg>
 Package pdftex.def Info: exam1_2.jpg  used on input line 41.
-(pdftex.def)             Requested size: 469.75502pt x 256.668pt.
+(pdftex.def)             Requested size: 281.85587pt x 153.98364pt.
  [2
 
  <./exam1_2.jpg>]
@@ -323,7 +323,7 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb>
-Output written on exam1.pdf (5 pages, 1234209 bytes).
+Output written on exam1.pdf (5 pages, 1234317 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
