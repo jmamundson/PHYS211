@@ -1,15 +1,15 @@
-next year consider using bar and mass attachments
-
-also include the following masses in the document:
-- gray ring: 4.297 kg
-- gray disk: 4.825 kg
-- blue ring: 4.359 kg
-- blue disk: 4.975 kg
-- brown disk: 4.869 kg
-
-put moment's of inertia in the beginning of the document
-
-only need to use two objects for the last part: a disk and a ring
+%next year consider using bar and mass attachments
+%
+%also include the following masses in the document:
+%- gray ring: 4.297 kg
+%- gray disk: 4.825 kg
+%- blue ring: 4.359 kg
+%- blue disk: 4.975 kg
+%- brown disk: 4.869 kg
+%
+%put moment's of inertia in the beginning of the document
+%
+%only need to use two objects for the last part: a disk and a ring
 
 \documentclass[11pt,letterpaper]{article}
 \usepackage{array}
@@ -57,7 +57,7 @@ only need to use two objects for the last part: a disk and a ring
 \begin{flushright}
 PHYS S211: General Physics I\\
 Lab 5: Torque\\
-10/11/22 (due 10/18/22)
+10/8/24 (due 10/15/24)
 \end{flushright}
 
 Name(s):\\
@@ -70,7 +70,7 @@ Name(s):\\
 \end{enumerate}
 
 \subsubsection*{Introduction:}
-In this lab you will explore the concepts of rotational motion, rolling motion, and moment of inertia. In the first part of the lab, you will use a rotational motion apparatus to measure the moment of inertia for two objects. In the second part, you will compare the speed at which objects of different shapes, and therefore different moments of inertia, roll down an incline.  
+In this lab you will explore the concepts of rotational motion, rolling motion, and moment of inertia. In the first part of the lab, you will use a rotational motion apparatus to measure the moment of inertia for three objects. In the second part, you will compare the speed at which objects of different shapes, and therefore different moments of inertia, roll down an incline.  
  
 Newton's second law, written for linear motion, has the familiar form $\sum \vec F=m\vec a$, and states that the linear acceleration that an object receives depends directly on the force acting upon it
 and inversely upon its mass.  For the case of angular motion, we have seen that Newton's
@@ -81,23 +81,58 @@ property of an object that measures its ease or resistance to change in angular 
 You may submit a group report. Submit the report as a single document separate from this hand-out, and clearly indicate if you are submitting it as a group report.
 \begin{enumerate}
 \setlength{\parskip}{3pt}
-\item Part 1: A free-body diagram [2 pts], the force balance equations and derivation you used to arrive at an equation for the moment of inertia [4 pts], and your calculated and estimated moments of inertia [4 pts].
+\item Part 1: A free-body diagram [2 pts], the force balance equations and derivation you used to arrive at an equation for the moment of inertia [4 pts], and your calculated and estimated moments of inertia [6 pts]. How much error do you introduce when treating the cylinders as point masses? [2 pts]
 \item Part 2: A brief description of the experiment and qualitative observations [2 pts], a derivation of the time it takes the object to roll down the ramp [4 pts], a table of the expected and observed travel times [2 pts], and a discussion of how ``rolling friction'' influences the motion of an object (i.e., discuss what sort of object's are most influenced by rolling friction) [2 pts].
 \end{enumerate}
 
 \subsubsection*{Equipment}
 \begin{itemize}
 \setlength{\parskip}{3pt}
-\item Rotating apparatus and disks and rings
+\item Rotating apparatus and disks, rings, and ``point'' masses
 \item String and hanging masses
 \item Scale
 \item Rolling objects (disk and ring)
 \item 2-m stick
 \end{itemize}
 
+\pagebreak
+\subsubsection*{Additional background}
+The moment of inertia can be calculated analytically for objects that have a lot of symmetry. In the table below, $m$ indicates the mass of the object, $r$ is the distance of the object from the axis of rotation, and $R$ is the radius of the object.
+
+\renewcommand{\arraystretch}{2}
+\begin{table}[h]
+\begin{tabular}{|l|c|}
+\hline
+Object & Moment of inertia\\
+\hline
+Point mass & $mr^2$\\
+Cylinder & $\frac{1}{2}mR^2$\\
+Thick-walled cylinder & $\frac{1}{2}m\left(R_{\rm inner}^2+R_{\rm outer}^2\right)$\\
+Solid sphere & $\frac{2}{5}mR^2$\\
+Spherical shell & $\frac{2}{3}mR^2$\\
+\hline
+\end{tabular}
+\end{table}
+
+In part 1 of the lab, you will estimate and measure the moment of inertia of a disk, a ring, and a system of two point masses. The masses of the disks and rings are shown in the following table.
+\begin{table}[h]
+\begin{tabular}{|l|c|}
+\hline
+Object & Mass [kg]\\
+\hline
+Gray ring & 4.297\\
+Gray disk & 4.825\\
+Blue ring & 4.359\\
+Blue disk & 4.975\\
+Brown disk & 4.869\\
+\hline
+\end{tabular}
+\end{table}
+
+
 \section{MEASURING AN OBJECT'S MOMENT OF INERTIA}
 For this part of the lab, a body is set in rotation about a vertical axis.  The applied
-torque is from a constant force produced by a falling mass. Using force and torque balances, you will derive an expression in which the moment of inertia of the rotating body is related to measurable quantities. Additionally, since the moments of inertia of certain bodies may be calculated from their masses and physical dimensions (using the equations in the textbook, which are also reproduced in Part 2), the theoretical moments of inertia may be computed to check the measured values.
+torque is from a constant force produced by a falling mass. Using force and torque balances, you will derive an expression in which the moment of inertia of the rotating body is related to measurable quantities. Additionally, since the moments of inertia of certain bodies may be calculated from their masses and physical dimensions (see Additional background), the theoretical moments of inertia may be computed to check the measured values.
 
 \begin{figure}[h]
 \begin{center}
@@ -166,9 +201,9 @@ set up.\\
 %4.  Record the height at which you release the mass.  Use a stop watch
 %to record the time it takes to fall that distance.\\
 
-The rotating apparatus has a moment of inertia even without the ring or disk. You will need to take this into account when calculating the moment of inertia of the ring/disk. Because the apparatus and the ring/disk have the same axis of rotation, we can write
-$$I_{\mbox{total}}=I_{\mbox{ring}}+I_{\mbox{apparatus}}$$
-When you perform the experiments you will be calculating $I_{\mbox{total}}$. To calculate $I_{\mbox{ring}}$, you will therefore need to also know $I_{\mbox{apparatus}}$, which you can determine by running the experiment without the ring/disk. You will perform this experiment for two objects --- a disk and a ring.  Be sure to measure the physical mass and dimensions of the ring and disk, which you will need for calculating the theoretical moments of inertia.\bigskip
+The rotating apparatus has a moment of inertia even without anything being placed on top of it. You will need to take this into account when calculating the moment of inertia of the object. Because the apparatus and the object have the same axis of rotation, we can write
+$$I_{\mbox{total}}=I_{\mbox{object}}+I_{\mbox{apparatus}}$$
+When you perform the experiments you will be calculating $I_{\mbox{total}}$. To calculate $I_{\mbox{object}}$, you will therefore need to also know $I_{\mbox{apparatus}}$, which you can determine by running the experiment without the ring/disk. You will perform this experiment for three objects --- a disk, a ring, and a system of two point masses.  Be sure to measure the dimensions of the objects, which you will need for calculating the theoretical moments of inertia.\bigskip
 
 {\bf Free body diagram and force balance derivation}\\
 Sketch a free body diagram and use Newton's Laws to derive an expression for the moment of inertia of rotating apparatus.
@@ -188,52 +223,10 @@ Disk:\\
 Ring:\\
 \vspace{6cm}
 
-%\vspace{1cm}
-%
-%\newcolumntype{Y}{>{\centering\arraybackslash}X}%
-%\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}
-%\hline
-%no disk or ring & $m_1$ & $r$ & $\Delta{t}$ & $\Delta{y}$ \\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\hline AVERAGE:&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline
-%\end{tabularx}\\
-%
-%\vspace{1cm}
-%
-%\newcolumntype{Y}{>{\centering\arraybackslash}X}%
-%\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}
-%\hline
-%ring & $m_1$ & $r$ & $\Delta{t}$ & $\Delta{y}$ \\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\hline AVERAGE:&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline
-%\end{tabularx}\\
-%
-%\vspace{1cm}
-%
-%
-%%\newcolumntype{Y}{>{\centering\arraybackslash}X}%
-%\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}
-%\hline
-%disk & $m_1$ & $r$ & $\Delta{t}$ & $\Delta{y}$ \\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline\hline AVERAGE:&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}&\vspace{2cm}\\
-%\hline
-%\end{tabularx}\\
+System of two point masses:\\
+\vspace{6cm}
 
-
-
-
+When calculating the moment of inertia of the ``point'' masses, you assumed that the cylinders had all of their mass concentrated at a single point. How much error does this introduce? To answer this, calculate the moment of inertia of two cylinders rotating around shared axis. Note that the moment of inertia for the finite objects presented in the Additional background assumes that the objects rotate around their central axes. To shift to a different axis, you need to use the parallel-axis theorem (ie., add $mr^2$ to the moment of inertia of the object shown in the table). How much does your theoretical moment of inertia change when you do this?
 
 \section{MOTION OF AN OBJECT ROLLING DOWN A SLOPE}
 For this part of the lab, you will compare the motion of two solid cylinders and two hollow cylinders as they roll down an inclined plane. For each object, measure the mass and radius so that you can compare the measured travel times with theoretically expected travel times. 
@@ -302,17 +295,6 @@ For this part of the lab, you will compare the motion of two solid cylinders and
 %This approximation was used in the momentum lab. 
 First, derive an expression for the time that it takes the object to roll down the ramp. The result will depend on the object's moment of inertia, which can be computed analytically for some shapes.
 
-Cylinder:
-$$I=\frac{1}{2}mr^2$$
-
-Thick-walled cylindrical shell:
-$$I=\frac{1}{2}m\left(r_{\rm inner}^2+r_{\rm outer}^2\right)$$
-
-Solid sphere:
-$$I=\frac{2}{5}mr^2$$
-
-Spherical shell:
-$$I=\frac{2}{3}mr^2$$
 
 \vspace{1cm}
 
