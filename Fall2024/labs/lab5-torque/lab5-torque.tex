@@ -97,7 +97,7 @@ You may submit a group report. Submit the report as a single document separate f
 
 \pagebreak
 \subsubsection*{Additional background}
-The moment of inertia can be calculated analytically for objects that have a lot of symmetry. In the table below, $m$ indicates the mass of the object, $r$ is the distance of the object from the axis of rotation, and $R$ is the radius of the object.
+The moment of inertia can be calculated analytically for objects that have a lot of symmetry. In the table below, $m$ indicates the mass of the object, $r$ is the distance of the object from the axis of rotation, $R$ is the radius of the object, and $L$ is the length of a rod.
 
 \renewcommand{\arraystretch}{2}
 \begin{table}[h]
@@ -110,6 +110,7 @@ Cylinder & $\frac{1}{2}mR^2$\\
 Thick-walled cylinder & $\frac{1}{2}m\left(R_{\rm inner}^2+R_{\rm outer}^2\right)$\\
 Solid sphere & $\frac{2}{5}mR^2$\\
 Spherical shell & $\frac{2}{3}mR^2$\\
+Rod (around the center) & $\frac{1}{12}mL^2$\\
 \hline
 \end{tabular}
 \end{table}
@@ -125,6 +126,8 @@ Gray disk & 4.825\\
 Blue ring & 4.359\\
 Blue disk & 4.975\\
 Brown disk & 4.869\\
+``Point'' masses & 2.703\\
+Rod & 0.832\\
 \hline
 \end{tabular}
 \end{table}
@@ -203,10 +206,10 @@ set up.\\
 
 The rotating apparatus has a moment of inertia even without anything being placed on top of it. You will need to take this into account when calculating the moment of inertia of the object. Because the apparatus and the object have the same axis of rotation, we can write
 $$I_{\mbox{total}}=I_{\mbox{object}}+I_{\mbox{apparatus}}$$
-When you perform the experiments you will be calculating $I_{\mbox{total}}$. To calculate $I_{\mbox{object}}$, you will therefore need to also know $I_{\mbox{apparatus}}$, which you can determine by running the experiment without the ring/disk. You will perform this experiment for three objects --- a disk, a ring, and a system of two point masses.  Be sure to measure the dimensions of the objects, which you will need for calculating the theoretical moments of inertia.\bigskip
+When you perform the experiments you will be calculating $I_{\mbox{total}}$. To calculate $I_{\mbox{object}}$, you will therefore need to also know $I_{\mbox{apparatus}}$, which you can determine by running the experiment without the ring/disk. You will perform this experiment for three objects --- a disk, a ring, and a system consisting of a rod and two point masses.  Be sure to measure the dimensions of the objects, which you will need for calculating the theoretical moments of inertia.\bigskip
 
 {\bf Free body diagram and force balance derivation}\\
-Sketch a free body diagram and use Newton's Laws to derive an expression for the moment of inertia of rotating apparatus.
+Sketch a free body diagram and use Newton's Laws to derive an expression for the moment of inertia of the rotating apparatus.
 
 \clearpage
 {\bf Calculated and estimated moments of inertia}\\
@@ -223,7 +226,7 @@ Disk:\\
 Ring:\\
 \vspace{6cm}
 
-System of two point masses:\\
+System of rod and two ``point'' masses:\\
 \vspace{6cm}
 
 When calculating the moment of inertia of the ``point'' masses, you assumed that the cylinders had all of their mass concentrated at a single point. How much error does this introduce? To answer this, calculate the moment of inertia of two cylinders rotating around shared axis. Note that the moment of inertia for the finite objects presented in the Additional background assumes that the objects rotate around their central axes. To shift to a different axis, you need to use the parallel-axis theorem (ie., add $mr^2$ to the moment of inertia of the object shown in the table). How much does your theoretical moment of inertia change when you do this?
